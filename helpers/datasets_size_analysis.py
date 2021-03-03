@@ -11,7 +11,6 @@ def get_files_path(folder, pattern):
     return [folder + "/" + f for f in os.listdir(folder) if f.endswith(pattern)]
     
 def get_audio_duration(path):
-
     with contextlib.closing(wave.open(path,'r')) as f:
         frames = f.getnframes()
         rate = f.getframerate()
