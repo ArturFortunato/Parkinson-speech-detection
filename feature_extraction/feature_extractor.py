@@ -15,7 +15,7 @@ class feature_extractor:
         output = []
 
         for f in files:
-            csv_file = pd.read_csv(f, sep=";")
+            csv_file = self.read_csv(f)
 
             #Remove frameTime column
             csv_file = csv_file.drop(['frameTime'], axis=1)
@@ -52,30 +52,51 @@ class feature_extractor:
         data = [float(val) for val in data]
 
         return { "{}_stdev".format(column_name): stat.stdev(data) }
-
+    
     def avg_stdev_csv(self, filename, columns_to_avg, columns_to_stdev):
         csv_file = pd.read_csv(filename)
         output = {}
+        
+        if columns_to_avg == [] and columns_to_stdev:
+            columns_to_avg = csv_file.columns
 
         for column in columns_to_avg:
             avg = self.__average_column(csv_file[column], column)
-            output = {**output, **avg} 
+            output = {**output, **avg}
 
         for column in columns_to_stdev:
             std = self.__stdev_column(csv_file[column], column)
-            output = {**output, **std} 
+            output = {**output, **std}
 
         return output
     
     def __merge(self, csvs, output_path):
         combined_csv = pd.concat(csvs)
 
-        combined_csv.to_csv(output_path, index=False, sep=";")
+        self.to_csv(combined_csv, output_path)
 
     def merge_csv(self, csv_files, output_path):
-        csvs = [pd.read_csv(csv, sep=";") for csv in csv_files]
+        csvs = [self.read_csv(csv) for csv in csv_files]
 
         self.__merge(csvs, output_path)
+
+    def to_csv(self, csv, filename):
+        csv.to_csv(filename, index=False, sep=";")
+
+    def read_csv(self, filename):
+        return pd.read_csv(filename, sep=";")
+
+    def average_and_write_csv(self, input_csv, output_path):
+        csv = self.read_csv(input_csv)
+        
+        # Parses all values to floats. 
+        # Ignore options allows to keep 'name' column as a string 
+        # without raising an error
+        csv = csv.apply(pd.to_numeric, errors='ignore')
+
+        output_csv = csv.groupby(['name']).mean()
+        
+        self.to_csv(output_csv, output_path)
 
     # is_control is true if group is healthy control
     def extract_features(self, type_conf, audios_path, output_path, is_control):

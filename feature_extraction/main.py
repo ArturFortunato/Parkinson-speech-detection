@@ -12,14 +12,14 @@ GITA_AUDIOS = '/afs/inesc-id.pt/corpora/pc-gita/PC-GITA_per_task_44100Hz/read_te
 GITA_OUTPUT = '/afs/inesc-id.pt/home/aof/thesis/features/gita/'
 
 def extract(extractor, dataset, output_path, feature_group, subfolders, audios_path):
-    # FraLusoPark
-    if not os.path.isfile("{}/{}_{}.csv".format(FRALUSOPARK_OUTPUT, dataset, feature_group)):
+    if not os.path.isfile("{}/{}_{}.csv".format(output_path, dataset, feature_group)):
         hc_csv = extractor.extract_features(feature_group, "{}/{}".format(audios_path, subfolders[0]), output_path, True )
         pd_csv = extractor.extract_features(feature_group, "{}/{}".format(audios_path, subfolders[1]), output_path, False)
 
         extractor.merge_csv([hc_csv, pd_csv], "{}/{}_{}.csv".format(output_path, dataset, feature_group))
-
-
+        
+    if not os.path.isfile("{}/{}_{}_avg.csv".format(output_path, dataset, feature_group)):
+        extractor.average_and_write_csv("{}/{}_{}.csv".format(output_path, dataset, feature_group), "{}/{}_{}_avg.csv".format(output_path, dataset, feature_group))
 
 def main():
     extractor = feature_extractor()
