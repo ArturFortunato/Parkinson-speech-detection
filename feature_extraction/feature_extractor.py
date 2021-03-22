@@ -4,13 +4,20 @@ import pandas     as pd
 import statistics as stat
 
 OPENSMILE      = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/bin/SMILExtract'
-MFCC_CONF      = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/mfcc/MFCC12_0_D_A.conf'
-MFCC_CONF_MEAN = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/mfcc/MFCC12_E_D_A_Z.conf'
+
+MFCC_CONF        = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/mfcc/MFCC12_0_D_A.conf'
+GEMAPS_CONF      = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/gemaps/v01b/GeMAPSv01b.conf'
 
 class feature_extractor:
     def __list_files(self, path):
         return os.listdir(path)
         
+    def __feature_conf_file(self, feature_set):
+        if feature_set == 'mfcc':
+            return MFCC_CONF
+        elif feature_set == 'gemaps':
+            return GEMAPS_CONF
+
     def __clean_csv(self, files, is_control):
         output = []
 
@@ -20,7 +27,7 @@ class feature_extractor:
             #Remove frameTime column
             csv_file = csv_file.drop(['frameTime'], axis=1)
                     
-            #Add name column (filename without extention
+            #Add name column (filename without extention)
             file_without_ext = f.split("/")[-1].split(".")[0]
             csv_file['name'] = file_without_ext
             
@@ -80,8 +87,8 @@ class feature_extractor:
 
         self.__merge(csvs, output_path)
 
-    def to_csv(self, csv, filename):
-        csv.to_csv(filename, index=False, sep=";")
+    def to_csv(self, csv, filename, index=False):
+        csv.to_csv(filename, index=index, sep=";")
 
     def read_csv(self, filename):
         return pd.read_csv(filename, sep=";")
@@ -93,18 +100,16 @@ class feature_extractor:
         # Ignore options allows to keep 'name' column as a string 
         # without raising an error
         csv = csv.apply(pd.to_numeric, errors='ignore')
-
         output_csv = csv.groupby(['name']).mean()
-        
-        self.to_csv(output_csv, output_path)
+        self.to_csv(output_csv, output_path, index=True)
 
     # is_control is true if group is healthy control
     def extract_features(self, type_conf, audios_path, output_path, is_control):
         wav_files = self.__list_files(audios_path)
-        csv_files = self.__extract(audios_path, wav_files, type_conf, output_path, MFCC_CONF)
+        csv_files = self.__extract(audios_path, wav_files, type_conf, output_path, self.__feature_conf_file(type_conf))
         csv_list  = self.__clean_csv(csv_files, is_control)
         
-        output_file = "{}/mfcc_{}.csv".format(output_path, "HC" if is_control else "PD")
+        output_file = "{}/{}_{}.csv".format(output_path, type_conf, "HC" if is_control else "PD")
         self.__merge(csv_list, output_file)
 
         return output_file

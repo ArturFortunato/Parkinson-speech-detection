@@ -1,17 +1,11 @@
 import os
 
 from feature_extractor import feature_extractor
+from praat_extractor   import praat_extractor
 
-FRALUSOPARK_AUDIOS = '/afs/inesc-id.pt/home/aof/thesis/fralusopark_wav'
-FRALUSOPARK_OUTPUT = '/afs/inesc-id.pt/home/aof/thesis/features/fralusopark/'
+import paths
 
-MDVR_KCL_AUDIOS = '/afs/inesc-id.pt/home/aof/thesis/mdvr_kcl_wav/'
-MDVR_KCL_OUTPUT = '/afs/inesc-id.pt/home/aof/thesis/features/mdvr_kcl/'
-
-GITA_AUDIOS = '/afs/inesc-id.pt/corpora/pc-gita/PC-GITA_per_task_44100Hz/read_text/ayerfuialmedico/sin_normalizar/'
-GITA_OUTPUT = '/afs/inesc-id.pt/home/aof/thesis/features/gita/'
-
-def extract(extractor, dataset, output_path, feature_group, subfolders, audios_path):
+def extract_opensmile(extractor, dataset, output_path, feature_group, subfolders, audios_path):
     if not os.path.isfile("{}/{}_{}.csv".format(output_path, dataset, feature_group)):
         hc_csv = extractor.extract_features(feature_group, "{}/{}".format(audios_path, subfolders[0]), output_path, True )
         pd_csv = extractor.extract_features(feature_group, "{}/{}".format(audios_path, subfolders[1]), output_path, False)
@@ -21,17 +15,35 @@ def extract(extractor, dataset, output_path, feature_group, subfolders, audios_p
     if not os.path.isfile("{}/{}_{}_avg.csv".format(output_path, dataset, feature_group)):
         extractor.average_and_write_csv("{}/{}_{}.csv".format(output_path, dataset, feature_group), "{}/{}_{}_avg.csv".format(output_path, dataset, feature_group))
 
+def extract_praat(extractor, subfolders, csv_in, csv_out, audios_path):
+    if not os.path.isfile(csv_out):
+        extractor.add_hnr(subfolders, csv_in, csv_out, audios_path)
+
 def main():
-    extractor = feature_extractor()
-    
+    extractor_opensmile = feature_extractor()
+    extractor_praat     = praat_extractor()    
+
     # FraLusoPark
-    extract(extractor, "fralusopark", FRALUSOPARK_OUTPUT, "mfcc", ["CONTROLOS", "DOENTES"], FRALUSOPARK_AUDIOS)
+    extract_opensmile(extractor_opensmile, "fralusopark", paths.FRALUSOPARK_OUTPUT, "mfcc"  , ["CONTROLOS", "DOENTES"], paths.FRALUSOPARK_AUDIOS)
+    extract_opensmile(extractor_opensmile, "fralusopark", paths.FRALUSOPARK_OUTPUT, "gemaps", ["CONTROLOS", "DOENTES"], paths.FRALUSOPARK_AUDIOS)
+    extract_praat(
+            extractor_praat,
+            {
+                0: "CONTROLOS",
+                1: "DOENTES"
+            },
+            "{}/{}_{}_avg.csv".format(paths.FRALUSOPARK_OUTPUT, "fralusopark", "mfcc"), 
+            "{}/{}_{}_avg.csv".format(paths.FRALUSOPARK_OUTPUT, "fralusopark", "praat"),
+            paths.FRALUSOPARK_AUDIOS
+    )
 
     # MDVR_KCL
-    extract(extractor, "mdvr_kcl", MDVR_KCL_OUTPUT, "mfcc", ["HC", "PD"], MDVR_KCL_AUDIOS)
+    extract_opensmile(extractor_opensmile, "mdvr_kcl", paths.MDVR_KCL_OUTPUT, "mfcc", ["HC", "PD"], paths.MDVR_KCL_AUDIOS)
 
     # GITA 
-    extract(extractor, "gita", GITA_OUTPUT, "mfcc", ["hc", "pd"], GITA_AUDIOS)
+    extract_opensmile(extractor_opensmile, "gita", paths.GITA_OUTPUT, "mfcc", ["hc", "pd"], paths.GITA_AUDIOS)
+
+
 
 if __name__ == '__main__':
     main()
