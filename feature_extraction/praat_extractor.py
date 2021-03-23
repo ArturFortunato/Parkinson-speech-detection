@@ -37,7 +37,10 @@ class praat_extractor:
         sound = parselmouth.Sound("{}/{}/{}.wav".format(path, subfolders[row['label']], "_".join(row['name'].split("_")[:-1])))
         
         harmonicity = sound.to_harmonicity()
-        
+
+        #This produces a square matrix for GNR, not quite sure what it is
+        #harmonicity_gne = sound.to_harmonicity_gne()
+
         pitch = call(sound, "To Pitch", 0.0, LOWER_PITCH, UPPER_PITCH)
         pointProcess = call(sound, "To PointProcess (periodic, cc)", LOWER_PITCH, UPPER_PITCH)
 
@@ -57,4 +60,4 @@ class praat_extractor:
         # Apply parselmouth wrapper function row-wise
         #hnr, meanF0, stdevF0, jitter, shimmer = dataframe.apply(self.__basic_features, path=path, subfolders=subfolders, axis='columns')
         dataframe[['hnr', 'meanF0', 'stdevF0', 'jitter', 'shimmer']] = dataframe.apply(self.__basic_features, path=path, subfolders=subfolders, axis='columns', result_type='expand')
-        dataframe.to_csv(csv_out, index=False)
+        dataframe.to_csv(csv_out, index=False, sep=";")

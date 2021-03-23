@@ -3,10 +3,11 @@ import os
 import pandas     as pd
 import statistics as stat
 
-OPENSMILE      = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/bin/SMILExtract'
+OPENSMILE   = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/bin/SMILExtract'
 
-MFCC_CONF        = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/mfcc/MFCC12_0_D_A.conf'
-GEMAPS_CONF      = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/gemaps/v01b/GeMAPSv01b.conf'
+MFCC_CONF   = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/mfcc/MFCC12_0_D_A.conf'
+GEMAPS_CONF = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/gemaps/v01b/GeMAPSv01b.conf'
+PLP_CONF    = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/plp/PLP_0_D_A.conf'
 
 class feature_extractor:
     def __list_files(self, path):
@@ -17,6 +18,8 @@ class feature_extractor:
             return MFCC_CONF
         elif feature_set == 'gemaps':
             return GEMAPS_CONF
+        elif feature_set == 'plp':
+            return PLP_CONF
 
     def __clean_csv(self, files, is_control):
         output = []
@@ -29,7 +32,7 @@ class feature_extractor:
                     
             #Add name column (filename without extention)
             file_without_ext = f.split("/")[-1].split(".")[0]
-            csv_file['name'] = file_without_ext
+            csv_file['name'] = "_".join(file_without_ext.split("_")[:-1])
             
             # Label: 1 for PD, 0 for HC
             csv_file['label'] = 0 if is_control else 1
@@ -78,20 +81,20 @@ class feature_extractor:
         return output
     
     def __merge(self, csvs, output_path):
-        combined_csv = pd.concat(csvs)
+        combined_csv = pd.concat(csvs, axis=1)
 
         self.to_csv(combined_csv, output_path)
 
     def merge_csv(self, csv_files, output_path):
-        csvs = [self.read_csv(csv) for csv in csv_files]
+        csvs = [self.read_csv(csv, index_col='name') for csv in csv_files]
 
         self.__merge(csvs, output_path)
 
     def to_csv(self, csv, filename, index=False):
         csv.to_csv(filename, index=index, sep=";")
 
-    def read_csv(self, filename):
-        return pd.read_csv(filename, sep=";")
+    def read_csv(self, filename, index_col=None):
+        return pd.read_csv(filename, sep=";", index_col=index_col)
 
     def average_and_write_csv(self, input_csv, output_path):
         csv = self.read_csv(input_csv)
