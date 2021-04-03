@@ -37,12 +37,18 @@ class Metrics:
         return self.tp / self.total
 
     def precision(self):
+        if self.tp + self.fp == 0:
+            return 0
         return self.tp / (self.tp + self.fp)
 
     def recall(self):
+        if self.tp + self.fn == 0:
+            return 0
         return self.tp / (self.tp + self.fn)
 
     def specificity(self):
+        if self.tn + self.fp == 0:
+            return 0
         return self.tn / (self.tn + self.fp)
 
     def f1_score(self):

@@ -4,17 +4,18 @@ from sklearn.model_selection import train_test_split
 from metrics import Metrics
 
 class MLP:
-    def __init__(self, hidden_layer_sizes, activation, alpha=0.0001):
+    def __init__(self, hidden_layer_sizes, activation, alpha=0.0001, max_iter=2000):
         self.mlp = MLPClassifier(
                 hidden_layer_sizes=hidden_layer_sizes, 
                 activation=activation, 
-                alpha=0.0001
+                alpha=0.001,
+                max_iter=max_iter
         )
         self.trained = None
 
     # Returns x_train, x_test, y_train, y_test
-    def split_train_test(self, x, y):
-        return train_test_split(x, y, stratify=y, random_state=1)
+    def split_train_test(self, x, y, test_size=0.1):
+        return train_test_split(x, y, stratify=y, random_state=1, test_size=test_size)
 
     def fit(self, x_train, y_train):
         self.trained = self.mlp.fit(x_train, y_train)
