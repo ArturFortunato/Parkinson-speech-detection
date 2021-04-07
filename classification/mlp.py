@@ -4,12 +4,13 @@ from sklearn.model_selection import train_test_split
 from metrics import Metrics
 
 class MLP:
-    def __init__(self, hidden_layer_sizes, activation, alpha=0.0001, max_iter=2000):
+    def __init__(self, hidden_layer_sizes, activation, alpha, max_iter, solver):
         self.mlp = MLPClassifier(
                 hidden_layer_sizes=hidden_layer_sizes, 
                 activation=activation, 
-                alpha=0.001,
-                max_iter=max_iter
+                alpha=alpha,
+                max_iter=max_iter,
+                solver=solver
         )
         self.trained = None
 

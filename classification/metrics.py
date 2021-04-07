@@ -34,7 +34,7 @@ class Metrics:
                 self.fp += 1
 
     def accuracy(self):
-        return self.tp / self.total
+        return (self.tp + self.tn) / self.total
 
     def precision(self):
         if self.tp + self.fp == 0:
@@ -54,6 +54,8 @@ class Metrics:
     def f1_score(self):
         p = self.precision()
         r = self.recall()
+        if  p + r == 0:
+            return 0
         return 2 * p * r / (p + r)
 
     def generate_report(self, name, threshold):
