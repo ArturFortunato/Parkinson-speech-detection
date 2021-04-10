@@ -34,7 +34,9 @@ class praat_extractor:
     
     # Extracts HNR, mean and avg F0, localJitter, localShimmer
     def __basic_features(self, row, path, subfolders):
-        sound = parselmouth.Sound("{}/{}/{}.wav".format(path, subfolders[row['label']], "_".join(row['name'].split("_")[:-1])))
+        print(row["name"])
+        sound = parselmouth.Sound("{}/{}/{}.wav".format(path, subfolders[row['label']], row['name']))
+        #sound = parselmouth.Sound("{}/{}/{}.wav".format(path, subfolders[row['label']], "_".join(row['name'].split("_")[:-1])))
         
         harmonicity = sound.to_harmonicity()
 
@@ -60,4 +62,6 @@ class praat_extractor:
         # Apply parselmouth wrapper function row-wise
         #hnr, meanF0, stdevF0, jitter, shimmer = dataframe.apply(self.__basic_features, path=path, subfolders=subfolders, axis='columns')
         dataframe[['hnr', 'meanF0', 'stdevF0', 'jitter', 'shimmer']] = dataframe.apply(self.__basic_features, path=path, subfolders=subfolders, axis='columns', result_type='expand')
+        print(dataframe.columns)
+        input()
         dataframe.to_csv(csv_out, index=False, sep=";")
