@@ -1,6 +1,7 @@
 import os
 
 import pandas as pd
+from multiprocessing import Process
 
 from mlp import MLP
 from data_processing import DataProcessing
@@ -15,7 +16,7 @@ def pre_process(input_csv, output_csv):
     if os.path.isfile(output_csv):
         return
     preparator = DataProcessing()
-    preparator.zscore(input_csv, output_csv, columns_to_ignore=['name', 'label'])
+    preparator.zscore(input_csv, output_csv, columns_to_ignore=['name', 'label', 'frameTime'])
 
 def get_report_path(experiment, dataset, test_size, alpha, max_iter, act_funcion, solver):
     if   experiment == 'baseline' or experiment == 'independent':
@@ -105,15 +106,18 @@ def perform_language_independent(mlp_params_list):
 
 def main():
     for dataset in DATASETS:
-        input_csv  = '{}/{}/{}.csv'.format(FEATURES, dataset, dataset)
+        input_csv  = '{}/{}/{}_mfcc_plp.csv'.format(FEATURES, dataset, dataset)
         normalized = '{}/{}/{}_normalized.csv'.format(FEATURES, dataset, dataset)
         pre_process(input_csv, normalized)
 
     mlp_params_list = generate_mlp_params_list()
-
+    
+    p_baseline = Process(target=perform_baseline, args=(mlp_params_list,))
+    p_baseline.start()
+    p_baseline.stop()
     #perform_baseline(mlp_params_list)
     #perform_semi_independent(mlp_params_list)
-    perform_language_independent(mlp_params_list)
+    #perform_language_independent(mlp_params_list)
 
 if __name__ == '__main__':
     main()

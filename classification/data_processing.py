@@ -14,7 +14,6 @@ class DataProcessing():
     '''
     def zscore(self, input_csv, output_path, columns_to_ignore=[]):
         csv = pd.read_csv(input_csv, sep=";")
-
         for column in csv.columns:
             if column in columns_to_ignore:
                 print("Ignoring column {}".format(column))
