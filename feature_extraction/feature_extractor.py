@@ -3,6 +3,8 @@ import os
 import pandas     as pd
 import statistics as stat
 
+from data_processing import DataProcessing
+
 OPENSMILE   = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/bin/SMILExtract'
 
 MFCC_CONF   = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/mfcc/MFCC12_0_D_A.conf'
@@ -23,13 +25,11 @@ class feature_extractor:
 
     def __clean_csv(self, files, is_control):
         output = []
+        dataProcessor = DataProcessing()
 
         for f in files:
             csv_file = self.read_csv(f)
 
-            #Remove frameTime column
-            #csv_file = csv_file.drop(['frameTime'], axis=1)
-                    
             #Add name column (filename without extention)
             file_without_ext = f.split("/")[-1].split(".")[0]
             csv_file['name'] = "_".join(file_without_ext.split("_")[:-1])
@@ -40,7 +40,13 @@ class feature_extractor:
             output.append(csv_file)
 
         return output
+    
+    def __zscore(self, files):
+        data_processor = DataProcessing()
 
+        for csv_file in files:
+            data_processor.zscore(csv_file, csv_file, columns_to_ignore=['name', 'frameTime', 'label'])
+            
     def __extract(self, audios_path, files, type_conf, output_path, conf_file):
         csv_files = []
 
@@ -120,7 +126,9 @@ class feature_extractor:
     def extract_features(self, type_conf, audios_path, output_path, is_control):
         wav_files = self.__list_files(audios_path)
         csv_files = self.__extract(audios_path, wav_files, type_conf, output_path, self.__feature_conf_file(type_conf))
+        self.__zscore(csv_files)
         csv_list  = self.__clean_csv(csv_files, is_control)
+        
         
         output_file = "{}/{}_{}.csv".format(output_path, type_conf, "HC" if is_control else "PD")
         self.__concat(csv_list, output_file)
