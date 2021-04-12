@@ -28,7 +28,7 @@ class feature_extractor:
             csv_file = self.read_csv(f)
 
             #Remove frameTime column
-            csv_file = csv_file.drop(['frameTime'], axis=1)
+            #csv_file = csv_file.drop(['frameTime'], axis=1)
                     
             #Add name column (filename without extention)
             file_without_ext = f.split("/")[-1].split(".")[0]
@@ -47,7 +47,8 @@ class feature_extractor:
         for f in files:
             file_without_ext = f.split(".")[0]
             output_file = "{}/{}_{}.csv".format(output_path, file_without_ext, type_conf)
-            os.system("{} -C {} -I {}/{} -csvoutput {}".format(OPENSMILE, conf_file, audios_path, f, output_file))
+            if not os.path.isfile(output_file):
+                os.system("{} -C {} -I {}/{} -csvoutput {}".format(OPENSMILE, conf_file, audios_path, f, output_file))
             
             csv_files.append(output_file)
 
@@ -80,15 +81,24 @@ class feature_extractor:
 
         return output
     
-    def __merge(self, csvs, output_path):
-        combined_csv = pd.concat(csvs, axis=1)
+    def __concat(self, csvs, output_path):
+        combined_csv = pd.concat(csvs, axis=0)
 
         self.to_csv(combined_csv, output_path)
 
-    def merge_csv(self, csv_files, output_path):
-        csvs = [self.read_csv(csv, index_col='name') for csv in csv_files]
+    def concat_csv(self, csv_files, output_path, index_col=None):
+        csvs = [self.read_csv(csv, index_col=index_col) for csv in csv_files]
 
-        self.__merge(csvs, output_path)
+        self.__concat(csvs, output_path)
+
+    # Merges two csvs by columns
+    def merge(self, csv1_file, csv2_file, columns, output_file, how='inner'):
+        csv1 = self.read_csv(csv1_file)
+        csv2 = self.read_csv(csv2_file)
+
+        output = pd.merge(csv1, csv2, on=columns, how=how)
+    
+        self.to_csv(output, output_file)
 
     def to_csv(self, csv, filename, index=False):
         csv.to_csv(filename, index=index, sep=";")
@@ -113,6 +123,6 @@ class feature_extractor:
         csv_list  = self.__clean_csv(csv_files, is_control)
         
         output_file = "{}/{}_{}.csv".format(output_path, type_conf, "HC" if is_control else "PD")
-        self.__merge(csv_list, output_file)
+        self.__concat(csv_list, output_file)
 
         return output_file
