@@ -12,11 +12,10 @@ class DataProcessing():
         Data will be normalized by column (feature)
         Final mean will be 0 and stdev will be 1
     '''
-    def zscore(self, input_csv, output_path, columns_to_ignore=[]):
-        csv = pd.read_csv(input_csv, sep=";")
+    def zscore(self, csv, columns_to_ignore=[]):
         for column in csv.columns:
             if column in columns_to_ignore:
                 print("Ignoring column {}".format(column))
                 continue
             csv[column] = stats.zscore(csv[column])
-        csv.to_csv(output_path, sep=";", index=False)
+        return csv

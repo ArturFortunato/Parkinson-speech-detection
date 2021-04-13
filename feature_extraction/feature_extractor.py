@@ -25,7 +25,7 @@ class feature_extractor:
 
     def __clean_csv(self, files, is_control):
         output = []
-        dataProcessor = DataProcessing()
+        data_processing = DataProcessing()
 
         for f in files:
             csv_file = self.read_csv(f)
@@ -37,16 +37,13 @@ class feature_extractor:
             # Label: 1 for PD, 0 for HC
             csv_file['label'] = 0 if is_control else 1
 
+            # Zscore all data columns
+            csv_file = data_processing.zscore(csv_file, columns_to_ignore=['label', 'name', 'frameTime'])
+            
             output.append(csv_file)
 
         return output
     
-    def __zscore(self, files):
-        data_processor = DataProcessing()
-
-        for csv_file in files:
-            data_processor.zscore(csv_file, csv_file, columns_to_ignore=['name', 'frameTime', 'label'])
-            
     def __extract(self, audios_path, files, type_conf, output_path, conf_file):
         csv_files = []
 
@@ -126,7 +123,6 @@ class feature_extractor:
     def extract_features(self, type_conf, audios_path, output_path, is_control):
         wav_files = self.__list_files(audios_path)
         csv_files = self.__extract(audios_path, wav_files, type_conf, output_path, self.__feature_conf_file(type_conf))
-        self.__zscore(csv_files)
         csv_list  = self.__clean_csv(csv_files, is_control)
         
         
