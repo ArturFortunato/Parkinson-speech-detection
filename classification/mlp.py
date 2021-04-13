@@ -1,3 +1,5 @@
+import random
+
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 
@@ -15,8 +17,20 @@ class MLP:
         self.trained = None
 
     # Returns x_train, x_test, y_train, y_test
-    def split_train_test(self, x, y, test_size=0.1):
+    # Deprecated
+    def split_train_test_old(self, x, y, test_size=0.1):
         return train_test_split(x, y, stratify=y, random_state=1, test_size=test_size)
+
+    # Returns x_train, x_test, y_train, y_test
+    def split_train_test(self, csv, test_size=0.1):
+        participants = set(csv["name"])
+        test_subjects  = random.sample(participants, round(test_size * len(participants)))
+        train_subjects = [participant for participant in participants if participant not in test_subjects]
+        
+        train = csv.loc[csv['name'].isin(train_subjects)]
+        test  = csv.loc[csv['name'].isin(test_subjects )]
+
+        return train, test
 
     def fit(self, x_train, y_train):
         self.trained = self.mlp.fit(x_train, y_train)
@@ -27,16 +41,29 @@ class MLP:
         
         return None
 
-    def __threshold_filter(self, probabilities, threshold):
-        # probability[1] is the probability to classify as PD
-        return [1 if probability[1] >= threshold else 0 for probability in probabilities]
+    # Averages the probabilities
+    # yielded by the classification model
+    def __participant_result(probabilities):
+        final_probability = sum(probabilities) / len(probabilities)
+        return 1 if final_probability >= threshold else 0
 
-    def score(self, x_test, y_test, threshold, output_file, report_name):
-        probabilities = self.__predict_prob(x_test)
+    def score(self, test, threshold, output_file, report_name):
+        test_participants = set(test["name"])
         
-        predicted = self.__threshold_filter(probabilities, threshold)
-        
-        metrics = Metrics(predicted, y_test.tolist())
+        predicted = []
+        labels = []
+        for test_participant in test_participants:
+            print("Participant {}".format(test_participant))
+            print(test.loc[test['name'] == test_participant])
+            participant_rows = self.__predict_prob(test.loc[test['name'] == test_participant])
+            participant_x = participant_rows[[col for col in participant_rows.columns if col not in ['label']]]
+            participant_y = participant_rows['label'][0]
+            probabilities = self.__predict_prob(participant_x)
+            participant_result = self.__participant_result(probabilities, threshold)
+            predicted.append(participant_result)
+            labels.append(participant_y)
+
+        metrics = Metrics(predicted, labels)
     
         f = open(output_file, "a")
         f.write(metrics.generate_report(report_name, threshold))

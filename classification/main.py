@@ -24,11 +24,15 @@ def get_report_path(experiment, dataset, test_size, alpha, max_iter, act_funcion
     if   experiment == 'baseline' or experiment == 'independent':
         return "{}/{}/{}/{}_{}_{}_{}_{}.txt".format(REPORTS_PATH, experiment, dataset, solver, test_size, alpha, max_iter, act_funcion)
 
-def generate_mlp_params_list():
+# set test to True to accelerate debugging
+def generate_mlp_params_list(test=False):
     result = []
     alphas = [0.0001, 0.001, 0.01, 0.1]
     max_iters = [1000, 2000, 5000]
     solvers = ['lbfgs', 'sgd', 'adam']
+
+    if test:
+        return {'test_size': 0.1, 'alpha': 0.001, 'max_iter': 1000, 'solver': 'adam', 'act_function': 'tanh'}
 
     for alpha in alphas:
         for max_iter in max_iters:
@@ -42,10 +46,18 @@ def generate_mlp_params_list():
                 })
     return result
 
-def fit_and_score(classfier, x_train, y_train, x_test, y_test, classification_threshold, report_path, report_name):
+def fit_and_score(classifier, train, test, classification_threshold, report_path, report_name):
+    # drops frameTime and name columns
+    x_train = train[[col for col in train.columns if col not in ['name', 'label', 'frameTime']]]
+    y_train = train['label']
+
+
+    # drops frameTime 
+    test = test[[col for col in test.columns if col not in ['frameTime']]]
+    
     classifier.fit(x_train, y_train)
 
-    classifier.score(x_test, y_test, classification_threshold, report_path, report_name)
+    classifier.score(test, classification_threshold, report_path, report_name)
 
 def language_dependent(dataset, classification_threshold, report_name, mlp_params):
     normalized = '{}/{}/{}_normalized.csv'.format(FEATURES, dataset, dataset)
@@ -61,9 +73,9 @@ def language_dependent(dataset, classification_threshold, report_name, mlp_param
     x = csv.loc[:, csv.columns != 'label']
     y = csv['label']
 
-    x_train, x_test, y_train, y_test = mlp.split_train_test(x, y, test_size=mlp_params["test_size"])
+    train, test = mlp.split_train_test(csv, test_size=mlp_params["test_size"])
 
-    fit_and_score(mlp, x_train, y_train, x_test, y_test, classification_threshold, report_path, report_name)
+    fit_and_score(mlp, train, test, classification_threshold, report_path, report_name)
 
 def language_independent(train_dataset, test_datasets, classification_threshold, report_name, mlp_params):
     train = '{}/{}/{}_normalized.csv'.format(FEATURES, train_dataset, train_dataset)
@@ -115,6 +127,8 @@ def main():
 
     mlp_params_list = generate_mlp_params_list()
     
+    perform_baseline(mlp_params_list)
+
     #p_baseline = Process(target=perform_baseline, args=(mlp_params_list,))
     #p_baseline.start()
     #p_baseline.join()
