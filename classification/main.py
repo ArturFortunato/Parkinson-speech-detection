@@ -60,15 +60,15 @@ def fit_and_score(classifier, train, test, classification_threshold, report_path
     classifier.score(test, classification_threshold, report_path, report_name)
 
 def language_dependent(dataset, classification_threshold, report_name, mlp_params):
-    normalized = '{}/{}/{}_normalized.csv'.format(FEATURES, dataset, dataset)
+    csv_file = '{}/{}/{}_mfcc_plp.csv'.format(FEATURES, dataset, dataset)
 
     report_path = get_report_path("baseline", dataset, mlp_params["test_size"], mlp_params["alpha"], mlp_params["max_iter"], mlp_params["act_function"], mlp_params["solver"]) 
 
-    csv = pd.read_csv(normalized, sep=";")
+    csv = pd.read_csv(csv_file, sep=";")
 
     # hidden layer sizes is features + 1
     # csv.columns is features + 1 (features + label)
-    mlp = MLP(hidden_layer_sizes=(len(csv.columns)), activation=mlp_params["act_function"], alpha=mlp_params["alpha"], max_iter=mlp_params["max_iter"], solver=mlp_params["solver"])
+    mlp = MLP(hidden_layer_sizes=(len(csv.columns)), activation=mlp_params["act_function"], alpha=mlp_params["alpha"], max_iter=mlp_params["max_iter"], solver=mlp_params["solver"], dataset=dataset)
     
     x = csv.loc[:, csv.columns != 'label']
     y = csv['label']
@@ -119,11 +119,11 @@ def perform_language_independent(mlp_params_list):
         language_independent('mdvr_kcl', ['fralusopark', 'gita'], 0.5, "Trained with MDVR KCL"   , mlp_params)
 
 def main():
-    for dataset in DATASETS:
-        normalized = '{}/{}/{}_normalized.csv'.format(FEATURES, dataset, dataset)
-        if not os.path.isfile(normalized):
-            input_csv  = '{}/{}/{}_mfcc_plp.csv'.format(FEATURES, dataset, dataset)
-            pre_process(input_csv, normalized)
+    #for dataset in DATASETS:
+    #    normalized = '{}/{}/{}_normalized.csv'.format(FEATURES, dataset, dataset)
+    #    if not os.path.isfile(normalized):
+    #        input_csv  = '{}/{}/{}_mfcc_plp.csv'.format(FEATURES, dataset, dataset)
+    #        pre_process(input_csv, normalized)
 
     mlp_params_list = generate_mlp_params_list()
     

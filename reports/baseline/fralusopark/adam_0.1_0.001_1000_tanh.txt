@@ -4,10 +4,10 @@ Fralusopark Baseline report
 
 	Accuracy:             0.7857142857142857
 
-	Precision:            0.8571428571428571
+	Precision:            0.8
 
-	Recall:               0.75
+	Recall:               0.8888888888888888
 
-	Specificity:          0.8333333333333334
+	Specificity:          0.6
 
-	F1-Score:             0.7999999999999999
+	F1-Score:             0.8421052631578948

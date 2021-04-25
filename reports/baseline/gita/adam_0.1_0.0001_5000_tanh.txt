@@ -2,12 +2,12 @@ Gita baseline report
 
 	Separation threshold: 0.5
 
-	Accuracy:             0.4
+	Accuracy:             1.0
 
-	Precision:            0.4
+	Precision:            1.0
 
-	Recall:               0.4
+	Recall:               1.0
 
-	Specificity:          0.4
+	Specificity:          1.0
 
-	F1-Score:             0.4000000000000001
+	F1-Score:             1.0

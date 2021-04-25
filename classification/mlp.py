@@ -1,12 +1,15 @@
 import random
+import os
 
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 
+import pickle
+
 from metrics import Metrics
 
 class MLP:
-    def __init__(self, hidden_layer_sizes, activation, alpha, max_iter, solver):
+    def __init__(self, hidden_layer_sizes, activation, alpha, max_iter, solver, dataset):
         self.mlp = MLPClassifier(
                 hidden_layer_sizes=hidden_layer_sizes, 
                 activation=activation, 
@@ -14,7 +17,16 @@ class MLP:
                 max_iter=max_iter,
                 solver=solver
         )
-        self.trained = None
+        self.activation = activation
+        self.alpha = alpha
+        self.solver = solver
+        self.dataset = dataset
+
+        if os.path.isfile('./classifier_{}.pkl'.format(self.__generate_sufix())):
+            with open('./classifier_{}.pkl'.format(self.__generate_sufix()), 'rb') as filename:
+                self.trained = pickle.load(filename)
+        else:
+            self.trained = None
 
     # Returns x_train, x_test, y_train, y_test
     # Deprecated
@@ -32,8 +44,17 @@ class MLP:
 
         return train, test
 
+    def __generate_sufix(self):
+        return "{}_{}_{}_{}".format(self.activation, self.solver, self.activation, self.dataset)
+
     def fit(self, x_train, y_train):
+        if self.trained is not None:
+            return
+
         self.trained = self.mlp.fit(x_train, y_train)
+
+        with open('./classifier_{}.pkl'.format(self.__generate_sufix()), 'wb') as filename:
+            pickle.dump(self.mlp, filename)
 
     def __predict_prob(self, x_test):
         if self.trained is not None:
@@ -43,9 +64,9 @@ class MLP:
 
     # Averages the probabilities
     # yielded by the classification model
-    def __participant_result(probabilities):
-        final_probability = sum(probabilities) / len(probabilities)
-        return 1 if final_probability >= threshold else 0
+    def __participant_result(self, probabilities, threshold):
+        healthy_prob = sum([i[0] for i in probabilities]) / len(probabilities)
+        return 1 if healthy_prob <= threshold else 0
 
     def score(self, test, threshold, output_file, report_name):
         test_participants = set(test["name"])
@@ -53,11 +74,9 @@ class MLP:
         predicted = []
         labels = []
         for test_participant in test_participants:
-            print("Participant {}".format(test_participant))
-            print(test.loc[test['name'] == test_participant])
-            participant_rows = self.__predict_prob(test.loc[test['name'] == test_participant])
-            participant_x = participant_rows[[col for col in participant_rows.columns if col not in ['label']]]
-            participant_y = participant_rows['label'][0]
+            participant_rows = test.loc[test['name'] == test_participant]
+            participant_x = participant_rows[[col for col in participant_rows.columns if col not in ['label', 'name', 'frameTime']]]
+            participant_y = participant_rows['label'][participant_rows.index[0]]
             probabilities = self.__predict_prob(participant_x)
             participant_result = self.__participant_result(probabilities, threshold)
             predicted.append(participant_result)
