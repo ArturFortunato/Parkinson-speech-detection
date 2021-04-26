@@ -22,8 +22,8 @@ class MLP:
         self.solver = solver
         self.dataset = dataset
 
-        if os.path.isfile('./classifier_{}.pkl'.format(self.__generate_sufix())):
-            with open('./classifier_{}.pkl'.format(self.__generate_sufix()), 'rb') as filename:
+        if os.path.isfile('./pickles/classifier_{}.pkl'.format(self.__generate_sufix())):
+            with open('./pickles/classifier_{}.pkl'.format(self.__generate_sufix()), 'rb') as filename:
                 self.trained = pickle.load(filename)
         else:
             self.trained = None
@@ -53,7 +53,7 @@ class MLP:
 
         self.trained = self.mlp.fit(x_train, y_train)
 
-        with open('./classifier_{}.pkl'.format(self.__generate_sufix()), 'wb') as filename:
+        with open('./pickles/classifier_{}.pkl'.format(self.__generate_sufix()), 'wb') as filename:
             pickle.dump(self.mlp, filename)
 
     def __predict_prob(self, x_test):
