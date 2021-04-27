@@ -1,0 +1,13 @@
+Trained with Gita report 
+
+	Separation threshold: 0.5
+
+	Accuracy:             0.5141242937853108
+
+	Precision:            0.5294117647058824
+
+	Recall:               0.4945054945054945
+
+	Specificity:          0.5348837209302325
+
+	F1-Score:             0.5113636363636365

@@ -3,11 +3,14 @@ import os
 import pandas     as pd
 import statistics as stat
 
+from data_processing import DataProcessing
+
 OPENSMILE   = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/bin/SMILExtract'
 
-MFCC_CONF   = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/mfcc/MFCC12_0_D_A.conf'
-GEMAPS_CONF = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/gemaps/v01b/GeMAPSv01b.conf'
-PLP_CONF    = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/plp/PLP_0_D_A.conf'
+MFCC_CONF       = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/mfcc/MFCC12_0_D_A.conf'
+GEMAPS_CONF     = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/gemaps/v01b/GeMAPSv01b.conf'
+PLP_CONF        = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/plp/PLP_0_D_A.conf'
+PROSODY_CONF    = '/afs/inesc-id.pt/home/aof/opensmile-3.0-linux-x64/config/prosody/prosodyAcf2.conf'
 
 class feature_extractor:
     def __list_files(self, path):
@@ -20,16 +23,16 @@ class feature_extractor:
             return GEMAPS_CONF
         elif feature_set == 'plp':
             return PLP_CONF
+        elif feature_set == 'prosody':
+            return PROSODY_CONF
 
-    def __clean_csv(self, files, is_control):
+    def __clean_csv(self, files, is_control, columns_to_use=None):
         output = []
+        data_processing = DataProcessing()
 
         for f in files:
             csv_file = self.read_csv(f)
 
-            #Remove frameTime column
-            csv_file = csv_file.drop(['frameTime'], axis=1)
-                    
             #Add name column (filename without extention)
             file_without_ext = f.split("/")[-1].split(".")[0]
             csv_file['name'] = "_".join(file_without_ext.split("_")[:-1])
@@ -37,17 +40,30 @@ class feature_extractor:
             # Label: 1 for PD, 0 for HC
             csv_file['label'] = 0 if is_control else 1
 
+            if columns_to_use is not None:
+                csv_file = csv_file.loc[:, csv_file.columns.isin(columns_to_use)]
+            
+            # Zscore all data columns
+            csv_file = data_processing.zscore(csv_file, columns_to_ignore=['label', 'name', 'frameTime'])
+            
             output.append(csv_file)
 
         return output
+    
+    def __get_opensmile_instruction(self, conf_file, audios_path, f, output_file, lld):
+        if lld:
+            return "{} -C {} -I {}/{} -lldcsvoutput {}".format(OPENSMILE, conf_file, audios_path, f, output_file)
 
-    def __extract(self, audios_path, files, type_conf, output_path, conf_file):
+        "{} -C {} -I {}/{} -csvoutput {}".format(OPENSMILE, conf_file, audios_path, f, output_file)
+
+    def __extract(self, audios_path, files, type_conf, output_path, conf_file, lld):
         csv_files = []
 
         for f in files:
             file_without_ext = f.split(".")[0]
             output_file = "{}/{}_{}.csv".format(output_path, file_without_ext, type_conf)
-            os.system("{} -C {} -I {}/{} -csvoutput {}".format(OPENSMILE, conf_file, audios_path, f, output_file))
+            if not os.path.isfile(output_file):
+                os.system(self.__get_opensmile_instruction(conf_file, audios_path, f, output_file, lld))
             
             csv_files.append(output_file)
 
@@ -80,15 +96,29 @@ class feature_extractor:
 
         return output
     
-    def __merge(self, csvs, output_path):
-        combined_csv = pd.concat(csvs, axis=1)
+    def __concat(self, csvs, output_path):
+        combined_csv = pd.concat(csvs, axis=0)
 
         self.to_csv(combined_csv, output_path)
 
-    def merge_csv(self, csv_files, output_path):
-        csvs = [self.read_csv(csv, index_col='name') for csv in csv_files]
+    def concat_csv(self, csv_files, output_path, index_col=None):
+        csvs = [self.read_csv(csv, index_col=index_col) for csv in csv_files]
 
-        self.__merge(csvs, output_path)
+        self.__concat(csvs, output_path)
+
+    # Merges a list of csvs by columns
+    def merge(self, csvs, columns, output_file, how='inner'):
+        if len(csvs) == 0:
+            print("At least 1 csv must exist in order to merge")
+            exit(-1)
+
+        output = self.read_csv(csvs[0])
+
+        for csv in csvs[1:]:
+            output = pd.merge(output, self.read_csv(csv), on=columns, how=how).drop_duplicates()
+
+        print(output.columns)
+        self.to_csv(output, output_file)
 
     def to_csv(self, csv, filename, index=False):
         csv.to_csv(filename, index=index, sep=";")
@@ -107,12 +137,13 @@ class feature_extractor:
         self.to_csv(output_csv, output_path, index=True)
 
     # is_control is true if group is healthy control
-    def extract_features(self, type_conf, audios_path, output_path, is_control):
+    def extract_features(self, type_conf, audios_path, output_path, is_control, columns_to_use=None):
         wav_files = self.__list_files(audios_path)
-        csv_files = self.__extract(audios_path, wav_files, type_conf, output_path, self.__feature_conf_file(type_conf))
-        csv_list  = self.__clean_csv(csv_files, is_control)
+        csv_files = self.__extract(audios_path, wav_files, type_conf, output_path, self.__feature_conf_file(type_conf), type_conf == "gemaps")
+        csv_list  = self.__clean_csv(csv_files, is_control, columns_to_use=columns_to_use)
+        
         
         output_file = "{}/{}_{}.csv".format(output_path, type_conf, "HC" if is_control else "PD")
-        self.__merge(csv_list, output_file)
+        self.__concat(csv_list, output_file)
 
         return output_file
