@@ -50,14 +50,20 @@ class feature_extractor:
 
         return output
     
-    def __extract(self, audios_path, files, type_conf, output_path, conf_file):
+    def __get_opensmile_instruction(self, conf_file, audios_path, f, output_file, lld):
+        if lld:
+            return "{} -C {} -I {}/{} -lldcsvoutput {}".format(OPENSMILE, conf_file, audios_path, f, output_file)
+
+        "{} -C {} -I {}/{} -csvoutput {}".format(OPENSMILE, conf_file, audios_path, f, output_file)
+
+    def __extract(self, audios_path, files, type_conf, output_path, conf_file, lld):
         csv_files = []
 
         for f in files:
             file_without_ext = f.split(".")[0]
             output_file = "{}/{}_{}.csv".format(output_path, file_without_ext, type_conf)
             if not os.path.isfile(output_file):
-                os.system("{} -C {} -I {}/{} -csvoutput {}".format(OPENSMILE, conf_file, audios_path, f, output_file))
+                os.system(self.__get_opensmile_instruction(conf_file, audios_path, f, output_file, lld))
             
             csv_files.append(output_file)
 
@@ -133,7 +139,7 @@ class feature_extractor:
     # is_control is true if group is healthy control
     def extract_features(self, type_conf, audios_path, output_path, is_control, columns_to_use=None):
         wav_files = self.__list_files(audios_path)
-        csv_files = self.__extract(audios_path, wav_files, type_conf, output_path, self.__feature_conf_file(type_conf))
+        csv_files = self.__extract(audios_path, wav_files, type_conf, output_path, self.__feature_conf_file(type_conf), type_conf == "gemaps")
         csv_list  = self.__clean_csv(csv_files, is_control, columns_to_use=columns_to_use)
         
         

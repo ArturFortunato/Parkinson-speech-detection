@@ -29,12 +29,13 @@ def extract_praat(extractor, subfolders, csv_in, csv_out, audios_path):
 
 def run_one_dataset(extractor_opensmile, extractor_praat, dataset, dataset_output, dataset_hc_pd, audios_path):
     print("Process {} is running {}".format(os.getpid(), dataset))
-    
-    gemaps_cols = ['label', 'name', 'frameTime', 'jitterLocal_sma3nz_amean', 'jitterLocal_sma3nz_stddevNorm','shimmerLocaldB_sma3nz_amean', 'shimmerLocaldB_sma3nz_stddevNorm']
+
+    gemaps_cols = ['name', 'frameTime', 'jitterLocal_sma3nz', 'shimmerLocaldB_sma3nz']
+    prosody_cols = ['name', 'frameTime', 'HNR_sma', 'F0_sma']
 
     mfcc    = extract_opensmile(extractor_opensmile, dataset, dataset_output, "mfcc"  , dataset_hc_pd, audios_path)
     plp     = extract_opensmile(extractor_opensmile, dataset, dataset_output, "plp", dataset_hc_pd, audios_path)
-    prosody = extract_opensmile(extractor_opensmile, dataset, dataset_output, "prosody", dataset_hc_pd, audios_path)
+    prosody = extract_opensmile(extractor_opensmile, dataset, dataset_output, "prosody", dataset_hc_pd, audios_path, columns_to_use=prosody_cols)
     gemaps  = extract_opensmile(extractor_opensmile, dataset, dataset_output, "gemaps", dataset_hc_pd, audios_path, columns_to_use=gemaps_cols)
 
     extractor_opensmile.merge([mfcc, plp, prosody, gemaps], ['name', 'frameTime'], "{}/{}_complete.csv".format(dataset_output, dataset))
@@ -43,18 +44,18 @@ def main2():
     extractor_opensmile = feature_extractor()
     extractor_praat     = praat_extractor()
     
-    #p_fralusopark = Process(target=run_one_dataset, args=(extractor_opensmile, extractor_praat, "fralusopark", paths.FRALUSOPARK_OUTPUT, ["CONTROLOS", "DOENTES"], paths.FRALUSOPARK_AUDIOS, ))
-    #p_fralusopark.start()
+    p_fralusopark = Process(target=run_one_dataset, args=(extractor_opensmile, extractor_praat, "fralusopark", paths.FRALUSOPARK_OUTPUT, ["CONTROLOS", "DOENTES"], paths.FRALUSOPARK_AUDIOS, ))
+    p_fralusopark.start()
 
     p_gita = Process(target=run_one_dataset, args=(extractor_opensmile, extractor_praat, "gita", paths.GITA_OUTPUT, ["hc", "pd"], paths.GITA_AUDIOS, ))
     p_gita.start()
 
-    #p_mdvr_kcl = Process(target=run_one_dataset, args=(extractor_opensmile, extractor_praat, "mdvr_kcl", paths.MDVR_KCL_OUTPUT, ["HC", "PD"], paths.MDVR_KCL_AUDIOS, ))
-    #p_mdvr_kcl.start()
+    p_mdvr_kcl = Process(target=run_one_dataset, args=(extractor_opensmile, extractor_praat, "mdvr_kcl", paths.MDVR_KCL_OUTPUT, ["HC", "PD"], paths.MDVR_KCL_AUDIOS, ))
+    p_mdvr_kcl.start()
 
-    #p_fralusopark.join()
+    p_fralusopark.join()
     p_gita.join()
-    #p_mdvr_kcl.join()
+    p_mdvr_kcl.join()
 
 def main():
     extractor_opensmile = feature_extractor()
