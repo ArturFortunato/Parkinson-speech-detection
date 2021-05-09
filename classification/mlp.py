@@ -9,32 +9,30 @@ import pickle
 from metrics import Metrics
 
 class MLP:
-    def __init__(self, hidden_layer_sizes, activation, alpha, max_iter, solver, dataset):
-        self.mlp = MLPClassifier(
-                hidden_layer_sizes=hidden_layer_sizes, 
-                activation=activation, 
-                alpha=alpha,
-                max_iter=max_iter,
-                solver=solver
-        )
-        self.activation = activation
-        self.alpha = alpha
-        self.solver = solver
-        self.dataset = dataset
+    def __init__(self, hidden_layer_sizes, mlp_params, dataset, experiment):
+        self.activation = mlp_params['activation']
+        self.alpha      = mlp_params['alpha']
+        self.solver     = mlp_params['solver']
+        self.max_iter   = mlp_params['max_iter'] 
+        self.experiment = experiment
+        self.dataset    = dataset
 
-        if os.path.isfile('./pickles/classifier_{}.pkl'.format(self.__generate_sufix())):
-            with open('./pickles/classifier_{}.pkl'.format(self.__generate_sufix()), 'rb') as filename:
+        self.mlp = MLPClassifier(
+                hidden_layer_sizes = hidden_layer_sizes, 
+                activation         = self.activation, 
+                alpha              = self.alpha,
+                max_iter           = self.max_iter,
+                solver             = self.solver
+        )
+
+        if os.path.isfile('./pickles/{}/classifier_{}.pkl'.format(self.experiment, self.__generate_sufix())):
+            with open('./pickles/{}/classifier_{}.pkl'.format(self.experiment, self.__generate_sufix()), 'rb') as filename:
                 self.trained = pickle.load(filename)
         else:
             self.trained = None
 
-    # Returns x_train, x_test, y_train, y_test
-    # Deprecated
-    def split_train_test_old(self, x, y, test_size=0.1):
-        return train_test_split(x, y, stratify=y, random_state=1, test_size=test_size)
-
-    # Returns x_train, x_test, y_train, y_test
-    def split_train_test(self, csv, test_size=0.1):
+    @staticmethod
+    def split_train_test(csv, test_size=0.1):
         participants = set(csv["name"])
         test_subjects  = random.sample(participants, round(test_size * len(participants)))
         train_subjects = [participant for participant in participants if participant not in test_subjects]
@@ -53,7 +51,7 @@ class MLP:
 
         self.trained = self.mlp.fit(x_train, y_train)
 
-        with open('./pickles/classifier_{}.pkl'.format(self.__generate_sufix()), 'wb') as filename:
+        with open('./pickles/{}/classifier_{}.pkl'.format(self.experiment, self.__generate_sufix()), 'wb') as filename:
             pickle.dump(self.mlp, filename)
 
     def __predict_prob(self, x_test):

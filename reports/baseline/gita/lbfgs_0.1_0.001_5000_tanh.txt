@@ -1,4 +1,4 @@
-Gita baseline report 
+Gita Baseline report 
 
 	Separation threshold: 0.5
 
