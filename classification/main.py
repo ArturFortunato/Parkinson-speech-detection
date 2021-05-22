@@ -43,16 +43,14 @@ def fit_and_score(classifier, train, test, classification_threshold, report_path
     
     classifier.fit(x_train, y_train)
 
-    ignore_repeated_experient(report_path)
     classifier.score(test, classification_threshold, report_path, report_name)
 
-def ignore_repeated_experient(report_path):
+def report_already_exists(report_path):
     if os.path.isfile(report_path):
         print("Past experiment results found, ignoring...")
-        sys.exit(0)
-    else:
-        print("BARRACA")
-        exit(1)
+        return True
+    
+    return False
 
 def language_dependent(dataset, classification_threshold, report_name, mlp_params, hidden_layer_sizes=None):
     print("Starting language dependent for {}".format(mlp_params))
@@ -60,16 +58,17 @@ def language_dependent(dataset, classification_threshold, report_name, mlp_param
     csv_file = '{}/{}/{}_complete.csv'.format(FEATURES, dataset, dataset)
     experiment = "baseline" if hidden_layer_sizes == None else "baseline_200"
 
+    report_path = get_report_path(experiment, dataset, mlp_params["test_size"], mlp_params["alpha"], mlp_params["max_iter"], mlp_params["activation"], mlp_params["solver"]) 
+
+    if report_already_exists(report_path):
+        return
+
     csv = pd.read_csv(csv_file, sep=";")
     
     # hidden layer sizes is features + 1
     # csv.columns is features + 1 (features + label)
     if hidden_layer_sizes == None:
         hidden_layer_sizes = (len(csv.columns))
-    
-    report_path = get_report_path(experiment, dataset, mlp_params["test_size"], mlp_params["alpha"], mlp_params["max_iter"], mlp_params["activation"], mlp_params["solver"]) 
-
-    #ignore_repeated_experient(report_path)
 
     mlp = MLP(hidden_layer_sizes, mlp_params=mlp_params, dataset=dataset, experiment=experiment)
     
@@ -87,6 +86,11 @@ def semi_independent(full_dataset, semi_dataset, classification_threshold, repor
     semi_csv_file = '{}/{}/{}_complete.csv'.format(FEATURES, semi_dataset, semi_dataset)
     experiment    = "semi" if hidden_layer_sizes == None else "semi_200"
     
+    report_path = get_report_path(experiment, dataset_name, mlp_params["test_size"], mlp_params["alpha"], mlp_params["max_iter"], mlp_params["activation"], mlp_params["solver"]) 
+
+    if report_already_exists(report_path):
+        return
+
     full_csv  = pd.read_csv(full_csv_file, sep=";")
     semi_csv  = pd.read_csv(semi_csv_file, sep=";")
 
@@ -98,10 +102,6 @@ def semi_independent(full_dataset, semi_dataset, classification_threshold, repor
     # csv.columns is features + 1 (features + label)
     if hidden_layer_sizes == None:
         hidden_layer_sizes = (len(train_csv.columns))
-    
-    report_path = get_report_path(experiment, dataset_name, mlp_params["test_size"], mlp_params["alpha"], mlp_params["max_iter"], mlp_params["activation"], mlp_params["solver"]) 
-
-    #ignore_repeated_experient(report_path)
 
     mlp = MLP(hidden_layer_sizes, mlp_params, dataset=dataset_name, experiment=experiment)
     
@@ -113,6 +113,11 @@ def language_independent(train_datasets, test_dataset, classification_threshold,
     test_csv_file = '{}/{}/{}_complete.csv'.format(FEATURES, test_dataset, test_dataset)
     experiment = "independent" if hidden_layer_sizes == None else "independent_200"
 
+    report_path = get_report_path(experiment, test_dataset, mlp_params["test_size"], mlp_params["alpha"], mlp_params["max_iter"], mlp_params["activation"], mlp_params["solver"]) 
+
+    if report_already_exists(report_path):
+        return
+
     train_csv = pd.concat([pd.read_csv('{}/{}/{}_complete.csv'.format(FEATURES, dataset, dataset), sep=";") for dataset in train_datasets ], ignore_index=True)
     test_csv  = pd.read_csv(test_csv_file, sep=";")
     
@@ -120,10 +125,6 @@ def language_independent(train_datasets, test_dataset, classification_threshold,
     # csv.columns is features + 1 (features + label)
     if hidden_layer_sizes == None:
         hidden_layer_sizes = (len(train_csv.columns))
-
-    report_path = get_report_path(experiment, test_dataset, mlp_params["test_size"], mlp_params["alpha"], mlp_params["max_iter"], mlp_params["activation"], mlp_params["solver"]) 
-
-    #ignore_repeated_experient(report_path)
 
     mlp = MLP(hidden_layer_sizes, mlp_params, dataset=test_dataset, experiment=experiment)
     
@@ -136,46 +137,64 @@ def perform_baseline(mlp_params_list):
     processes = []
 
     for mlp_params in mlp_params_list:
-        processes.append(Process(target=language_dependent, args=('fralusopark', 0.5, "Fralusopark Baseline", mlp_params, )))
-        processes.append(Process(target=language_dependent, args=('gita'       , 0.5, "Gita Baseline"       , mlp_params, )))
-        processes.append(Process(target=language_dependent, args=('mdvr_kcl'   , 0.5, "MDVR KCL Baseline"   , mlp_params, )))
+        #processes.append(Process(target=language_dependent, args=('fralusopark', 0.5, "Fralusopark Baseline", mlp_params, )))
+        #processes.append(Process(target=language_dependent, args=('gita'       , 0.5, "Gita Baseline"       , mlp_params, )))
+        #processes.append(Process(target=language_dependent, args=('mdvr_kcl'   , 0.5, "MDVR KCL Baseline"   , mlp_params, )))
 
-        processes.append(Process(target=language_dependent, args=('fralusopark', 0.5, "Fralusopark Baseline", mlp_params, (200,200), )))
-        processes.append(Process(target=language_dependent, args=('gita'       , 0.5, "Gita Baseline"       , mlp_params, (200,200), )))
-        processes.append(Process(target=language_dependent, args=('mdvr_kcl'   , 0.5, "MDVR KCL Baseline"   , mlp_params, (200,200), )))
+        #processes.append(Process(target=language_dependent, args=('fralusopark', 0.5, "Fralusopark Baseline", mlp_params, (200,200), )))
+        #processes.append(Process(target=language_dependent, args=('gita'       , 0.5, "Gita Baseline"       , mlp_params, (200,200), )))
+        #processes.append(Process(target=language_dependent, args=('mdvr_kcl'   , 0.5, "MDVR KCL Baseline"   , mlp_params, (200,200), )))
 
-    for process in processes:
-        process.start()
+    #for process in processes:
+    #    process.start()
 
-    for process in processes:
-        process.join()
+    #for process in processes:
+    #    process.join()
+
+        language_dependent('fralusopark', 0.5, "Fralusopark Baseline", mlp_params, (200,200))
+        language_dependent('gita'       , 0.5, "Gita Baseline"       , mlp_params, (200,200))
+        language_dependent('mdvr_kcl'   , 0.5, "MDVR KCL Baseline"   , mlp_params, (200,200))
 
     print("Language dependent experiments: DONE!\n")
 
 def perform_semi_independent(mlp_params_list):
     print("Semi independent experiments...\n")
 
-    processes = []
+    #processes = []
     for mlp_params in mlp_params_list:
-        processes.append(Process(target=semi_independent, args=('fralusopark', 'gita'    , 0.5, "Trained with fralusopark and part Gita"    , mlp_params, )))
-        processes.append(Process(target=semi_independent, args=('fralusopark', 'mdvr_kcl', 0.5, "Trained with fralusopark and part MDVR_KCL", mlp_params, )))
-        processes.append(Process(target=semi_independent, args=('gita', 'fralusopark'    , 0.5, "Trained with gita and part fralusopark"    , mlp_params, )))
-        processes.append(Process(target=semi_independent, args=('gita', 'mdvr_kcl'       , 0.5, "Trained with gita and part MDVR_KCL"       , mlp_params, )))
-        processes.append(Process(target=semi_independent, args=('mdvr_kcl', 'fralusopark', 0.5, "Trained with MDVR_KCL and part fralusopark", mlp_params, )))
-        processes.append(Process(target=semi_independent, args=('mdvr_kcl', 'gita'       , 0.5, "Trained with MDVR_KCL and part gita"       , mlp_params, )))
+        #processes.append(Process(target=semi_independent, args=('fralusopark', 'gita'    , 0.5, "Trained with fralusopark and part Gita"    , mlp_params, )))
+        #processes.append(Process(target=semi_independent, args=('fralusopark', 'mdvr_kcl', 0.5, "Trained with fralusopark and part MDVR_KCL", mlp_params, )))
+        #processes.append(Process(target=semi_independent, args=('gita', 'fralusopark'    , 0.5, "Trained with gita and part fralusopark"    , mlp_params, )))
+        #processes.append(Process(target=semi_independent, args=('gita', 'mdvr_kcl'       , 0.5, "Trained with gita and part MDVR_KCL"       , mlp_params, )))
+        #processes.append(Process(target=semi_independent, args=('mdvr_kcl', 'fralusopark', 0.5, "Trained with MDVR_KCL and part fralusopark", mlp_params, )))
+        #processes.append(Process(target=semi_independent, args=('mdvr_kcl', 'gita'       , 0.5, "Trained with MDVR_KCL and part gita"       , mlp_params, )))
 
-        processes.append(Process(target=semi_independent, args=('fralusopark', 'gita'    , 0.5, "Trained with fralusopark and part Gita"    , mlp_params, (200,200), )))
-        processes.append(Process(target=semi_independent, args=('fralusopark', 'mdvr_kcl', 0.5, "Trained with fralusopark and part MDVR_KCL", mlp_params, (200,200), )))
-        processes.append(Process(target=semi_independent, args=('gita', 'fralusopark'    , 0.5, "Trained with gita and part fralusopark"    , mlp_params, (200,200), )))
-        processes.append(Process(target=semi_independent, args=('gita', 'mdvr_kcl'       , 0.5, "Trained with gita and part MDVR_KCL"       , mlp_params, (200,200), )))
-        processes.append(Process(target=semi_independent, args=('mdvr_kcl', 'fralusopark', 0.5, "Trained with MDVR_KCL and part fralusopark", mlp_params, (200,200), )))
-        processes.append(Process(target=semi_independent, args=('mdvr_kcl', 'gita'       , 0.5, "Trained with MDVR_KCL and part gita"       , mlp_params, (200,200), )))
+        semi_independent('fralusopark', 'gita'    , 0.5, "Trained with fralusopark and part Gita"    , mlp_params)
+        semi_independent('fralusopark', 'mdvr_kcl', 0.5, "Trained with fralusopark and part MDVR_KCL", mlp_params)
+        semi_independent('gita', 'fralusopark'    , 0.5, "Trained with gita and part fralusopark"    , mlp_params)
+        semi_independent('gita', 'mdvr_kcl'       , 0.5, "Trained with gita and part MDVR_KCL"       , mlp_params)
+        semi_independent('mdvr_kcl', 'fralusopark', 0.5, "Trained with MDVR_KCL and part fralusopark", mlp_params)
+        semi_independent('mdvr_kcl', 'gita'       , 0.5, "Trained with MDVR_KCL and part gita"       , mlp_params)
 
-    for process in processes:
-        process.start()
+        #processes.append(Process(target=semi_independent, args=('fralusopark', 'gita'    , 0.5, "Trained with fralusopark and part Gita"    , mlp_params, (200,200), )))
+        #processes.append(Process(target=semi_independent, args=('fralusopark', 'mdvr_kcl', 0.5, "Trained with fralusopark and part MDVR_KCL", mlp_params, (200,200), )))
+        #processes.append(Process(target=semi_independent, args=('gita', 'fralusopark'    , 0.5, "Trained with gita and part fralusopark"    , mlp_params, (200,200), )))
+        #processes.append(Process(target=semi_independent, args=('gita', 'mdvr_kcl'       , 0.5, "Trained with gita and part MDVR_KCL"       , mlp_params, (200,200), )))
+        #processes.append(Process(target=semi_independent, args=('mdvr_kcl', 'fralusopark', 0.5, "Trained with MDVR_KCL and part fralusopark", mlp_params, (200,200), )))
+        #processes.append(Process(target=semi_independent, args=('mdvr_kcl', 'gita'       , 0.5, "Trained with MDVR_KCL and part gita"       , mlp_params, (200,200), )))
+        
+        semi_independent('fralusopark', 'gita'    , 0.5, "Trained with fralusopark and part Gita"    , mlp_params, (200,200))
+        semi_independent('fralusopark', 'mdvr_kcl', 0.5, "Trained with fralusopark and part MDVR_KCL", mlp_params, (200,200))
+        semi_independent('gita', 'fralusopark'    , 0.5, "Trained with gita and part fralusopark"    , mlp_params, (200,200))
+        semi_independent('gita', 'mdvr_kcl'       , 0.5, "Trained with gita and part MDVR_KCL"       , mlp_params, (200,200))
+        semi_independent('mdvr_kcl', 'fralusopark', 0.5, "Trained with MDVR_KCL and part fralusopark", mlp_params, (200,200))
+        semi_independent('mdvr_kcl', 'gita'       , 0.5, "Trained with MDVR_KCL and part gita"       , mlp_params, (200,200))
 
-    for process in processes:
-        process.join()
+    #for process in processes:
+    #    process.start()
+
+    #for process in processes:
+    #    process.join()
 
     print("Language semi dependent experiments: DONE!\n")
 
@@ -183,27 +202,35 @@ def perform_language_independent(mlp_params_list):
     
     print("Language independent experiments...\n")
     
-    processes = []
+    #processes = []
     for mlp_params in mlp_params_list:
-        processes.append(Process(target=language_independent, args=(['gita', 'mdvr_kcl'], 'fralusopark', 0.5, "Tested with fralusopark", mlp_params, )))
-        processes.append(Process(target=language_independent, args=(['fralusopark', 'mdvr_kcl'], 'gita', 0.5, "Tested with Gita"       , mlp_params, )))
-        processes.append(Process(target=language_independent, args=(['fralusopark', 'gita'], 'mdvr_kcl', 0.5, "Tested with MDVR KCL"   , mlp_params, )))
+        #processes.append(Process(target=language_independent, args=(['gita', 'mdvr_kcl'], 'fralusopark', 0.5, "Tested with fralusopark", mlp_params, )))
+        #processes.append(Process(target=language_independent, args=(['fralusopark', 'mdvr_kcl'], 'gita', 0.5, "Tested with Gita"       , mlp_params, )))
+        #processes.append(Process(target=language_independent, args=(['fralusopark', 'gita'], 'mdvr_kcl', 0.5, "Tested with MDVR KCL"   , mlp_params, )))
 
-        processes.append(Process(target=language_independent, args=(['gita', 'mdvr_kcl'], 'fralusopark', 0.5, "Tested with fralusopark", mlp_params, (200,200), )))
-        processes.append(Process(target=language_independent, args=(['fralusopark', 'mdvr_kcl'], 'gita', 0.5, "Tested with Gita"       , mlp_params, (200,200), )))
-        processes.append(Process(target=language_independent, args=(['fralusopark', 'gita'], 'mdvr_kcl', 0.5, "Tested with MDVR KCL"   , mlp_params, (200,200), )))
+        language_independent(['gita', 'mdvr_kcl'], 'fralusopark', 0.5, "Tested with fralusopark", mlp_params)
+        language_independent(['fralusopark', 'mdvr_kcl'], 'gita', 0.5, "Tested with Gita"       , mlp_params)
+        language_independent(['fralusopark', 'gita'], 'mdvr_kcl', 0.5, "Tested with MDVR KCL"   , mlp_params)
+        
+        #processes.append(Process(target=language_independent, args=(['gita', 'mdvr_kcl'], 'fralusopark', 0.5, "Tested with fralusopark", mlp_params, (200,200), )))
+        #processes.append(Process(target=language_independent, args=(['fralusopark', 'mdvr_kcl'], 'gita', 0.5, "Tested with Gita"       , mlp_params, (200,200), )))
+        #processes.append(Process(target=language_independent, args=(['fralusopark', 'gita'], 'mdvr_kcl', 0.5, "Tested with MDVR KCL"   , mlp_params, (200,200), )))
+        language_independent(['gita', 'mdvr_kcl'], 'fralusopark', 0.5, "Tested with fralusopark", mlp_params, (200,200))
+        language_independent(['fralusopark', 'mdvr_kcl'], 'gita', 0.5, "Tested with Gita"       , mlp_params, (200,200))
+        language_independent(['fralusopark', 'gita'], 'mdvr_kcl', 0.5, "Tested with MDVR KCL"   , mlp_params, (200,200))
 
-    for process in processes:
-        process.start()
+    #for process in processes:
+    #    process.start()
 
-    for process in processes:
-        process.join()
+    #for process in processes:
+    #    process.join()
 
     print("Language independent experiments: DONE!\n")
 
 def main():
-    mlp_params_list = generate_mlp_params_list(test=True)
+    mlp_params_list = generate_mlp_params_list()
     
+    print(mlp_params_list)
     targets = [perform_baseline, perform_semi_independent, perform_language_independent]
     experiments = []
 
