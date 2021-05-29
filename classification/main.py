@@ -18,7 +18,7 @@ def generate_mlp_params_list(test=False):
     result = []
     alphas = [0.0001, 0.001, 0.01]
     max_iters = [2000, 5000]
-    solvers = ['lbfgs', 'sgd', 'adam']
+    solvers = ['lbfgs', 'adam']
 
     if test:
         return [{'test_size': 0.1, 'alpha': 0.001, 'max_iter': 1, 'solver': 'adam', 'activation': 'tanh'}]
