@@ -2,12 +2,12 @@ Fralusopark Baseline report
 
 	Separation threshold: 0.5
 
-	Accuracy:             0.8571428571428571
+	Accuracy:             0.7142857142857143
 
-	Precision:            0.8
+	Precision:            0.75
 
-	Recall:               1.0
+	Recall:               0.75
 
 	Specificity:          0.6666666666666666
 
-	F1-Score:             0.888888888888889
+	F1-Score:             0.75

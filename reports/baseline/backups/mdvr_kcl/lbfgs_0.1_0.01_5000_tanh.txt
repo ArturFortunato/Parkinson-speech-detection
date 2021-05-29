@@ -1,0 +1,13 @@
+MDVR KCL baseline report 
+
+	Separation threshold: 0.5
+
+	Accuracy:             1.0
+
+	Precision:            0
+
+	Recall:               0
+
+	Specificity:          1.0
+
+	F1-Score:             0
