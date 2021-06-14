@@ -4,10 +4,10 @@ Gita Baseline report
 
 	Accuracy:             0.9
 
-	Precision:            1.0
+	Precision:            0.75
 
-	Recall:               0.8571428571428571
+	Recall:               1.0
 
-	Specificity:          1.0
+	Specificity:          0.8571428571428571
 
-	F1-Score:             0.923076923076923
+	F1-Score:             0.8571428571428571

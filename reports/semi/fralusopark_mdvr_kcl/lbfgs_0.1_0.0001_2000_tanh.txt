@@ -4,10 +4,10 @@ Trained with fralusopark and part MDVR_KCL report
 
 	Accuracy:             0.5
 
-	Precision:            0.6666666666666666
+	Precision:            1.0
 
-	Recall:               0.6666666666666666
+	Recall:               0.3333333333333333
 
-	Specificity:          0.0
+	Specificity:          1.0
 
-	F1-Score:             0.6666666666666666
+	F1-Score:             0.5
