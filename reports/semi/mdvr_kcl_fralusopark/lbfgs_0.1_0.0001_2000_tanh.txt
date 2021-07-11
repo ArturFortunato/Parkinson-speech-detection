@@ -1,0 +1,13 @@
+Trained with MDVR_KCL and part fralusopark report 
+
+	Separation threshold: 0.5
+
+	Accuracy:             0.42857142857142855
+
+	Precision:            0.4444444444444444
+
+	Recall:               0.5714285714285714
+
+	Specificity:          0.2857142857142857
+
+	F1-Score:             0.5

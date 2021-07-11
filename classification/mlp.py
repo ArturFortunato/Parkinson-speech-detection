@@ -5,36 +5,49 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 
 import pickle
+import pandas as pd
 
 from metrics import Metrics
 
-class MLP:
-    def __init__(self, hidden_layer_sizes, activation, alpha, max_iter, solver, dataset):
-        self.mlp = MLPClassifier(
-                hidden_layer_sizes=hidden_layer_sizes, 
-                activation=activation, 
-                alpha=alpha,
-                max_iter=max_iter,
-                solver=solver
-        )
-        self.activation = activation
-        self.alpha = alpha
-        self.solver = solver
-        self.dataset = dataset
+SUBSETS_PATH = "../../subsets"
 
-        if os.path.isfile('./pickles/classifier_{}.pkl'.format(self.__generate_sufix())):
-            with open('./pickles/classifier_{}.pkl'.format(self.__generate_sufix()), 'rb') as filename:
+class MLP:
+    def __init__(self, hidden_layer_sizes, mlp_params, dataset, experiment):
+        self.activation = mlp_params['activation']
+        self.alpha      = mlp_params['alpha']
+        self.solver     = mlp_params['solver']
+        self.max_iter   = mlp_params['max_iter'] 
+        self.experiment = experiment
+        self.dataset    = dataset
+
+        self.mlp = MLPClassifier(
+                hidden_layer_sizes = hidden_layer_sizes, 
+                activation         = self.activation, 
+                alpha              = self.alpha,
+                max_iter           = self.max_iter,
+                solver             = self.solver
+        )
+
+        if os.path.isfile('./pickles/{}/{}/{}.pkl'.format(self.experiment, self.dataset, self.generate_suffix())):
+            with open('./pickles/{}/{}/{}.pkl'.format(self.experiment, self.dataset, self.generate_suffix()), 'rb') as filename:
                 self.trained = pickle.load(filename)
         else:
             self.trained = None
 
-    # Returns x_train, x_test, y_train, y_test
-    # Deprecated
-    def split_train_test_old(self, x, y, test_size=0.1):
-        return train_test_split(x, y, stratify=y, random_state=1, test_size=test_size)
+    @staticmethod
+    def save_csv(csv, path):
+        csv.to_csv(path, sep=";", index=False)
 
-    # Returns x_train, x_test, y_train, y_test
     def split_train_test(self, csv, test_size=0.1):
+        train_file = "{}/{}/{}/{}_train.csv".format(SUBSETS_PATH, self.experiment, self.dataset, self.generate_suffix())
+        test_file  = "{}/{}/{}/{}_test.csv".format(SUBSETS_PATH, self.experiment, self.dataset, self.generate_suffix())
+
+        if os.path.isfile(train_file) and os.path.isfile(test_file):
+            train = pd.read_csv(train_file, sep=";")
+            test= pd.read_csv(test_file, sep=";")
+
+            return train, test
+        
         participants = set(csv["name"])
         test_subjects  = random.sample(participants, round(test_size * len(participants)))
         train_subjects = [participant for participant in participants if participant not in test_subjects]
@@ -42,10 +55,13 @@ class MLP:
         train = csv.loc[csv['name'].isin(train_subjects)]
         test  = csv.loc[csv['name'].isin(test_subjects )]
 
+        MLP.save_csv(train, "{}/{}/{}/{}_train.csv".format(SUBSETS_PATH, self.experiment, self.dataset, self.generate_suffix()))
+        MLP.save_csv(test , "{}/{}/{}/{}_test.csv".format(SUBSETS_PATH, self.experiment, self.dataset, self.generate_suffix()))
+
         return train, test
 
-    def __generate_sufix(self):
-        return "{}_{}_{}_{}".format(self.activation, self.solver, self.activation, self.dataset)
+    def generate_suffix(self):
+        return "{}_{}_{}_{}".format(self.solver, self.alpha, self.max_iter, self.activation )
 
     def fit(self, x_train, y_train):
         if self.trained is not None:
@@ -53,7 +69,7 @@ class MLP:
 
         self.trained = self.mlp.fit(x_train, y_train)
 
-        with open('./pickles/classifier_{}.pkl'.format(self.__generate_sufix()), 'wb') as filename:
+        with open('./pickles/{}/{}/{}.pkl'.format(self.experiment, self.dataset, self.generate_suffix()), 'wb') as filename:
             pickle.dump(self.mlp, filename)
 
     def __predict_prob(self, x_test):
@@ -84,7 +100,7 @@ class MLP:
 
         metrics = Metrics(predicted, labels)
     
-        f = open(output_file, "a")
+        f = open(output_file, "w")
         f.write(metrics.generate_report(report_name, threshold))
         f.close()
 

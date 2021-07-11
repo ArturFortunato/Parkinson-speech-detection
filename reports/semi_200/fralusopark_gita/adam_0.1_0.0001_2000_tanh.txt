@@ -1,0 +1,13 @@
+Trained with fralusopark and part Gita report 
+
+	Separation threshold: 0.5
+
+	Accuracy:             0.3
+
+	Precision:            0.2222222222222222
+
+	Recall:               1.0
+
+	Specificity:          0.125
+
+	F1-Score:             0.3636363636363636

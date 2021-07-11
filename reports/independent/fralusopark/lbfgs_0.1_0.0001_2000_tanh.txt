@@ -1,13 +1,13 @@
-Trained with fralusopark report 
+Tested with fralusopark report 
 
 	Separation threshold: 0.5
 
-	Accuracy:             0.5109489051094891
+	Accuracy:             0.55
 
-	Precision:            0.49206349206349204
+	Precision:            0.5769230769230769
 
-	Recall:               0.4696969696969697
+	Recall:               0.6
 
-	Specificity:          0.5492957746478874
+	Specificity:          0.49230769230769234
 
-	F1-Score:             0.48062015503875966
+	F1-Score:             0.5882352941176471
