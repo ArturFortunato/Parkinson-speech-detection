@@ -100,7 +100,7 @@ class MLP:
 
         metrics = Metrics(predicted, labels)
     
-        f = open(output_file, "a")
+        f = open(output_file, "w")
         f.write(metrics.generate_report(report_name, threshold))
         f.close()
 

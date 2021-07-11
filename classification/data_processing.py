@@ -16,7 +16,6 @@ class DataProcessing():
         csv = pd.read_csv(input_csv, sep=";")
         for column in csv.columns:
             if column in columns_to_ignore:
-                print("Ignoring column {}".format(column))
                 continue
             csv[column] = stats.zscore(csv[column])
         csv.to_csv(output_path, sep=";", index=False)

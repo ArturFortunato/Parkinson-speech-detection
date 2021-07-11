@@ -1,4 +1,5 @@
 import sys
+import time
 import os
 
 import pandas as pd
@@ -19,8 +20,8 @@ def get_report_path(experiment, dataset, test_size, alpha, max_iter, act_funcion
 def generate_mlp_params_list(test=False):
     result = []
     alphas = [0.0001, 0.001, 0.01]
-    max_iters = [2000, 5000]
-    solvers = ['lbfgs', 'adam']
+    max_iters = [5000, 2000]
+    solvers = ['adam', 'lbfgs']
 
     if test:
         return [{'test_size': 0.1, 'alpha': 0.001, 'max_iter': 1, 'solver': 'adam', 'activation': 'tanh'}]
@@ -49,15 +50,16 @@ def fit_and_score(classifier, train, test, classification_threshold, report_path
 
 def report_already_exists(report_path):
     if os.path.isfile(report_path):
-        print("Past experiment results found at {}, ignoring...".format(report_path))
         return True
     
     print("No report found at {}, performing experiment...".format(report_path))
+
+    # Create a file for other processes to know the experiment is already running
+    os.system("touch {}".format(report_path))
+
     return False
 
 def language_dependent(dataset, classification_threshold, report_name, mlp_params, hidden_layer_sizes=None):
-    print("Starting language dependent for {}".format(mlp_params))
-
     csv_file = '{}/{}/{}_complete.csv'.format(FEATURES, dataset, dataset)
     experiment = "baseline" if hidden_layer_sizes == None else "baseline_200"
 
@@ -81,8 +83,6 @@ def language_dependent(dataset, classification_threshold, report_name, mlp_param
 
 
 def semi_independent(full_dataset, semi_dataset, classification_threshold, report_name, mlp_params, hidden_layer_sizes=None):
-    print("Starting semi language dependent for {}".format(mlp_params))
-
     dataset_name = "{}_{}".format(full_dataset, semi_dataset)
 
     full_csv_file = '{}/{}/{}_complete.csv'.format(FEATURES, full_dataset, full_dataset)
@@ -111,8 +111,6 @@ def semi_independent(full_dataset, semi_dataset, classification_threshold, repor
     fit_and_score(mlp, train_csv, test_csv, classification_threshold, report_path, report_name)
 
 def language_independent(train_datasets, test_dataset, classification_threshold, report_name, mlp_params, hidden_layer_sizes=None):
-    print("Starting language dependent for {}".format(mlp_params))
-
     test_csv_file = '{}/{}/{}_complete.csv'.format(FEATURES, test_dataset, test_dataset)
     experiment = "independent" if hidden_layer_sizes == None else "independent_200"
 
@@ -137,26 +135,30 @@ def language_independent(train_datasets, test_dataset, classification_threshold,
     fit_and_score(mlp, train_csv, test_csv, classification_threshold, report_path, report_name)
 
 def perform_baseline(mlp_params_list):
-    
     print("Language dependent experiments...\n")
     
     for mlp_params in mlp_params_list:
-        print("BASELINE new params@ {}".format(datetime.now()))
         language_dependent('fralusopark', 0.5, "Fralusopark Baseline", mlp_params)
         language_dependent('gita'       , 0.5, "Gita Baseline"       , mlp_params)
         language_dependent('mdvr_kcl'   , 0.5, "MDVR KCL Baseline"   , mlp_params)
 
+    print("Language dependent experiments: DONE!\n")
+
+def perform_baseline_200(mlp_params_list):
+
+    print("Language dependent 200 experiments...\n")
+
+    for mlp_params in mlp_params_list:
         language_dependent('fralusopark', 0.5, "Fralusopark Baseline", mlp_params, (200,200))
         language_dependent('gita'       , 0.5, "Gita Baseline"       , mlp_params, (200,200))
         language_dependent('mdvr_kcl'   , 0.5, "MDVR KCL Baseline"   , mlp_params, (200,200))
 
-    print("Language dependent experiments: DONE!\n")
+    print("Language dependent 200 experiments: DONE!\n")
 
 def perform_semi_independent(mlp_params_list):
     print("Semi independent experiments...\n")
 
     for mlp_params in mlp_params_list:
-        print("SEMI new params@ {}".format(datetime.now()))
         semi_independent('fralusopark', 'gita'    , 0.5, "Trained with fralusopark and part Gita"    , mlp_params)
         semi_independent('fralusopark', 'mdvr_kcl', 0.5, "Trained with fralusopark and part MDVR_KCL", mlp_params)
         semi_independent('gita', 'fralusopark'    , 0.5, "Trained with gita and part fralusopark"    , mlp_params)
@@ -164,6 +166,12 @@ def perform_semi_independent(mlp_params_list):
         semi_independent('mdvr_kcl', 'fralusopark', 0.5, "Trained with MDVR_KCL and part fralusopark", mlp_params)
         semi_independent('mdvr_kcl', 'gita'       , 0.5, "Trained with MDVR_KCL and part gita"       , mlp_params)
 
+    print("Language semi dependent experiments: DONE!\n")
+
+def perform_semi_independent_200(mlp_params_list):
+    print("Semi independent 200 experiments...\n")
+
+    for mlp_params in mlp_params_list:
         semi_independent('fralusopark', 'gita'    , 0.5, "Trained with fralusopark and part Gita"    , mlp_params, (200,200))
         semi_independent('fralusopark', 'mdvr_kcl', 0.5, "Trained with fralusopark and part MDVR_KCL", mlp_params, (200,200))
         semi_independent('gita', 'fralusopark'    , 0.5, "Trained with gita and part fralusopark"    , mlp_params, (200,200))
@@ -171,33 +179,40 @@ def perform_semi_independent(mlp_params_list):
         semi_independent('mdvr_kcl', 'fralusopark', 0.5, "Trained with MDVR_KCL and part fralusopark", mlp_params, (200,200))
         semi_independent('mdvr_kcl', 'gita'       , 0.5, "Trained with MDVR_KCL and part gita"       , mlp_params, (200,200))
 
-    print("Language semi dependent experiments: DONE!\n")
+    print("Language semi dependent 200 experiments: DONE!\n")
 
 def perform_language_independent(mlp_params_list):
     
     print("Language independent experiments...\n")
     
     for mlp_params in mlp_params_list:
-        print("INDEPENDENT new params@ {}".format(datetime.now()))
         language_independent(['gita', 'mdvr_kcl'], 'fralusopark', 0.5, "Tested with fralusopark", mlp_params)
         language_independent(['fralusopark', 'mdvr_kcl'], 'gita', 0.5, "Tested with Gita"       , mlp_params)
         language_independent(['fralusopark', 'gita'], 'mdvr_kcl', 0.5, "Tested with MDVR KCL"   , mlp_params)
         
+    print("Language independent experiments: DONE!\n")
+
+def perform_language_independent_200(mlp_params_list):
+    
+    print("Language independent 200 experiments...\n")
+    
+    for mlp_params in mlp_params_list:
         language_independent(['gita', 'mdvr_kcl'], 'fralusopark', 0.5, "Tested with fralusopark", mlp_params, (200,200))
         language_independent(['fralusopark', 'mdvr_kcl'], 'gita', 0.5, "Tested with Gita"       , mlp_params, (200,200))
         language_independent(['fralusopark', 'gita'], 'mdvr_kcl', 0.5, "Tested with MDVR KCL"   , mlp_params, (200,200))
 
-    print("Language independent experiments: DONE!\n")
+    print("Language independent 200 experiments: DONE!\n")
 
 def main():
     mlp_params_list = generate_mlp_params_list()
     
     print(mlp_params_list)
-    targets = [perform_baseline, perform_semi_independent, perform_language_independent]
+    targets = [perform_semi_independent_200, perform_baseline, perform_semi_independent_200, perform_baseline, perform_semi_independent_200, perform_baseline, perform_semi_independent_200, perform_baseline, perform_semi_independent_200, perform_baseline, perform_semi_independent_200]
     experiments = []
 
     for target in targets:
         experiments.append(Process(target=target, args=(mlp_params_list,)))
+        time.sleep(1)
 
     for experiment in experiments:
         experiment.start()
