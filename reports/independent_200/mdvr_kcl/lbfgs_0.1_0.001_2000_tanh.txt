@@ -2,12 +2,12 @@ Tested with MDVR KCL report
 
 	Separation threshold: 0.5
 
-	Accuracy:             0.43243243243243246
+	Accuracy:             0.4864864864864865
 
-	Precision:            0.43243243243243246
+	Precision:            0.45714285714285713
 
 	Recall:               1.0
 
-	Specificity:          0.0
+	Specificity:          0.09523809523809523
 
-	F1-Score:             0.6037735849056604
+	F1-Score:             0.6274509803921569

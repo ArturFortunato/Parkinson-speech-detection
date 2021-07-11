@@ -4,10 +4,10 @@ Tested with MDVR KCL report
 
 	Accuracy:             0.43243243243243246
 
-	Precision:            0.43243243243243246
+	Precision:            0.42857142857142855
 
-	Recall:               1.0
+	Recall:               0.9375
 
-	Specificity:          0.0
+	Specificity:          0.047619047619047616
 
-	F1-Score:             0.6037735849056604
+	F1-Score:             0.588235294117647

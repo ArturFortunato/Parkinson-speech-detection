@@ -1,0 +1,13 @@
+Trained with MDVR_KCL and part gita report 
+
+	Separation threshold: 0.5
+
+	Accuracy:             0.5
+
+	Precision:            0.3333333333333333
+
+	Recall:               0.6666666666666666
+
+	Specificity:          0.42857142857142855
+
+	F1-Score:             0.4444444444444444

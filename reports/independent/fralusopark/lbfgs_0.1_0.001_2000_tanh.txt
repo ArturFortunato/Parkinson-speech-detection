@@ -4,10 +4,10 @@ Tested with fralusopark report
 
 	Accuracy:             0.5857142857142857
 
-	Precision:            0.6075949367088608
+	Precision:            0.6049382716049383
 
-	Recall:               0.64
+	Recall:               0.6533333333333333
 
-	Specificity:          0.5230769230769231
+	Specificity:          0.5076923076923077
 
-	F1-Score:             0.6233766233766234
+	F1-Score:             0.6282051282051282

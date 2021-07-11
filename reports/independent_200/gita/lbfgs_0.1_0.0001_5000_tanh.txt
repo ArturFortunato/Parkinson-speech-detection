@@ -4,10 +4,10 @@ Tested with Gita report
 
 	Accuracy:             0.62
 
-	Precision:            0.5833333333333334
+	Precision:            0.5789473684210527
 
-	Recall:               0.84
+	Recall:               0.88
 
-	Specificity:          0.4
+	Specificity:          0.36
 
-	F1-Score:             0.6885245901639344
+	F1-Score:             0.6984126984126985
