@@ -1,0 +1,6 @@
+dataset,solver,alpha,iterations,accuracy,precision,recall,specificity,fscore
+gita,lbfgs,0.01,5000,0.66,0.614,0.86,0.46,0.717
+gita,lbfgs,0.0001,2000,0.63,0.589,0.86,0.4,0.699
+gita,lbfgs,0.0001,5000,0.62,0.579,0.88,0.36,0.698
+gita,lbfgs,0.001,2000,0.6,0.571,0.8,0.4,0.667
+fralusopark,lbfgs,0.0001,5000,0.586,0.586,0.773,0.369,0.667

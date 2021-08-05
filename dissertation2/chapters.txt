@@ -1,0 +1,35 @@
+1 - Introduction
+
+2 - Parkinson's Disease
+   2.1 - Symptoms
+   2.2 - Speech impairments
+   2.3 - Diagnosis
+
+3 - Computational diagnosis
+   3.1 - Speech production tasks
+   3.2 - Feature selection
+   3.3 - Classification models
+   3.4 - Universality
+   3.5 - Explainability and Interpretability
+
+4 - Explainability models
+   4.1 - Explanation (definição)
+   4.2 - Scope
+      4.2.1 - Local explanations' models
+      4.2.2 - Global explanations' models
+      4.2.3 - Mixed models
+
+5 - Corpus description
+
+6 - Experimental setup
+   6.1 - Data processing
+   6.2 - Feature selection
+   6.3 - Classification experiments
+   6.4 - Explanations
+   6.5 - Models evaluation
+
+7 - Discussion of results
+   7.1 - Classification experiments
+   7.2 - Explanations
+
+8 - Conclusions

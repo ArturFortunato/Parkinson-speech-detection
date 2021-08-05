@@ -1,0 +1,111 @@
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+  %
+%%%%%                       CHAPTER
+ %%%
+  %
+
+\chapter{Results and discussion}
+%\addcontentsline{lof}{chapter}{\thechapter\quad Nihil Molestiae}
+%\addcontentsline{lot}{chapter}{\thechapter\quad Nihil Molestiae}
+\label{ch:omnisvoluptas}
+
+%\begin{quotation}
+%  {\small\it Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
+
+%{\small\it -- Cerico}
+%\end{quotation}
+
+
+\section{Classification Experiments}
+
+For this work, three types of experiments have been conducted, each using two different architectures, as described in the previous chapter. Results are shown in tables \textbf{5.1} and \textbf{5.2} (for the baseline experiments), \textbf{5.3} and \textbf{5.4} (for the semi-independent experiments), and \textbf{5.1} and \textbf{5.6} (for the language independent experiments). These tables show the top five MLP parameter configurations for each of the experiments. Tables \textbf{5.1}, \textbf{5.3} and \textbf{5.5} present the results for architecture 1, whereas tables \textbf{5.2}, \textbf{5.4} and \textbf{5.6} communicate the results for architecture 2.
+
+\subsection{Baseline experiments}
+
+Tables \textbf{5.1} and \textbf{5.2} show that both architecture 1 and 2 of the \gls{mlp} yielded an accuracy of 90\% with the best parameterization. \\
+   - Avaliar cada up dos parametros\\
+All the best models configurations (for both architecture 1 and 2) achieved higher scores using the GITA dataset. There are multiple reasons that can justify this result. For example, the audios from the MDVR\_KCL dataset were recorded using phone calls. The distribution between \gls{mlp} solvers (adam and lbfgs) on the top 5 model configurations for architecture 1 is well balanced, whereas 4 out of the 5 (or 80\%) of the best model configurations on architecture 2 use the adam solver.\\
+   - Avaliar as outras métricas \\
+Architecture 1 yielded precision values between 0.75 and 1, meaning that 75\% to 100\% of the patients labeled as \gls{pd} by the models were correctly classified. Architecture 2 produced slightly worst results regarding precision, achieving values between 67\% and 100\%. Recall values (which evaluates how the percentage of \gls{pd} patients were correctly classified) were similar between the two architectures Architecture 1 produced recall values between 71\% and 100\%, whereas architecture 2 achieved values between 67\% and 100\%. Using the specificity metric (which allows to evaluate the percentage of \gls{hc} patients that were correctly classified) to compare the two architectures, architecture 2 outperformed architecture 1 by a small margin, producing a range of values between 75\% and 100\%, whereas architecture 1 produced a range of values between 80\% and 100\%. Finally, comparing both architectures using the F1-score metric, it is possible to see a significantly higher performance with architecture 2, which produced a maximum of almost 91\%, compared with architecture 1 that returned a maximum of 85\%.
+We can conclude that there are no significant differences between the two architectures.
+
+\textbf{Semi independent} \\
+ - Obtivemos Z com um modelo semi independente \\
+ - A performance baixou, manteve-se/não se manteve ao nível do state-of-the art \\
+  - Avaliar as outras métricas \\
+  - Resultados semelhantes à baseline provam que podemos retreinar um modelo com um novo pequeno dataset e o modelo fica preparado para uma classificação noutro idioma \\
+  \\
+ \textbf{Independent} \\
+ - Com o modelo 100\% independente obtivemos XXX de performance \\
+ - A performance atingida foi semelhante à do estado da arte \\
+ - Avaliar as outras métricas \\
+
+- Avaliar correlação dos parametros da rede com os resultados
+Figures \textbf{1} and \textbf{2} compare the different values of each parameter of the \gls{mlp} with the accuracy yielded by the model.
+
+ - Overall, o modelo X/Y apresentou uma performance superior ao outro \\
+
+ - Overall de quantos doentes fomos capazes de dignosticar \\
+ 
+\begin{table}
+	\begin{tabular}{lcccccccc}
+		\bfseries dataset & \bfseries solver & \bfseries alpha & \bfseries iterations & \bfseries accuracy  & \bfseries precision & \bfseries recall & \bfseries specificity & \bfseries f1-score
+		\csvreader[head to column names]{csvs/baseline_top.csv}{}
+		{\\\hline\dataset & \solver & \alpha & \iterations & \accuracy  & \precision & \recall & \specificity & \fscore}
+	\end{tabular}
+	\caption{\label{tab:table-name}Baseline experiment results using architecture 1.}
+\end{table}
+
+\begin{table}
+	\begin{tabular}{lcccccccc}
+		\bfseries dataset & \bfseries solver & \bfseries alpha & \bfseries iterations & \bfseries accuracy  & \bfseries precision & \bfseries recall & \bfseries specificity & \bfseries f1-score
+		\csvreader[head to column names]{csvs/baseline_200_top.csv}{}
+		{\\\hline\dataset & \solver & \alpha & \iterations & \accuracy  & \precision & \recall & \specificity & \fscore}
+	\end{tabular}
+	\caption{\label{tab:table-name}Baseline experiment result using architecture 2.}
+\end{table}
+
+\begin{table}
+	\begin{tabular}{lcccccccc}
+		\bfseries dataset & \bfseries solver & \bfseries alpha & \bfseries iterations & \bfseries accuracy  & \bfseries precision & \bfseries recall & \bfseries specificity & \bfseries f1-score
+		\csvreader[head to column names]{csvs/semi_top.csv}{}
+		{\\\hline\dataset & \solver & \alpha & \iterations & \accuracy  & \precision & \recall & \specificity & \fscore}
+	\end{tabular}
+	\caption{\label{tab:table-name}Semi independent experiment result using architecture 1.}
+\end{table}
+
+\begin{table}
+	\begin{tabular}{lcccccccc}
+		\bfseries dataset & \bfseries solver & \bfseries alpha & \bfseries iterations & \bfseries accuracy  & \bfseries precision & \bfseries recall & \bfseries specificity & \bfseries f1-score
+		\csvreader[head to column names]{csvs/semi_200_top.csv}{}
+		{\\\hline\dataset & \solver & \alpha & \iterations & \accuracy  & \precision & \recall & \specificity & \fscore}
+	\end{tabular}
+	\caption{\label{tab:table-name}Semi independent experiment result using architecture 2.}
+\end{table}
+
+\begin{table}
+	\begin{tabular}{lcccccccc}
+		\bfseries dataset & \bfseries solver & \bfseries alpha & \bfseries iterations & \bfseries accuracy  & \bfseries precision & \bfseries recall & \bfseries specificity & \bfseries f1-score
+		\csvreader[head to column names]{csvs/independent_top.csv}{}
+		{\\\hline\dataset & \solver & \alpha & \iterations & \accuracy  & \precision & \recall & \specificity & \fscore}
+	\end{tabular}
+	\caption{\label{tab:table-name}Independent experiment result using architecture 1.}
+\end{table}
+
+\begin{table}
+	\begin{tabular}{lcccccccc}
+		\bfseries dataset & \bfseries solver & \bfseries alpha & \bfseries iterations & \bfseries accuracy  & \bfseries precision & \bfseries recall & \bfseries specificity & \bfseries f1-score
+		\csvreader[head to column names]{csvs/independent_200_top.csv}{}
+		{\\\hline\dataset & \solver & \alpha & \iterations & \accuracy  & \precision & \recall & \specificity & \fscore}
+	\end{tabular}
+	\caption{\label{tab:table-name}Independent experiment result using architecture 2.}
+\end{table}
+
+\section{Language Independency}
+
+ - 
+
+\section{Explanations}
+
+ - 
+

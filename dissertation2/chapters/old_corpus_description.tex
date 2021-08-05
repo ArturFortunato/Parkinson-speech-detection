@@ -1,0 +1,48 @@
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+  %
+%%%%%                       CHAPTER
+ %%%
+  %
+
+\chapter{Corpus description}
+%\addcontentsline{lof}{chapter}{\thechapter\quad Nihil Molestiae}
+%\addcontentsline{lot}{chapter}{\thechapter\quad Nihil Molestiae}
+\label{ch:nihil}
+
+\begin{quotation}
+  {\small\it Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
+
+{\small\it -- Cerico}
+\end{quotation}
+
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                        FIRST SECTION
+ %%%
+  %
+
+As described in section 3.3, most datasets available for this task are very small, thus being unfitted to train neural models \cite{underfitting_small_datasets}. Nevertheless, a small number of common speech production tasks are contained by the datasets. Thus, the differences between some of these datasets are only the model of the microphone used for recording and the language of the test subjects. Hence, some works have combined several datasets \cite{parkinson_braga}, \cite{parkinson_acoustic_despotovic}, \cite{parkinson_phonemic_relevance}, \cite{x_vector_parkinson} to use different datasets for training an testing, or to mix instances from different datasets in the training and/or testing sets \cite{parkinson_three_languages}, all proving to be accurate in the \gls{pd} classification task.
+
+In this study, we will use 3 datasets for training and testing the model -- FraLusoPark \cite{fralusopark}, GITA \cite{GITA}, and Mobile Device Voice Recordings at King's College London (MDVR\_KCL) \cite{MDVR}.
+
+The FraLusoPark dataset is composed by speech from 120 patients, half of which are native French speakers and the other half are European Portuguese speakers. The dataset also contains 120 healthy participants as a control group (with the same distribution between French and European Portuguese speakers as the \gls{pd} participants). Each group of \gls{pd} patients is divided into three subgroups, based on the number of years since diagnostic: 20 early stage patients (who have been diagnosed less than 3 years before, and present no motor fluctuations), 20 medium stage patients (with a diagnostic made 4 to 9 years before the study, or less than 3 years, and experiencing motor fluctuations), and 20 advanced stage patients, diagnosed over 10 years ago. The patients are recorded twice for every speech production task, BEFORE (at least 12 hours after medication) and AFTER medication (at least 1 hour after medication). FraLusoPark participants were asked to perform a set of speech production tasks: sustain the vowel\textit{\/a\/} at a steady pitch, maximum phonation time of the vowel \textit{\/a\/} on a single breath, \gls{ddk} (repetition of the pseudo-word \textit{\/pa-ta-ka\/} for a fast rate during 30 seconds), reading aloud 10 words and 10 sentences, formed by adapting part of section V.2 of the Frenchay Dysarthria Assessment of Intelligibility (FDA-2), reading of a short text (adapted to French and European Portuguese), storytelling by guided visual stimuli, reading a collection of sentences with specific language-dependent prosodic properties and free conversation for 3 minutes. In the scope of this study, we will only consider the Portuguese speakers of this dataset.
+
+The GITA dataset contains recordings of 50 \gls{pd} patients and 50 \gls{hc}, evenly distributed between genders. For the \gls{pd} group, the average age is 62.2 $\pm$ 11.2 years for male participants and 60.1 $\pm$ 7.8 for female participants. Considering the \gls{hc} group, the average age is 61.2 $\pm$ 11.3 years for male participants and 60.7 $\pm$ 7.7 for female participants. Multiple stages of disease progression are considered in this study (time since diagnostic ranges between 0.4 - 20 years for male patients and 1 - 41 years for female patients). All the participants are Colombian Spanish native speakers. Recordings of the \gls{pd} patients were made no more than 3 hours after the morning medication. Different speech production tasks were performed to examine phonation, articulation and prosody. To analyze phonation, participants were asked to sustain the five Spanish vowels and to repeat the same five vowels, but alternating the tone between low and high. Regarding articulation, a \gls{ddk} evaluation was performed with the pseudo-words \textit{/pa-ta-ka/}, \textit{/pa-ka-ta/} and \textit{/pe-ta-ka/}. Finally, for the evaluation of prosody, both \gls{pd} patients and \gls{hc} were asked to repeat a series of sentences with different levels of complexity, to read a dialogue between a doctor and a patient (this text contained the complete set of Spanish sounds), to read sentences with a strong emphasis on a set of words and freely speak about their daily routine. 
+
+Lastly, the MDVR\_KCL dataset was recorded in the context of phone calls, but recorded in an acoustically controlled environment. The dataset contains 16 participants with \gls{pd} (11 male and 4 female) and 21 \gls{hc} (3 male and 18 female), totaling 37 English speakers. The \gls{pd} group contains patients from all the stages of the disease (early, mid and late stages) according to the  Hoehn and Yahr scale \textbf{hoehn\_yahr}. The participants were asked to read a text (``The north wind and the sun'' or ``Tech. Engin. Computer applications in geography snippet''). Additionally, the text executor started a spontaneous conversation with the participant about various topics. 
+
+To homogenize the datasets, only the text-reading tasks will be considered. This yields a total of 131 \gls{hc} and 125 \gls{pd} speakers of European Portuguese, Colombian Spanish, and English. 
+
+
+  %
+ %%%
+%%%%%                           THE END
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "tese"
+%%% End: 

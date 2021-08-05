@@ -1,0 +1,10 @@
+This is makeindex, version 2.15 [TeX Live 2017] (kpathsea + Thai support).
+Scanning style file ./nomenclature.ist.......done (7 attributes redefined, 0 ignored).
+Scanning input file document.nlo....
+!! Input index error (file = document.nlo, line = 22):
+   -- Extra `|' at position 502 of first argument.
+done (28 entries accepted, 1 rejected).
+Sorting entries....done (117 comparisons).
+Generating output file document.nls....done (108 lines written, 0 warnings).
+Output written in document.nls.
+Transcript written in document.ilg.

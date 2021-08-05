@@ -1,0 +1,41 @@
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+  %
+%%%%%                         CHAPTER
+ %%%
+  %
+
+\chapter{Introduction}
+%\addcontentsline{lof}{chapter}{\thechapter\quad Lorem Ipsum}
+%\addcontentsline{lot}{chapter}{\thechapter\quad Lorem Ipsum}
+\label{ch:lorem}
+
+%\begin{quotation}
+%  {\small\it Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
+
+%{\small\it -- Cerico}
+%\end{quotation}
+
+
+Neurodegenerative diseases are the most debilitating disorders that ail human kind, and the fourth leading cause of death. Neurodegenerative diseases affect the patient's thinking, movement, cognitive behavior, and memory, causing impairments and disabilities. These diseases include serious disorders like \gls{ad} and \gls{pd} \cite{parkinson_incidence}.
+
+\gls{pd} is the second most common neurodegenerative disease. It was estimated that 1\% of people over 60 years old are affected with \gls{pd} \cite{epidemiology_pd}. In 2015, more than 6 million people suffered from this disease worldwide. This value is projected to double by 2040, mainly driven by the increase of life expectancy \cite{parkinson_worldwide}. One of the consequences of \gls{pd} is the development of dementia. Almost half the \gls{pd} patients develop dementia in the first 10 years after diagnosis \cite{parkinson_10_years}, reaching over 80\% after 20 years \cite{parkinson_20_years}.
+
+Early detection of \gls{pd} can be critical for the life quality of the patient. Hence, the earlier the diagnostic is made, the earlier the treatment can begin, thus starting to control the evolution of the disease and improving the comfort of the patient. Furthermore, the majority of the treatment costs occur during the later stages of the disease, reinforcing the importance of early diagnosis \cite{parkinson_early}.
+
+Over the last years, medicine and health care have been a prime focus for \gls{ai} and \gls{ml}. Numerous models have been tested to these areas, demonstrating impressive results in early detection of many diseases, among other tasks. However, the majority of these experiments focuses only on maximizing accuracy performance. Hence, a large problem remains unsolved on the real application of the previously referred models, as explainability has yet to become a focus for any of these works \cite{LIME_explainability}.
+Replacing medical decision‐making with non-explainable, black-box \gls{ml} models, can be contravening with the profound ethical responsibilities of clinicians \cite{black_box_model_problem}. Consequently, the lack of explainability and interpretability of \gls{ml} models used in these areas can seriously limit their chances of adoption in real practice \cite{interpretability_importance}. Therefore, the application of explainable models will increase the possibility for medical professionals to understand a model's output, thus increasing the acceptance of \gls{ai} systems in such tasks \cite{explainable_ai_systems}.
+
+This work aims to improve our ability to automatically and more accurately diagnose \gls{pd}, by building a classifier that differentiates \gls{pd} patients from healthy people. This work aims, not only to allow \gls{pd} to be detected earlier, but also to increase the degree of confidence of the diagnostic, leveraging the accuracy of the classifier close to 100\%. Additionally, by using an explainability model, human-understandable explanations for the given classification (Parkinson or Healthy) of each patient will be generated to foster the use of \gls{ml} models to support \gls{pd}'s diagnosis.
+
+The document is structured as follows. Section 2 describes \gls{pd} and state-of-the-art methodologies for \gls{pd} computational diagnosis. Next, section 3 dives into the concept of \gls{xai}, and reviews multiple approaches developed in this area. Section 4 describes the experimental setup of this work, followed by section 5, which reports the results and their discussion. Finally, Section 7 presents the conclusions and future work.
+
+  %
+ %%%
+%%%%%                        THE END
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "tese"
+%%% End: 

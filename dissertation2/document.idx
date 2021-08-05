@@ -1,0 +1,93 @@
+\indexentry {analisador morfológico!Amorfo|hyperindexformat{\see {Amorfo}}}{1}
+\indexentry {Data Category Registry|hyperindexformat{\see {DCR}}}{1}
+\indexentry {Data Category Selection|hyperindexformat{\see {DCS}}}{1}
+\indexentry {recomendações EAGLES|hyperindexformat{\see {EAGLES}}}{1}
+\indexentry {entidade morfológica|hyperindexformat{\see {unidade morfológica}}}{1}
+\indexentry {entidade sintáctica|hyperindexformat{\see {unidade sintáctica}}}{1}
+\indexentry {entidade semântica|hyperindexformat{\see {unidade semântica}}}{1}
+\indexentry {Multext!GLOSIX|hyperindexformat{\see {GLOSIX}}}{1}
+\indexentry {General Lingware Open System Environment|hyperindexformat{\see {GLOSIX}}}{1}
+\indexentry {arquitectura!HYLITE+ (sistema)|hyperpage}{1}
+\indexentry {sistema!HYLITE+|hyperpage}{1}
+\indexentry {tempo real|hyperindexformat{\see {sistemas de tempo real}}}{1}
+\indexentry {sistemas de tempo real!HYLITE+|hyperpage}{1}
+\indexentry {ISO!TC37|hyperindexformat{\see {TC37}}}{1}
+\indexentry {analisador morfológico!ispell|hyperindexformat{\see {ispell}}}{1}
+\indexentry {international ispell|hyperindexformat{\see {ispell}}}{1}
+\indexentry {Java Database Connectivity|hyperindexformat{\see {JDBC}}}{1}
+\indexentry {analisador morfológico!JSpell|hyperindexformat{\see {JSpell}}}{1}
+\indexentry {Lightweight Directory Access Protocol|hyperindexformat{\see {LDAP}}}{1}
+\indexentry {Linguistic Data Consortium|hyperindexformat{\see {LDC}}}{1}
+\indexentry {GNU m4|hyperindexformat{\see {m4}}}{1}
+\indexentry {Multilingual ISLE Lexical Entry|hyperindexformat{\see {MILE}}}{1}
+\indexentry {gerador morfológico|hyperindexformat{\see {monge}}}{1}
+\indexentry {realização de superfície!morfológica|hyperindexformat{\see {monge}}}{1}
+\indexentry {projecto!Multext|hyperindexformat{\see {Multext}}}{1}
+\indexentry {programação literária!noweb|hyperindexformat{\see {noweb}}}{1}
+\indexentry {Open Database Connectivity|hyperindexformat{\see {ODBC}}}{1}
+\indexentry {paradigma de flexão!fonético|hyperindexformat{\see {forma fonética}}}{1}
+\indexentry {paradigma de flexão!gráfico|hyperindexformat{\see {forma gráfica}}}{1}
+\indexentry {projecto!PAROLE|hyperindexformat{\see {PAROLE}}}{1}
+\indexentry {LE-PAROLE|hyperindexformat{\see {PAROLE}}}{1}
+\indexentry {sistema!PEBA-II|hyperindexformat{\see {PEBA-II}}}{1}
+\indexentry {modos de interacção!monólogo!PEBA-II (sistema)|hyperindexformat{\see {PEBA-II}}}{1}
+\indexentry {modelos de geração!geração profunda!PEBA-II (sistema)|hyperindexformat{\see {PEBA-II}}}{1}
+\indexentry {perfil do utilizador|hyperindexformat{\see {modelo do utilizador}}}{1}
+\indexentry {preferências do utilizador|hyperindexformat{\see {modelo do utilizador}}}{1}
+\indexentry {sistema!PLANDoc|hyperindexformat{\see {PLANDoc}}}{1}
+\indexentry {modelos de geração!geração profunda!PLANDoc (sistema)|hyperindexformat{\see {PLANDoc}}}{1}
+\indexentry {planeador de texto|hyperindexformat{\see {micro\pdash {}planeador}}}{1}
+\indexentry {sistema!POWER|hyperindexformat{\see {POWER}}}{1}
+\indexentry {modos de interacção!monólogo!POWER (sistema)|hyperindexformat{\see {POWER}}}{1}
+\indexentry {modelos de geração!geração profunda!POWER (sistema)|hyperindexformat{\see {POWER}}}{1}
+\indexentry {RDF Schema|hyperindexformat{\see {RDFS}}}{1}
+\indexentry {ISO!8879|hyperindexformat{\see {SGML}}}{1}
+\indexentry {projecto!SIMPLE|hyperindexformat{\see {SIMPLE}}}{1}
+\indexentry {analisador morfológico!SMorph|hyperindexformat{\see {SMorph}}}{1}
+\indexentry {arquitectura modular!realizador de superfície!SURGE (sistema)|hyperindexformat{\see {SURGE}}}{1}
+\indexentry {sistema!SURGE|hyperindexformat{\see {SURGE}}}{1}
+\indexentry {Text Encoding Initiative|hyperindexformat{\see {TEI}}}{1}
+\indexentry {analisador morfológico!XA|hyperindexformat{\see {XA}}}{1}
+\indexentry {AUTHOR|hyperpage}{51}
+\indexentry {StoryBook|hyperpage}{51}
+\indexentry {DCR|hyperpage}{51}
+\indexentry {DCR|hyperpage}{51}
+\indexentry {RAGS|hyperpage}{51}
+\indexentry {arquitectura!DocuPlanner (sistema)|hyperpage}{51}
+\indexentry {modelos de geração!geração profunda!DocuPlanner (sistema)|hyperpage}{51}
+\indexentry {sistema!DocuPlanner|hyperpage}{51}
+\indexentry {document drafting!DocuPlanner (sistema)|hyperpage}{51}
+\indexentry {sistema!DocuPlanner|hyperpage}{51}
+\indexentry {INESC|hyperpage}{51}
+\indexentry {língua!Português|hyperpage}{51}
+\indexentry {língua!Espanhol|hyperpage}{51}
+\indexentry {língua!Inglês|hyperpage}{51}
+\indexentry {língua!Francês|hyperpage}{51}
+\indexentry {LDAP|hyperpage}{52}
+\indexentry {m4|hyperpage}{52}
+\indexentry {OWL|hyperpage}{52}
+\indexentry {OWL|hyperpage}{52}
+\indexentry {RDF|hyperpage}{52}
+\indexentry {RDFS|hyperpage}{52}
+\indexentry {OWL|hyperpage}{52}
+\indexentry {RAGS|hyperpage}{52}
+\indexentry {RDF|hyperpage}{52}
+\indexentry {RDF|hyperpage}{52}
+\indexentry {RDF|hyperpage}{52}
+\indexentry {RDFS|hyperpage}{52}
+\indexentry {RDF|hyperpage}{52}
+\indexentry {RDF|hyperpage}{52}
+\indexentry {ISO|hyperpage}{52}
+\indexentry {TC37!SC4|hyperpage}{52}
+\indexentry {XML|hyperpage}{52}
+\indexentry {XMI|hyperpage}{52}
+\indexentry {XML|hyperpage}{52}
+\indexentry {XMI|hyperpage}{52}
+\indexentry {SGML|hyperpage}{53}
+\indexentry {ISO|hyperpage}{53}
+\indexentry {XML|hyperpage}{53}
+\indexentry {XML|hyperpage}{53}
+\indexentry {XML|hyperpage}{53}
+\indexentry {XSL|hyperpage}{53}
+\indexentry {XML|hyperpage}{53}
+\indexentry {XSLT|hyperpage}{53}
