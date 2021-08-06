@@ -23,29 +23,10 @@ For this work, three types of experiments have been conducted, each using two di
 \subsection{Baseline experiments}
 
 Tables \textbf{5.1} and \textbf{5.2} show that both architecture 1 and 2 of the \gls{mlp} yielded an accuracy of 90\% with the best parameterization. \\
-   - Avaliar cada up dos parametros\\
-All the best models configurations (for both architecture 1 and 2) achieved higher scores using the GITA dataset. There are multiple reasons that can justify this result. For example, the audios from the MDVR\_KCL dataset were recorded using phone calls. The distribution between \gls{mlp} solvers (adam and lbfgs) on the top 5 model configurations for architecture 1 is well balanced, whereas 4 out of the 5 (or 80\%) of the best model configurations on architecture 2 use the adam solver.\\
-   - Avaliar as outras métricas \\
-Architecture 1 yielded precision values between 0.75 and 1, meaning that 75\% to 100\% of the patients labeled as \gls{pd} by the models were correctly classified. Architecture 2 produced slightly worst results regarding precision, achieving values between 67\% and 100\%. Recall values (which evaluates how the percentage of \gls{pd} patients were correctly classified) were similar between the two architectures Architecture 1 produced recall values between 71\% and 100\%, whereas architecture 2 achieved values between 67\% and 100\%. Using the specificity metric (which allows to evaluate the percentage of \gls{hc} patients that were correctly classified) to compare the two architectures, architecture 2 outperformed architecture 1 by a small margin, producing a range of values between 75\% and 100\%, whereas architecture 1 produced a range of values between 80\% and 100\%. Finally, comparing both architectures using the F1-score metric, it is possible to see a significantly higher performance with architecture 2, which produced a maximum of almost 91\%, compared with architecture 1 that returned a maximum of 85\%.
-We can conclude that there are no significant differences between the two architectures.
-
-\textbf{Semi independent} \\
- - Obtivemos Z com um modelo semi independente \\
- - A performance baixou, manteve-se/não se manteve ao nível do state-of-the art \\
-  - Avaliar as outras métricas \\
-  - Resultados semelhantes à baseline provam que podemos retreinar um modelo com um novo pequeno dataset e o modelo fica preparado para uma classificação noutro idioma \\
-  \\
- \textbf{Independent} \\
- - Com o modelo 100\% independente obtivemos XXX de performance \\
- - A performance atingida foi semelhante à do estado da arte \\
- - Avaliar as outras métricas \\
-
-- Avaliar correlação dos parametros da rede com os resultados
-Figures \textbf{1} and \textbf{2} compare the different values of each parameter of the \gls{mlp} with the accuracy yielded by the model.
-
- - Overall, o modelo X/Y apresentou uma performance superior ao outro \\
-
- - Overall de quantos doentes fomos capazes de dignosticar \\
+All the best models configurations (for both architecture 1 and 2) achieved higher scores using the GITA dataset. There are multiple reasons that can justify this result. For example, the audios from the MDVR\_KCL dataset were recorded using phone calls, which uses audio compression with losses, resulting in audios with inferior quality. The distribution between \gls{mlp} solvers (adam and lbfgs) on the top 5 model configurations for architecture 1 is well balanced, whereas 4 out of the 5 (or 80\%) of the best model configurations on architecture 2 use the adam solver. From the three values used for the alpha parameter, the Both architectures have yielded better results when using valuer smaller values (0.0001 and 0.001) for the alpha parameter, comparing to the results obtained using larger values (0.1). Finally, architecture 1 doesn't show significant differences between models using 2000 and 5000 for the maximum number of iterations. On the other hand, this difference is observable on architecture 2, where the 4 models which yielded better results use the value of 5000 for this parameter. The difference between architectures be explained by the extra complexity of architecture 2 derived from the large number of parameters to optimize (52400 weights and 401 biases), compared with architecture 1, which has 3844 weights and 63 bias. The large number of parameter requires a larger number of iterations for the model to converge.
+Architecture 1 yielded precision values between 0.75 and 1, meaning that 75\% to 100\% of the patients labeled as \gls{pd} by the models were correctly classified. Architecture 2 produced slightly worst results regarding precision, achieving values between 67\% and 100\%. Recall values (which evaluates how the percentage of \gls{pd} patients were correctly classified) were similar between the two architectures. Architecture 1 produced recall values between 71\% and 100\%, whereas architecture 2 achieved results between 67\% and 100\%. Using the specificity metric (which allows to evaluate the percentage of \gls{hc} patients that were correctly classified) to compare the two architectures, architecture 2 outperformed architecture 1 by a small margin, producing a range of values between 75\% and 100\%, whereas architecture 1 produced a range of values between 80\% and 100\%. Finally, comparing both architectures using the F1-score metric, it is possible to see a significantly higher performance with architecture 2, which produced a maximum of almost 91\%, compared with architecture 1 that returned a maximum of 85\%.
+We can conclude that there are no significant differences between the two architectures. \\
+ - Compare with state-of-the-art (compare with the ones using the same dataset and use that as an argument)
  
 \begin{table}
 	\begin{tabular}{lcccccccc}
@@ -65,6 +46,17 @@ Figures \textbf{1} and \textbf{2} compare the different values of each parameter
 	\caption{\label{tab:table-name}Baseline experiment result using architecture 2.}
 \end{table}
 
+\subsection{Semi independent experiments}
+ - Obtivemos Z com um modelo semi independente \\
+As we can observe in \textbf{table 5.3}, when testing a semi-independent approach, architecture 1 yielded better results than architecture 2. Despite the two best model configuration of both architecture produced an accuracy of 90\% the following 3 model configurations resulted in an accuracy of almost 86\%, whereas architecture 2 only reached an accuracy of 80\%.  \\
+ - Comparar os parâmetros \\
+Architecture 1 produced its best results using a combination of FraLusoPark and Gita datasets. At the same time, higher scores from architecture 2 were achieved when combining Gita and MDVK\_KCL. Similarly to the baseline experiments, it is possible to observe that the models produce better results when trained with the Gita dataset. No differences can be observed between results achieved with the different values for the solver parameter (adam and lbfgs), nor for the number of maximum iterations. On the other hand, 4 out of the top 5 results for architecture 1 and all the top 5 results for architecture 2 are produced using smaller values of the alpha parameter (0.0001 and 0.001). This results are similar to what was observed in the baseline experiments.
+ - Avaliar as outras métricas \\
+ - A performance baixou, manteve-se/não se manteve ao nível do state-of-the art \\
+The results were similar to the ones achieved on the baseline experiences using architecture 2. Architecture 1 had a slightly better performance on the semi language-independent experiments, compared to the baselines.
+ - Resultados semelhantes à baseline provam que podemos retreinar um modelo com um novo pequeno dataset e o modelo fica preparado para uma classificação noutro idioma \\
+This experiment, coupling with similar work that tested semi language-independent models \textbf{citar o gajo que fez semi-independent}, allows to conclude that a model can be extended with a small dataset of a new language and , which is can be beneficial for this problem, as lack of training data is usually a limitation to train such models.
+  \\
 \begin{table}
 	\begin{tabular}{lcccccccc}
 		\bfseries dataset & \bfseries solver & \bfseries alpha & \bfseries iterations & \bfseries accuracy  & \bfseries precision & \bfseries recall & \bfseries specificity & \bfseries f1-score
@@ -82,6 +74,18 @@ Figures \textbf{1} and \textbf{2} compare the different values of each parameter
 	\end{tabular}
 	\caption{\label{tab:table-name}Semi independent experiment result using architecture 2.}
 \end{table}
+
+\subsection{Language-independent experiments}
+ - Com o modelo 100\% independente obtivemos XXX de performance \\
+ - A performance atingida foi semelhante à do estado da arte \\
+ - Avaliar as outras métricas \\
+
+- Avaliar correlação dos parametros da rede com os resultados
+Figures \textbf{1} and \textbf{2} compare the different values of each parameter of the \gls{mlp} with the accuracy yielded by the model.
+
+ - Overall, o modelo X/Y apresentou uma performance superior ao outro \\
+
+ - Overall de quantos doentes fomos capazes de dignosticar \\
 
 \begin{table}
 	\begin{tabular}{lcccccccc}
