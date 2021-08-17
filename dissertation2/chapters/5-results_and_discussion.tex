@@ -48,7 +48,7 @@ We can conclude that there are no significant differences between the two archit
 
 \subsection{Semi independent experiments}
  - Obtivemos Z com um modelo semi independente \\
-As we can observe in \textbf{table 5.3}, when testing a semi-independent approach, architecture 1 yielded better results than architecture 2. Despite the two best model configuration of both architecture produced an accuracy of 90\% the following 3 model configurations resulted in an accuracy of almost 86\%, whereas architecture 2 only reached an accuracy of 80\%.  \\
+As we can observe in \textbf{table 5.3}, when testing a semi-independent approach, architecture 1 yielded better results than architecture 2. Despite the two best model configurations of both architectures produced an accuracy of 90\%, the following 3 model configurations resulted in an accuracy of almost 86\%, whereas architecture 2 only reached an accuracy of 80\%.  \\
  - Comparar os parâmetros \\
 Architecture 1 produced its best results using a combination of FraLusoPark and Gita datasets. At the same time, higher scores from architecture 2 were achieved when combining Gita and MDVK\_KCL. Similarly to the baseline experiments, it is possible to observe that the models produce better results when trained with the Gita dataset. No differences can be observed between results achieved with the different values for the solver parameter (adam and lbfgs), nor for the number of maximum iterations. On the other hand, 4 out of the top 5 results for architecture 1 and all the top 5 results for architecture 2 are produced using smaller values of the alpha parameter (0.0001 and 0.001). This results are similar to what was observed in the baseline experiments.
  - Avaliar as outras métricas \\
@@ -77,9 +77,12 @@ This experiment, coupling with similar work that tested semi language-independen
 
 \subsection{Language-independent experiments}
  - Com o modelo 100\% independente obtivemos XXX de performance \\
+When using a language-independent model, architecture 1 achieved a maximum accuracy of 67\%. Architecture 2 yelded very similar results, scoring a maximum of 66\%. \\
  - A performance atingida foi semelhante à do estado da arte \\
+ - Comparar os parametros \\
+ Combining the top 5 model configurations for both architectures, almost all of these (90\%) obtained its score when trained with the FraLusoPark and MDVR\_KCL, and tested with Gita. The same percentage of the combination of the top 5 models of each architecture used the lbfgs solver, whereas only 1 of these 10 model configurations used the adam solver. Similarly to what was observed on the dependent and semi-independent experiments, the model's performance is constantly higher when smaller values are used for the alpha parameter. On both architectures, only 1 of the top 5 model configurations used $\alpha = 1$. Finally, no significant differences can be found when comparing model's performance based on the number of iterations. \\
  - Avaliar as outras métricas \\
-
+Considering the precision metric, architecture 1 scored higher values than architecture 2. It's values range between 0.59 and 0.64 whereas architecture 2 yielded values between 0.57 and 0.61, meaning that architecture 2 produced more false positives (patients from the \gls{hc} group wrongly classified as \gls{pd}). On the other hand, architecture 1 performed worse when comparing the recall metric, only achieving values ranging from 0.76 to 0.84, whereas architecture 2 scored recall values between 0.77 and 0.88, thus correctly classifying a higher number of patients from the \gls{pd} group. Architecture 1 significantly outperformed architecture 2, when compared using the specificity metric. Architecture 2 only achieved a maximum of 0.46, compared to architecture 1, which scored a maximum of 0.58 on this metric. Lastly, as F1-score combines precision and recall in the same metric, the results of both architectures on this metric were equivalent.
 - Avaliar correlação dos parametros da rede com os resultados
 Figures \textbf{1} and \textbf{2} compare the different values of each parameter of the \gls{mlp} with the accuracy yielded by the model.
 
@@ -105,6 +108,8 @@ Figures \textbf{1} and \textbf{2} compare the different values of each parameter
 	\caption{\label{tab:table-name}Independent experiment result using architecture 2.}
 \end{table}
 
+\subsection{Model optimization}
+When comparing models' results per parameter, it is possible to find the best values for each. Smaller values for alpha (0.0001 and 0.001) consistently produced superior results when compared with 0.01. 
 \section{Language Independency}
 
  - 

@@ -27,6 +27,7 @@
 \contentsline {subsection}{\numberline {5.1.1}Baseline experiments}{21}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Semi independent experiments}{22}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}Language-independent experiments}{23}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Model optimization}{24}{subsection.5.1.4}
 \contentsline {section}{\numberline {5.2}Language Independency}{24}{section.5.2}
 \contentsline {section}{\numberline {5.3}Explanations}{24}{section.5.3}
 \contentsline {chapter}{\numberline {6}Conclusions}{25}{chapter.6}
