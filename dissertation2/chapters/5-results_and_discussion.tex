@@ -46,24 +46,21 @@ We can conclude that there are no significant differences between the two archit
 	\caption{\label{tab:table-name}Baseline experiment result using architecture 2.}
 \end{table}
 
-\subsection{Semi independent experiments}
- - Obtivemos Z com um modelo semi independente \\
-As we can observe in \textbf{table 5.3}, when testing a semi-independent approach, architecture 1 yielded better results than architecture 2. Despite the two best model configurations of both architectures produced an accuracy of 90\%, the following 3 model configurations resulted in an accuracy of almost 86\%, whereas architecture 2 only reached an accuracy of 80\%.  \\
- - Comparar os parâmetros \\
-Architecture 1 produced its best results using a combination of FraLusoPark and Gita datasets. At the same time, higher scores from architecture 2 were achieved when combining Gita and MDVK\_KCL. Similarly to the baseline experiments, it is possible to observe that the models produce better results when trained with the Gita dataset. No differences can be observed between results achieved with the different values for the solver parameter (adam and lbfgs), nor for the number of maximum iterations. On the other hand, 4 out of the top 5 results for architecture 1 and all the top 5 results for architecture 2 are produced using smaller values of the alpha parameter (0.0001 and 0.001). This results are similar to what was observed in the baseline experiments.
- - Avaliar as outras métricas \\
- - A performance baixou, manteve-se/não se manteve ao nível do state-of-the art \\
+\subsection{Semi-independent experiments}
+
+As observed in \textbf{table 5.3}, when testing a semi-independent approach, architecture 1 yielded higher results than architecture 2. Despite the two best model configurations of both architectures produced an accuracy of 90\%, the following 3 model configurations resulted in an accuracy of almost 86\%, whereas architecture 2 only reached an accuracy of 80\%.  \\
+Architecture 1 produced its best results using a combination of FraLusoPark and Gita datasets. At the same time, higher scores from architecture 2 were achieved when combining Gita and MDVR\_KCL. Similarly to the baseline experiments, it is possible to observe that the models produce better results when trained with the Gita dataset. No differences can be observed between results achieved with the different values for the solver parameter (adam and lbfgs), nor for the number of maximum iterations. On the other hand, 4 out of the top 5 results for architecture 1 and all the top 5 results for architecture 2 are produced using smaller values of the alpha parameter (0.0001 and 0.001). This results are similar to what was observed in the baseline experiments.
+Architecture 1 outperformed architecture 2 on precision, producing results between 0.83 and 1, whereas architecture 2 yielded values between 0.6 and 1. While both architectures' higher value was the same, architecture 1 produced consistently more consistent results, with a smaller. Similar results were achieved when using recall. Architecture 1 produced values between 0.75 and 1, and 3 of the top 5 model configurations achieved 100\% recall. On the other hand, architecture 2 values for recall ranged from 0.66 and 1. As F1-score combines the values from precision and recall (and architecture 1 outperformed architecture 2 on both these metrics), the same results were achieved with the F1-score metric. Values of this metric for architecture 1 varied between 0.85 and 0.92, whereas architecture 2 values ranged from 0.75 to 0.88. Finally, architecture 2 produced better results when using specificity. This architecture's values varied between 0.71 and 1, with a much smaller variation between extremes when compared to the results produced by architecture 1, which varied from 0.5 to 1.
 The results were similar to the ones achieved on the baseline experiences using architecture 2. Architecture 1 had a slightly better performance on the semi language-independent experiments, compared to the baselines.
- - Resultados semelhantes à baseline provam que podemos retreinar um modelo com um novo pequeno dataset e o modelo fica preparado para uma classificação noutro idioma \\
-This experiment, coupling with similar work that tested semi language-independent models \textbf{citar o gajo que fez semi-independent}, allows to conclude that a model can be extended with a small dataset of a new language and , which is can be beneficial for this problem, as lack of training data is usually a limitation to train such models.
-  \\
+This experiment, coupling with similar work that tested semi language-independent models \textbf{citar o gajo que fez semi-independent}, allows to conclude that a model can be retrained with a small dataset of a new language and extended to be used with a new language with the same performance as it was trained only with the new language. This can be particularly beneficial for this problem, as lack of training data is usually a limitation to train such models.
+
 \begin{table}
 	\begin{tabular}{lcccccccc}
 		\bfseries dataset & \bfseries solver & \bfseries alpha & \bfseries iterations & \bfseries accuracy  & \bfseries precision & \bfseries recall & \bfseries specificity & \bfseries f1-score
 		\csvreader[head to column names]{csvs/semi_top.csv}{}
 		{\\\hline\dataset & \solver & \alpha & \iterations & \accuracy  & \precision & \recall & \specificity & \fscore}
 	\end{tabular}
-	\caption{\label{tab:table-name}Semi independent experiment result using architecture 1.}
+	\caption{\label{tab:table-name}Semi-independent experiment result using architecture 1.}
 \end{table}
 
 \begin{table}
@@ -78,7 +75,7 @@ This experiment, coupling with similar work that tested semi language-independen
 \subsection{Language-independent experiments}
  - Com o modelo 100\% independente obtivemos XXX de performance \\
 When using a language-independent model, architecture 1 achieved a maximum accuracy of 67\%. Architecture 2 yelded very similar results, scoring a maximum of 66\%. \\
- - A performance atingida foi semelhante à do estado da arte \\
+ - A performance atingida não foi semelhante à do estado da arte \\
  - Comparar os parametros \\
  Combining the top 5 model configurations for both architectures, almost all of these (90\%) obtained its score when trained with the FraLusoPark and MDVR\_KCL, and tested with Gita. The same percentage of the combination of the top 5 models of each architecture used the lbfgs solver, whereas only 1 of these 10 model configurations used the adam solver. Similarly to what was observed on the dependent and semi-independent experiments, the model's performance is constantly higher when smaller values are used for the alpha parameter. On both architectures, only 1 of the top 5 model configurations used $\alpha = 1$. Finally, no significant differences can be found when comparing model's performance based on the number of iterations. \\
  - Avaliar as outras métricas \\
@@ -109,12 +106,14 @@ Figures \textbf{1} and \textbf{2} compare the different values of each parameter
 \end{table}
 
 \subsection{Model optimization}
-When comparing models' results per parameter, it is possible to find the best values for each. Smaller values for alpha (0.0001 and 0.001) consistently produced superior results when compared with 0.01. 
+
+When comparing models' results per parameter, it is possible to find the best values for each. Smaller values for alpha (0.0001 and 0.001) consistently produced superior results when compared with 0.01. Considering language dependent and semi language dependent models, there is no evident difference between the use of the lbfgs and adam solvers. For both experiments,  around 50\% of the model configurations used each solver. On the other hand, for language-independent experiments, it is clear that models using the lbfgs solver outperformed those using the adam solver. As we can see in tables \textbf{5.5} and \textbf{5.6}, between the top 5 model configurations of each architecture, only 1 was trained using adam. Lastly, comparing the results based on the number of maximum number of iterations ($\#interations$), there is no evident difference between models trained with $\#iterations = 2000$ and $\#iterations = 5000$ in any of the experiments performed. This shows that, in most cases, 2000 iterations should be sufficient to train the model, and convergence is achieved without executing the maximum number of iterations.
+
 \section{Language Independency}
 
  - 
 
-\section{Explanations}
+\section{Explainability}
 
  - 
 
