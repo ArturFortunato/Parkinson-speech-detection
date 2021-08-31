@@ -111,9 +111,13 @@ When comparing models' results per parameter, it is possible to find the best va
 
 \section{Language Independency}
 
- - 
+Both architectures used during this work yielded an accuracy of 90\% on the semi language-independent experiments. This results are inferior to the ones achieved on a similar work (\cite{parkinson_three_languages}), where the authors were able to achieve a maximum accuracy of 96\% when training a model with a German dataset and 80\% of a Spanish dataset and testing with the remaining 20\%. On the other hand, this model was outperformed by Architecture 1 when using the recall metric, producing recall values  of 95\%, whereas architecture 1 of produced a recall of 100\% for the top 3 model configurations. Contrary to this, results produced by our model were inferior when using the specificity metric, where the authors were able to achieve a score of 97\%, compared to the 75\% produced by our model. Therefore, we can conclude that our solution has better ability to indicate when a subject belongs in the \gls{pd} group. This contrasts with the ability to classify subjects from the \gls{hc} group, where our model has an inferior performance. As previously described in section 5.1.3, architecture 1 produced an accuracy of 67\% on the language-independent experiments. This result is slightly inferior to the one achieved on a different article (\cite{parkinson_three_languages}), where a language-independent model yielded an accuracy of 77\% when trained with a Czech dataset and tested with a German dataset. Comparing the models using the recall and specificity metrics, the results are identical to the ones achieved on the semi language-independent models' comparison. Our model produced a recall of 76\% whereas the authors were only able to score 53\% on this metric. On the other hand, architecture 1 produced an score of 58\% on the specificity metric, significantly inferior to the 95\% achieved by the other work. \\
+It is possible to conclude that the performance of both architectures used during this work were not able to produce results at the state-of-the-art on the language independency topic, although outperforming the state-of-the-art on the recall metric, which demonstrates better capability in detecting \gls{pd}.
+
+
 
 \section{Explainability}
 
- - 
-
+ - It is possible to see the percentage of each feature/feature group for each experiment \\
+ - Compare PLP and MFCC (as they both represent the sound similar to the way humans perceive it) \\
+ - Features x/y/z have no significant impact on the complete set of experiments \\
