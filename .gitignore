@@ -126,7 +126,12 @@ venv.bak/
 dmypy.json
 
 # Pyre type checker
+
+classifiation/pickles
 .pyre/
 
 #Pickles
 classification/pickles/*
+
+explainability/logs
+explainability/csv
