@@ -49,7 +49,7 @@ Three distinct experiments have been conducted during the present work. First, t
 \\
 For these experiments, the \textit{scikit-learn} implementation \cite{scikit-learn} of a \gls{mlp} was used. Two different architectures were tested to evaluate their ability to learn from the training data. The first architecture contains one entry layer with \textbf{N} neurons (where \textbf{N} is the number of input features), a fully-connected hidden layer with \textbf{N + 1} neurons and an output layer with 1 neuron, whose value represents the probability of the test subject to be classified as \gls{pd}. \textbf{Refer the papers where they say this model is great}. The second architecture also contains an input layer with \textbf{N} neurons, two fully-connected hidden layers, comprising 200 neurons each and, similarly to the first architecture, an output layer with 1 neuron, also representing the probability of the subject under evaluation to be diagnosed with \gls{pd}. For there experiments, the breaking point between \gls{hc} and \gls{pd} diagnostic (the output value of the neuron from the output layer) was set to 0.5 (50\%).
 \\
-In order to find the best model configuration, the experiments were repeated testing multiple values for \textit{alpha} ($ 10^{-3} $, $ 10 ^{-2} $, $ 10 ^{-1} $), maximum number of iterations (1000, 2000, 5000) and solver for weight optimization (lbfgs, sgd, adam). 
+In order to find the best model configuration, the experiments were repeated testing multiple values for the L2 regularization term parameter, or \textit{alpha} ($ 10^{-3} $, $ 10 ^{-2} $, $ 10 ^{-1} $), maximum number of iterations (1000, 2000, 5000) and solver for weight optimization (lbfgs, sgd, adam). 
 
 \section{Explanation Production}
 

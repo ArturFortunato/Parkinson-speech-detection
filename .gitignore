@@ -135,3 +135,8 @@ classification/pickles/*
 
 explainability/logs
 explainability/csv
+explainability/html
+
+explanation_csv.zip
+explanation_html.zip
+
