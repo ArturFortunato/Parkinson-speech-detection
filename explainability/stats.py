@@ -18,16 +18,16 @@ def dic_to_csv(dic, num_patients, base_name, sorters):
     csv = pd.DataFrame()
 
     for feature in dic:
-        percentage_patients = dic[feature]['count'] / num_patients
-        line = {'percentage_patients': percentage_patients, 'feature': feature, 'count': dic[feature]['count'], 'weight': dic[feature]['weight']}
+        percentage_patients = dic[feature]['count'] / num_patients * 100
+        line = {'feature': feature, 'percentage': percentage_patients, 'weight': dic[feature]['weight'], 'count': dic[feature]['count']}
         csv = csv.append(line, ignore_index=True)
-
-    print(csv)
     
     for sorter in sorters:
-        csv = csv.sort_values(by =sorters[sorter], ascending=False)
-
-        csv.to_csv('{}_by_{}.csv'.format(base_name, sorter), index=False)
+        result = csv.sort_values(by =sorters[sorter], ascending=False, key=abs)
+        result['percentage'] = result['percentage'].apply(lambda x: "{:.3f}".format(x))
+        result['weight'] = result['weight'].apply(lambda x: "{:.4f}".format(x))
+        result = result.drop(['count'], axis=1)
+        result.to_csv('{}_by_{}.csv'.format(base_name, sorter), index=False)
 
 # Generate stats
 def generate_stats(files):
@@ -48,7 +48,7 @@ def generate_stats(files):
             for feature in top_features:
                 if feature in result:
                     result[feature]['count']  += 1
-                    result[feature]['weight'] += top_features[feature]
+                    result[feature]['weight'] += abs(top_features[feature])
 
                 else:
                     result[feature] = {'count': 1, 'weight': top_features[feature]}
@@ -63,7 +63,7 @@ def main():
     #files = ['./csv/baseline_200/adam_0.001_2000_tanh.csv'] #, './csv/baseline_200/adam_0.001_5000_tanh.csv']
     stats, total_count = generate_stats(files)
 
-    dic_to_csv(stats, total_count, './teste', {'weight': ['weight', 'count'], 'percentage': 'percentage_patients'})
+    dic_to_csv(stats, total_count, './teste', {'weight': ['weight', 'count'], 'percentage': 'percentage'})
 
 if __name__ == '__main__':
     main()

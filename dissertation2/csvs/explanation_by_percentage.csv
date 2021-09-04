@@ -1,0 +1,11 @@
+feature,percentage,weight
+PlpCC[0],14.783,0.0568
+PlpCC\_de[1],13.913,0.0428
+PlpCC\_de\_de[3],13.261,0.0440
+pcm\_fftMag\_mfcc\_de[1],13.261,0.0426
+pcm\_fftMag\_mfcc[11],12.391,0.0423
+pcm\_fftMag\_mfcc[8],11.522,0.0425
+pcm\_fftMag\_mfcc[0],11.304,0.0581
+pcm\_fftMag\_mfcc\_de[0],11.087,0.0409
+PlpCC\_de[0],11.087,0.0428
+pcm\_fftMag\_mfcc\_de\_de[2],10.652,0.0411
