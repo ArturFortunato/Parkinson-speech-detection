@@ -135,6 +135,10 @@
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{csvsimple}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{graphics}
+
 %\usepackage[hyperindex]{hyperref}
 
 %---------------------------------------------------------------------------

@@ -159,9 +159,39 @@ To generate an explanation, the top 5 features with higher contribution to the d
 	
 \end{table}
 
-Tables 5.7 and 5.8 show the top 10 features sorted by their frequency on the complete set of explanations and by average contribution to the model's classification, respectively. \\
- - It is possible to see the percentage of each feature/feature group for each experiment \\
- Compare 
- \\
-\gls{plp} and \gls{mfcc} are different mathematical representations of sound that simulate the way humans perceive it. Observing tables 5.7 and 5.8, it is possible to verify that this features represent the majority of the top features with higher contribution to the largest number of test subjects.
- - Features x/y/z have no significant impact on the complete set of experiments \\
+Tables 5.7 and 5.8 show the top 10 features sorted by their frequency on the complete set of explanations produced in this work and by average contribution to the models' classification, respectively. \\
+\gls{plp} and \gls{mfcc} are different mathematical representations of sound that simulate the way humans perceive it. Observing tables 5.7 and 5.8, it is possible to verify that this features represent the majority of the top features with higher contribution to the model's classification of largest number of test subjects. Comparing the \gls{mfcc}s (represented on the table as \textit{pcm\_fftMag\_mfcc[n]}) and \gls{plp}s (represented on the table as \textit{PlpCC[n]}), there are no clear differences between these features. Finally, jitter (represented on the table as \textit{jitterLocal\_sma3nz}) is also on the top features with higher weight contribution. \\
+On the other hand, \gls{f0}, shimmer and \gls{hnr} produce significant contributions to few test subjects (8.2\% for F0, 7.4\% for shimmer and 6.5\% for HNR). These features' contributions are inferior to the ones shown on the table (0.0437 for F0, 0.0402 for HNR and 0.0379 for shimmer). A we can observe in figure \ref{weight}. The global contribution (weight) for each feature can be observed in figure \ref{weight}. The weight of the feature with highest global contribution is around 66\% larger the weight from the feature with lowest contribution. However, as there is no significant difference between one feature's value and the following, there is no evident way of splitting the features in two groups and label them as \textit{relevant} and \textit{non-relevant}.
+
+\begin{landscape}
+	\begin{figure*}[t]
+		\begin{center}
+			%\scalebox{1}[-1]{ 
+				%\scalebox{-1}[1]{
+				    \rotatebox[origin=c]{180}{
+						\includegraphics[clip=false,height=0.95\textwidth,width=0.95\textwidth]{figs/feature_by_weight.png}
+					}
+				%}
+			%}
+		\end{center}
+		\caption{Global contribution (weight) by feature.}
+		\label{weight}
+	\end{figure*}
+\end{landscape}
+
+\begin{landscape}
+	\begin{figure*}[t]
+		\begin{center}
+			%\scalebox{1}[-1]{ 
+			%\scalebox{-1}[1]{
+			\rotatebox[origin=c]{180}{
+				\includegraphics[clip=false,height=0.95\textwidth,width=0.95\textwidth]{figs/feature_by_percentage.png}
+			}
+			%}
+			%}
+		\end{center}
+		\caption{Percentage of subjects by feature.}
+		\label{percentage}
+	\end{figure*}
+\end{landscape}
+
