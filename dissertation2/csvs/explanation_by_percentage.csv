@@ -1,11 +1,11 @@
 feature,percentage,weight
-PlpCC[0],14.783,0.057
-PlpCC\_de[1],13.913,0.043
-PlpCC\_de\_de[3],13.261,0.044
-pcm\_fftMag\_mfcc\_de[1],13.261,0.043
-pcm\_fftMag\_mfcc[11],12.391,0.042
-pcm\_fftMag\_mfcc[8],11.522,0.043
-pcm\_fftMag\_mfcc[0],11.304,0.058
-pcm\_fftMag\_mfcc\_de[0],11.087,0.041
-PlpCC\_de[0],11.087,0.043
-pcm\_fftMag\_mfcc\_de\_de[2],10.652,0.041
+PLP[0],14.783,0.057
+$\Delta$ PLP[1],13.913,0.043
+$\Delta$$\Delta$ PLP[3],13.261,0.044
+$\Delta$ MFCC[1],13.261,0.043
+MFCC[11],12.391,0.042
+MFCC[8],11.522,0.043
+MFCC[0],11.304,0.058
+$\Delta$ MFCC[0],11.087,0.041
+$\Delta$ PLP[0],11.087,0.043
+$\Delta$$\Delta$ MFCC[2],10.652,0.041

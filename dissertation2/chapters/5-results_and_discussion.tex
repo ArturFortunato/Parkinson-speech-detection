@@ -63,7 +63,7 @@ This experiment confirms the conclusions of similar work that tested semi langua
 		\csvreader[head to column names]{csvs/semi_top.csv}{}
 		{\\\hline\dataset & \solver & \alpha & \iterations & \accuracy  & \precision & \recall & \specificity & \fscore}
 	\end{tabular}
-	\caption{\label{tab:table-name}Semi-independent experiment result using architecture 1.}
+	\caption{\label{tab:table-name}Semi language-independent experiment result using architecture 1.}
 \end{table}
 
 \begin{table}
@@ -73,7 +73,7 @@ This experiment confirms the conclusions of similar work that tested semi langua
 		\csvreader[head to column names]{csvs/semi_200_top.csv}{}
 		{\\\hline\dataset & \solver & \alpha & \iterations & \accuracy  & \precision & \recall & \specificity & \fscore}
 	\end{tabular}
-	\caption{\label{tab:table-name}Semi independent experiment result using architecture 2.}
+	\caption{\label{tab:table-name}Semi language-independent experiment result using architecture 2.}
 \end{table}
 
 \subsection{Language-independent experiments}
@@ -156,7 +156,7 @@ classification to the medical professional. The percentage attributed to each cl
 
 The top 10 features were sorted by their frequency on the complete set of explanations produced in this work and by average contribution to the models' classification, (Tables 5.7 and 5.8). \\
 \gls{plp} and \gls{mfcc} are different mathematical representations of sound that simulate the way humans perceive it. These two sets of features constitute the majority of the top features with highest contribution to the largest number of test subjects (tables 5.7 and 5.8).
-Comparing the \gls{mfcc}s (represented on the table as \textit{pcm\_fftMag\_mfcc[n]}) and \gls{plp}s (represented on the table as \textit{PlpCC[n]}), there are no significant differences between these features. In addition, jitter (\textit{jitterLocal\_sma3nz}) is also on the top features with higher weight contribution. Finally, \gls{f0}, shimmer and \gls{hnr} produce significant contributions to few test subjects (8.2\% for F0, 7.4\% for shimmer and 6.5\% for HNR). These features' contributions are inferior to the ones shown on the table (0.0437 for F0, 0.0402 for HNR and 0.0379 for shimmer). \\
+Comparing the \gls{mfcc}s (represented on the table as \textit{pcm\_fftMag\_mfcc[n]}) and \gls{plp}s (represented on the table as \textit{PlpCC[n]}), there are no significant differences between these features. In addition, jitter is also on the top features with higher weight contribution. Finally, \gls{f0}, shimmer and \gls{hnr} produce significant contributions to few test subjects (8.2\% for F0, 7.4\% for shimmer and 6.5\% for HNR). These features' contributions are inferior to the ones shown on the table (0.0437 for F0, 0.0402 for HNR and 0.0379 for shimmer). \\
 The global contribution (weight) for each feature can be observed in figure \ref{weight}. The weight of the feature with highest global contribution is around 66\% larger than the weight from the feature with lowest contribution. In addition, there is a significant difference between the weight of the top three features and the others, which can be defined as a threshold to separate the features into two groups (\textit{relevant} and \textit{irrelevant}). \\
 The small difference between contribution (weight) values for consecutive features suggests a correlation between some features. The same trend applies when sorting features by percentage of subjects. \\ 
 The best performing features are similar in both analysis, with a strong presence of MFCC and PLP group of features. A significant difference can be observed between the 5\textsuperscript{th} and the 6\textsuperscript{th} top features, which can also be defined as the threshold to separate the features into \textit{relevant} and \textit{irrelevant} groups. \\
