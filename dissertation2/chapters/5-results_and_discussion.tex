@@ -53,7 +53,7 @@ Overall, we can conclude that there are no significant differences between the t
 		\includegraphics[width=.49\linewidth]{figs/baseline_radar.jpg}
 		\includegraphics[width=.49\linewidth]{figs/baseline_200_radar.jpg}
 	\end{center}
-	\caption{Baseline experiment result using architecture 1 (left) and architecture 2 (right).}
+	\caption{Baseline experiment result using architecture 1 (left) and architecture 2 (right). Correspondence to table \ref{baseline-1} and \ref{baseline-2}: line 1 is orange, line 2 is green, line 3 is red, line 4 is purple, line 5 is brown.}
 	\label{radar_baseline}
 \end{figure*}
 
@@ -72,7 +72,7 @@ This experiment confirms the conclusions of similar work that tested semi langua
 		\csvreader[head to column names]{csvs/semi_top.csv}{}
 		{\\\hline\dataset & \solver & \alpha & \iterations & \accuracy  & \precision & \recall & \specificity & \fscore}
 	\end{tabular}
-	\caption{\label{semi-1}Semi language-independent experiment result using architecture 1.}
+	\caption{\label{semi-1}Semi language-independent experiment result using architecture 1. Dataset column legend: \textbf{M} - MDVR\_KCL, \textbf{F} - FralusoPark, \textbf{G} - Gita.}
 \end{table}
 
 \begin{table}
@@ -82,7 +82,7 @@ This experiment confirms the conclusions of similar work that tested semi langua
 		\csvreader[head to column names]{csvs/semi_200_top.csv}{}
 		{\\\hline\dataset & \solver & \alpha & \iterations & \accuracy  & \precision & \recall & \specificity & \fscore}
 	\end{tabular}
-	\caption{\label{semi-2}Semi language-independent experiment result using architecture 2.}
+	\caption{\label{semi-2}Semi language-independent experiment result using architecture 2. Dataset column legend: \textbf{M} - MDVR\_KCL, \textbf{F} - FralusoPark, \textbf{G} - Gita.}
 \end{table}
 
 \begin{figure*}[t]
@@ -90,7 +90,7 @@ This experiment confirms the conclusions of similar work that tested semi langua
 		\includegraphics[width=.49\linewidth]{figs/semi_radar.jpg}
 		\includegraphics[width=.49\linewidth]{figs/semi_200_radar.jpg}
 	\end{center}
-	\caption{Semi language-independent experiment result using architecture 1 (left) and architecture 2 (right).}
+	\caption{Semi language-independent experiment result using architecture 1 (left) and architecture 2 (right). Correspondence to table \ref{semi-1} and \ref{semi-2}: line 1 is orange, line 2 is green, line 3 is red, line 4 is purple, line 5 is brown.}
 	\label{radar_semi}
 \end{figure*}
 
@@ -111,7 +111,6 @@ We can conclude that the models have a similar performance on the \gls{pd} detec
 	\end{tabular}
 	\caption{\label{independent-1}Independent experiment result using architecture 1.}
 \end{table}
-
 \begin{table}
 	\centering
 	\begin{tabular}{lcccccccc}
@@ -127,9 +126,9 @@ We can conclude that the models have a similar performance on the \gls{pd} detec
 		\includegraphics[width=.49\linewidth]{figs/independent_radar.jpg}
 		\includegraphics[width=.49\linewidth]{figs/independent_200_radar.jpg}
 	\end{center}
-	\caption{Independent experiment result using architecture 1 (left) and architecture 2 (right).}
+	\caption{Independent experiment result using architecture 1 (left) and architecture 2 (right). Correspondence to table \ref{independent-1} and \ref{independent-2}: line 1 is orange, line 2 is green, line 3 is red, line 4 is purple, line 5 is brown.}.
 	\label{radar_independent}
-\end{figure*}\\
+\end{figure*}
 
 \subsection{Model optimization}
 
