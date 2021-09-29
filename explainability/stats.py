@@ -60,7 +60,6 @@ def generate_stats(files):
     
 def main():
     files = get_csvs_paths()
-    #files = ['./csv/baseline_200/adam_0.001_2000_tanh.csv'] #, './csv/baseline_200/adam_0.001_5000_tanh.csv']
     stats, total_count = generate_stats(files)
 
     dic_to_csv(stats, total_count, './teste', {'weight': ['weight', 'count'], 'percentage': 'percentage'})
