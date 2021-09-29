@@ -8,10 +8,6 @@ def generate(csv_file, image_file, x, y):
     for i in range(len(features)):
         features[i] = features[i].replace("$\Delta$", "Δ") 
 
-    print(features)
-
-    return
-
     weight = list(csv[y])
     feature_spaces = [4 * i for i in range(len(features))]
 

@@ -176,7 +176,7 @@ classification to the medical professional. The percentage attributed to each cl
 		\csvreader[head to column names]{csvs/explanation_by_weight.csv}{}
 		{\\\hline\feature & \percentage & \weight}
 	\end{tabular}
-	\caption{\label{feature-by-weight}Top 10 features ordered by contribution (weight) to explanations.}
+	\caption{\label{feature-by-weight}Top 10 features ordered by average contribution (weight) to explanations.}
 	
 \end{table}
 
@@ -188,35 +188,20 @@ The small difference between contribution (weight) values for consecutive featur
 The best performing features are similar in both analysis, with a strong presence of MFCC and PLP group of features. A significant difference can be observed between the 5\textsuperscript{th} and the 6\textsuperscript{th} top features, which can also be defined as the threshold to separate the features into \textit{relevant} and \textit{irrelevant} groups. \\
 Combining both analysis, the combined threshold can be defined as the top 5 features, meaning that this should be the group of features that the medical professional should focus on.
 
-\begin{landscape}
 	\begin{figure*}[t]
 		\begin{center}
-			%\scalebox{1}[-1]{ 
-				%\scalebox{-1}[1]{
-				    \rotatebox[origin=c]{180}{
-						\includegraphics[clip=false,height=0.95\textwidth,width=0.95\textwidth]{figs/feature_by_weight.png}
-					}
-				%}
-			%}
+			\includegraphics[clip=false,height=0.95\textwidth,width=0.95\textwidth]{figs/feature_by_weight.png}
 		\end{center}
 		\caption{Global contribution (weight) by feature.}
 		\label{weight}
 	\end{figure*}
-\end{landscape}
 
-\begin{landscape}
+
 	\begin{figure*}[t]
 		\begin{center}
-			%\scalebox{1}[-1]{ 
-			%\scalebox{-1}[1]{
-			\rotatebox[origin=c]{180}{
-				\includegraphics[clip=false,height=0.95\textwidth,width=0.95\textwidth]{figs/feature_by_percentage.png}
-			}
-			%}
-			%}
+			\includegraphics[clip=false,height=0.95\textwidth,width=0.95\textwidth]{figs/feature_by_percentage.png}
 		\end{center}
 		\caption{Percentage of subjects by feature.}
 		\label{percentage}
 	\end{figure*}
-\end{landscape}
 
