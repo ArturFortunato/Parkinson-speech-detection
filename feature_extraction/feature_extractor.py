@@ -31,6 +31,8 @@ class feature_extractor:
         data_processing = DataProcessing()
 
         for f in files:
+            print('file')
+            print(f)
             csv_file = self.read_csv(f)
 
             #Add name column (filename without extention)
@@ -44,7 +46,7 @@ class feature_extractor:
                 csv_file = csv_file.loc[:, csv_file.columns.isin(columns_to_use)]
             
             # Zscore all data columns
-            csv_file = data_processing.zscore(csv_file, columns_to_ignore=['label', 'name', 'frameTime'])
+            #csv_file = data_processing.zscore(csv_file, columns_to_ignore=['label', 'name', 'frameTime'])
             
             output.append(csv_file)
 
@@ -52,20 +54,30 @@ class feature_extractor:
     
     def __get_opensmile_instruction(self, conf_file, audios_path, f, output_file, lld):
         if lld:
+            print('lld')
+            print("{} -C {} -I {}/{} -lldcsvoutput {}".format(OPENSMILE, conf_file, audios_path, f, output_file))
             return "{} -C {} -I {}/{} -lldcsvoutput {}".format(OPENSMILE, conf_file, audios_path, f, output_file)
 
-        "{} -C {} -I {}/{} -csvoutput {}".format(OPENSMILE, conf_file, audios_path, f, output_file)
+        return "{} -C {} -I {}/{} -csvoutput {}".format(OPENSMILE, conf_file, audios_path, f, output_file)
 
-    def __extract(self, audios_path, files, type_conf, output_path, conf_file, lld):
+    def __extract(self, audios_path, files, type_conf, output_path, conf_file, lld, single_file=None):
         csv_files = []
 
-        for f in files:
-            file_without_ext = f.split(".")[0]
-            output_file = "{}/{}_{}.csv".format(output_path, file_without_ext, type_conf)
-            if not os.path.isfile(output_file):
-                os.system(self.__get_opensmile_instruction(conf_file, audios_path, f, output_file, lld))
-            
+        if single_file is not None:
+            output_file = 'single_subject.csv'
+            print(audios_path)
+            os.system(self.__get_opensmile_instruction(conf_file, '', files[0], output_file, lld))
+
             csv_files.append(output_file)
+
+        else: 
+            for f in files:
+                file_without_ext = f.split(".")[0]
+                output_file = "{}/{}_{}.csv".format(output_path, file_without_ext, type_conf)
+                if not os.path.isfile(output_file):
+                    os.system(self.__get_opensmile_instruction(conf_file, audios_path, f, output_file, lld))
+            
+                csv_files.append(output_file)
 
         return csv_files
 
@@ -137,9 +149,9 @@ class feature_extractor:
         self.to_csv(output_csv, output_path, index=True)
 
     # is_control is true if group is healthy control
-    def extract_features(self, type_conf, audios_path, output_path, is_control, columns_to_use=None):
-        wav_files = self.__list_files(audios_path)
-        csv_files = self.__extract(audios_path, wav_files, type_conf, output_path, self.__feature_conf_file(type_conf), type_conf == "gemaps")
+    def extract_features(self, type_conf, audios_path, output_path, is_control, columns_to_use=None, audio_file=None):
+        wav_files = self.__list_files(audios_path) if audio_file is None else [audio_file]
+        csv_files = self.__extract(audios_path, wav_files, type_conf, output_path, self.__feature_conf_file(type_conf), type_conf == "gemaps", single_file=audio_file)
         csv_list  = self.__clean_csv(csv_files, is_control, columns_to_use=columns_to_use)
         
         
@@ -147,3 +159,4 @@ class feature_extractor:
         self.__concat(csv_list, output_file)
 
         return output_file
+

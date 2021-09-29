@@ -7,32 +7,36 @@ from sklearn.model_selection import train_test_split
 import pickle
 import pandas as pd
 
-from metrics import Metrics
+from classification.metrics import Metrics
 
 SUBSETS_PATH = "../../subsets"
 
 class MLP:
-    def __init__(self, hidden_layer_sizes, mlp_params, dataset, experiment):
-        self.activation = mlp_params['activation']
-        self.alpha      = mlp_params['alpha']
-        self.solver     = mlp_params['solver']
-        self.max_iter   = mlp_params['max_iter'] 
-        self.experiment = experiment
-        self.dataset    = dataset
 
-        self.mlp = MLPClassifier(
+    def __init__(self, hidden_layer_sizes, mlp_params, dataset, experiment, model=None):
+        if model is None:
+            self.activation = mlp_params['activation']
+            self.alpha      = mlp_params['alpha']
+            self.solver     = mlp_params['solver']
+            self.max_iter   = mlp_params['max_iter'] 
+            self.experiment = experiment
+            self.dataset    = dataset
+
+            self.mlp = MLPClassifier(
                 hidden_layer_sizes = hidden_layer_sizes, 
                 activation         = self.activation, 
                 alpha              = self.alpha,
                 max_iter           = self.max_iter,
                 solver             = self.solver
-        )
+            )
 
-        if os.path.isfile('./pickles/{}/{}/{}.pkl'.format(self.experiment, self.dataset, self.generate_suffix())):
-            with open('./pickles/{}/{}/{}.pkl'.format(self.experiment, self.dataset, self.generate_suffix()), 'rb') as filename:
-                self.trained = pickle.load(filename)
+            if os.path.isfile('./pickles/{}/{}/{}.pkl'.format(self.experiment, self.dataset, self.generate_suffix())):
+                with open('./pickles/{}/{}/{}.pkl'.format(self.experiment, self.dataset, self.generate_suffix()), 'rb') as filename:
+                    self.trained = pickle.load(filename)
+            else:
+                self.trained = None
         else:
-            self.trained = None
+            self.trained = model
 
     @staticmethod
     def save_csv(csv, path):
@@ -97,6 +101,9 @@ class MLP:
             participant_result = self.__participant_result(probabilities, threshold)
             predicted.append(participant_result)
             labels.append(participant_y)
+        
+        if output_file is None:
+            return predicted == labels
 
         metrics = Metrics(predicted, labels)
     
