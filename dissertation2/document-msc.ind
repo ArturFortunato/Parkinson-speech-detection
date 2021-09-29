@@ -1,0 +1,106 @@
+\begin{theindex}
+
+  \item analisador morfológico
+    \subitem Amorfo, \see{Amorfo}{1}
+    \subitem ispell, \see{ispell}{1}
+    \subitem JSpell, \see{JSpell}{1}
+    \subitem SMorph, \see{SMorph}{1}
+    \subitem XA, \see{XA}{1}
+  \item arquitectura
+    \subitem HYLITE+ (sistema), 1
+  \item arquitectura modular
+    \subitem realizador de superfície
+      \subsubitem SURGE (sistema), \see{SURGE}{1}
+
+  \indexspace
+
+  \item Data Category Registry, \see{DCR}{1}
+  \item Data Category Selection, \see{DCS}{1}
+
+  \indexspace
+
+  \item entidade morfológica, \see{unidade morfológica}{1}
+  \item entidade semântica, \see{unidade semântica}{1}
+  \item entidade sintáctica, \see{unidade sintáctica}{1}
+
+  \indexspace
+
+  \item General Lingware Open System Environment, \see{GLOSIX}{1}
+  \item gerador morfológico, \see{monge}{1}
+  \item GNU m4, \see{m4}{1}
+
+  \indexspace
+
+  \item international ispell, \see{ispell}{1}
+  \item ISO
+    \subitem 8879, \see{SGML}{1}
+    \subitem TC37, \see{TC37}{1}
+
+  \indexspace
+
+  \item Java Database Connectivity, \see{JDBC}{1}
+
+  \indexspace
+
+  \item LE-PAROLE, \see{PAROLE}{1}
+  \item Lightweight Directory Access Protocol, \see{LDAP}{1}
+  \item Linguistic Data Consortium, \see{LDC}{1}
+
+  \indexspace
+
+  \item modelos de geração
+    \subitem geração profunda
+      \subsubitem PEBA-II (sistema), \see{PEBA-II}{1}
+      \subsubitem PLANDoc (sistema), \see{PLANDoc}{1}
+      \subsubitem POWER (sistema), \see{POWER}{1}
+  \item modos de interacção
+    \subitem monólogo
+      \subsubitem PEBA-II (sistema), \see{PEBA-II}{1}
+      \subsubitem POWER (sistema), \see{POWER}{1}
+  \item Multext
+    \subitem GLOSIX, \see{GLOSIX}{1}
+  \item Multilingual ISLE Lexical Entry, \see{MILE}{1}
+
+  \indexspace
+
+  \item Open Database Connectivity, \see{ODBC}{1}
+
+  \indexspace
+
+  \item paradigma de flexão
+    \subitem fonético, \see{forma fonética}{1}
+    \subitem gráfico, \see{forma gráfica}{1}
+  \item perfil do utilizador, \see{modelo do utilizador}{1}
+  \item planeador de texto, \see{micro\pdash {}planeador}{1}
+  \item preferências do utilizador, \see{modelo do utilizador}{1}
+  \item programação literária
+    \subitem noweb, \see{noweb}{1}
+  \item projecto
+    \subitem Multext, \see{Multext}{1}
+    \subitem PAROLE, \see{PAROLE}{1}
+    \subitem SIMPLE, \see{SIMPLE}{1}
+
+  \indexspace
+
+  \item RDF Schema, \see{RDFS}{1}
+  \item realização de superfície
+    \subitem morfológica, \see{monge}{1}
+  \item recomendações EAGLES, \see{EAGLES}{1}
+
+  \indexspace
+
+  \item sistema
+    \subitem HYLITE+, 1
+    \subitem PEBA-II, \see{PEBA-II}{1}
+    \subitem PLANDoc, \see{PLANDoc}{1}
+    \subitem POWER, \see{POWER}{1}
+    \subitem SURGE, \see{SURGE}{1}
+  \item sistemas de tempo real
+    \subitem HYLITE+, 1
+
+  \indexspace
+
+  \item tempo real, \see{sistemas de tempo real}{1}
+  \item Text Encoding Initiative, \see{TEI}{1}
+
+\end{theindex}

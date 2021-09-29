@@ -1,0 +1,30 @@
+\ifglsentryexists{gdp}{}%
+{%
+\gls@defglossaryentry{gdp}%
+{%
+name={GDP},%
+sort={GDP},%
+type={acronym},%
+first={Gross Domestic Product\glsspace (GDP)},%
+firstplural={Gross Domestic Product\acrpluralsuffix \glsspace (GDP\acrpluralsuffix )},%
+text={GDP},%
+plural={GDP\acrpluralsuffix },%
+description={Gross Domestic Product},%
+descriptionplural={Gross Domestic Product\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Gross Domestic Product},%
+longplural={Gross Domestic Products},%
+short={GDP},%
+shortplural={GDPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%

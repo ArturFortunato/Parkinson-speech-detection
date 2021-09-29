@@ -1,0 +1,3504 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Agarwal%
+\AX{agarwal  r
+@Agarwal, R.}%
+, Frosst%
+\AX{frosst  n
+@Frosst, N.}%
+, Zhang%
+\AX{zhang  x
+@Zhang, X.}%
+, Caruana%
+\AX{caruana  r
+@Caruana, R.}%
+\BCBL {}\ \BBA {} Hinton%
+\AX{hinton  g
+@Hinton, G.}%
+}{%
+Agarwal%
+\AX{agarwal  r
+@Agarwal, R.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+NAM}
+\APACinsertmetastar {%
+NAM}%
+\begin{APACrefauthors}%
+Agarwal, R.%
+\AX{agarwal  r
+@Agarwal, R.}%
+, Frosst, N.%
+\AX{frosst  n
+@Frosst, N.}%
+, Zhang, X.%
+\AX{zhang  x
+@Zhang, X.}%
+, Caruana, R.%
+\AX{caruana  r
+@Caruana, R.}%
+\BCBL {}\ \BBA {} Hinton, G.%
+\AX{hinton  g
+@Hinton, G.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Neural Additive Models: Interpretable Machine Learning
+  with Neural Nets} {Neural additive models: Interpretable machine learning
+  with neural nets}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Almeida%
+\AX{almeida  j
+@Almeida, J.}%
+\ \protect \BOthers {.}}{%
+Almeida%
+\AX{almeida  j
+@Almeida, J.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+parkinson_acoustic_almeida}
+\APACinsertmetastar {%
+parkinson_acoustic_almeida}%
+\begin{APACrefauthors}%
+Almeida, J.%
+\AX{almeida  j
+@Almeida, J.}%
+, Filho, P.%
+\AX{filho  p
+@Filho, P.}%
+, Carneiro, T.%
+\AX{carneiro  t
+@Carneiro, T.}%
+, Wei, W.%
+\AX{wei  w
+@Wei, W.}%
+, Damaševičius, R.%
+\AX{damaševičius  r
+@Damaševičius, R.}%
+, Maskeliunas, R.%
+\AX{maskeliunas  r
+@Maskeliunas, R.}%
+\BCBL {}\ \BBA {} Albuquerque, V.%
+\AX{albuquerque  v
+@Albuquerque, V.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Detecting Parkinson’s disease with sustained phonation
+  and speech signals using machine learning techniques} {Detecting
+  parkinson’s disease with sustained phonation and speech signals using
+  machine learning techniques}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Pattern Recognition Letters}{125}{}{55-62}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.patrec.2019.04.005}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Andonie%
+\AX{andonie  r
+@Andonie, R.}%
+}{%
+Andonie%
+\AX{andonie  r
+@Andonie, R.}%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+underfitting_small_datasets}
+\APACinsertmetastar {%
+underfitting_small_datasets}%
+\begin{APACrefauthors}%
+Andonie, R.%
+\AX{andonie  r
+@Andonie, R.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Extreme Data Mining: Inference from Small Datasets}
+  {Extreme data mining: Inference from small datasets}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{International Journal of Computers, Communications \&
+  Contro}{3}{}{280-291}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bach%
+\AX{bach  s
+@Bach, S.}%
+, Binder%
+\AX{binder  a
+@Binder, A.}%
+, Montavon%
+\AX{montavon  g
+@Montavon, G.}%
+, M{\"u}ller%
+\AX{muller  k
+@M{\"u}ller, K.}%
+\BCBL {}\ \BBA {} Samek%
+\AX{samek  w
+@Samek, W.}%
+}{%
+Bach%
+\AX{bach  s
+@Bach, S.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+FisherVectors}
+\APACinsertmetastar {%
+FisherVectors}%
+\begin{APACrefauthors}%
+Bach, S.%
+\AX{bach  s
+@Bach, S.}%
+, Binder, A.%
+\AX{binder  a
+@Binder, A.}%
+, Montavon, G.%
+\AX{montavon  g
+@Montavon, G.}%
+, M{\"u}ller, K.%
+\AX{muller  k
+@M{\"u}ller, K.}%
+\BCBL {}\ \BBA {} Samek, W.%
+\AX{samek  w
+@Samek, W.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Analyzing Classifiers: Fisher Vectors and Deep Neural
+  Networks} {Analyzing classifiers: Fisher vectors and deep neural
+  networks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{2016 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}{}{}{2912-2920}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bakar%
+\AX{bakar  z
+@Bakar, Z.}%
+, Tahir%
+\AX{tahir  n
+@Tahir, N.}%
+\BCBL {}\ \BBA {} Yassin%
+\AX{yassin  i
+@Yassin, I.}%
+}{%
+Bakar%
+\AX{bakar  z
+@Bakar, Z.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+parkinson_mlp}
+\APACinsertmetastar {%
+parkinson_mlp}%
+\begin{APACrefauthors}%
+Bakar, Z.%
+\AX{bakar  z
+@Bakar, Z.}%
+, Tahir, N.%
+\AX{tahir  n
+@Tahir, N.}%
+\BCBL {}\ \BBA {} Yassin, I.%
+\AX{yassin  i
+@Yassin, I.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Classification of Parkinson's disease based on
+  Multilayer Perceptrons Neural Network} {Classification of parkinson's disease
+  based on multilayer perceptrons neural network}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2010 6th International Colloquium on Signal Processing
+  its Applications} {2010 6th international colloquium on signal processing its
+  applications}\ (\BPG~1-4).
+\newblock
+\begin{APACrefDOI} \doi{10.1109/CSPA.2010.5545301} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bang%
+\AX{bang  y
+@Bang, Y.}%
+, Min%
+\AX{min  k
+@Min, K.}%
+, Sohn%
+\AX{sohn  y
+@Sohn, Y.}%
+\BCBL {}\ \BBA {} Cho%
+\AX{cho  s
+@Cho, S.}%
+}{%
+Bang%
+\AX{bang  y
+@Bang, Y.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+f0_jitter}
+\APACinsertmetastar {%
+f0_jitter}%
+\begin{APACrefauthors}%
+Bang, Y.%
+\AX{bang  y
+@Bang, Y.}%
+, Min, K.%
+\AX{min  k
+@Min, K.}%
+, Sohn, Y.%
+\AX{sohn  y
+@Sohn, Y.}%
+\BCBL {}\ \BBA {} Cho, S.%
+\AX{cho  s
+@Cho, S.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Acoustic characteristics of vowel sounds in patients
+  with Parkinson disease} {Acoustic characteristics of vowel sounds in patients
+  with parkinson disease}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{NeuroRehabilitation}{32}{}{649–654}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bot%
+\AX{bot  b
+@Bot, B.}%
+\ \protect \BOthers {.}}{%
+Bot%
+\AX{bot  b
+@Bot, B.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+mPower}
+\APACinsertmetastar {%
+mPower}%
+\begin{APACrefauthors}%
+Bot, B.%
+\AX{bot  b
+@Bot, B.}%
+, Suver, C.%
+\AX{suver  c
+@Suver, C.}%
+, Neto, E.%
+\AX{neto  e
+@Neto, E.}%
+, Kellen, M.%
+\AX{kellen  m
+@Kellen, M.}%
+, Klein, A.%
+\AX{klein  a
+@Klein, A.}%
+, Bare, C.%
+\AX{bare  c
+@Bare, C.}%
+\BDBL {}Trister, A.%
+\AX{doerr  m
+@Doerr, M.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The mPower study, Parkinson disease mobile data
+  collected using ResearchKit} {The mpower study, parkinson disease mobile data
+  collected using researchkit}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Scientific Data}{3}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Braga%
+\AX{braga  d
+@Braga, D.}%
+, Madureira%
+\AX{madureira  a
+@Madureira, A.}%
+, Coelho%
+\AX{coelho  l
+@Coelho, L.}%
+\BCBL {}\ \BBA {} Ajith%
+\AX{ajith  r
+@Ajith, R.}%
+}{%
+Braga%
+\AX{braga  d
+@Braga, D.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+parkinson_braga}
+\APACinsertmetastar {%
+parkinson_braga}%
+\begin{APACrefauthors}%
+Braga, D.%
+\AX{braga  d
+@Braga, D.}%
+, Madureira, A.%
+\AX{madureira  a
+@Madureira, A.}%
+, Coelho, L.%
+\AX{coelho  l
+@Coelho, L.}%
+\BCBL {}\ \BBA {} Ajith, R.%
+\AX{ajith  r
+@Ajith, R.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Automatic detection of Parkinson’s disease based on
+  acoustic analysis of speech} {Automatic detection of parkinson’s disease
+  based on acoustic analysis of speech}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Engineering Applications of Artificial
+  Intelligence}{77}{}{148-158}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.engappai.2018.09.018}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chen%
+\AX{chen  i
+@Chen, I.}%
+\ \protect \BOthers {.}}{%
+Chen%
+\AX{chen  i
+@Chen, I.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+ethical_black_box_decision}
+\APACinsertmetastar {%
+ethical_black_box_decision}%
+\begin{APACrefauthors}%
+Chen, I.%
+\AX{chen  i
+@Chen, I.}%
+, Pierson, E.%
+\AX{pierson  e
+@Pierson, E.}%
+, Rose, S.%
+\AX{rose  s
+@Rose, S.}%
+, Joshi, S.%
+\AX{joshi  s
+@Joshi, S.}%
+, Ferryman, K.%
+\AX{ferryman  k
+@Ferryman, K.}%
+\BCBL {}\ \BBA {} Ghassemi, M.%
+\AX{ghassemi  m
+@Ghassemi, M.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Ethical Machine Learning in Health Care} {Ethical
+  machine learning in health care}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{The Hastings Center Report}{}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1146/} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Choi%
+\AX{choi  b
+@Choi, B.}%
+, Shim%
+\AX{shim  g
+@Shim, G.}%
+, Jeong%
+\AX{jeong  b
+@Jeong, B.}%
+\BCBL {}\ \BBA {} Jo%
+\AX{jo  s
+@Jo, S.}%
+}{%
+Choi%
+\AX{choi  b
+@Choi, B.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+lime_depression}
+\APACinsertmetastar {%
+lime_depression}%
+\begin{APACrefauthors}%
+Choi, B.%
+\AX{choi  b
+@Choi, B.}%
+, Shim, G.%
+\AX{shim  g
+@Shim, G.}%
+, Jeong, B.%
+\AX{jeong  b
+@Jeong, B.}%
+\BCBL {}\ \BBA {} Jo, S.%
+\AX{jo  s
+@Jo, S.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Data-driven analysis using multiple self-report
+  questionnaires to identify college students at high risk of depressive
+  disorder} {Data-driven analysis using multiple self-report questionnaires to
+  identify college students at high risk of depressive disorder}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Scientific Reports}{10}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1038/s41598-020-64709-7} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chung%
+\AX{chung  j
+@Chung, J.}%
+, Nagrani%
+\AX{nagrani  a
+@Nagrani, A.}%
+\BCBL {}\ \BBA {} Zisserman%
+\AX{zisserman  a
+@Zisserman, A.}%
+}{%
+Chung%
+\AX{chung  j
+@Chung, J.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+voxceleb1}
+\APACinsertmetastar {%
+voxceleb1}%
+\begin{APACrefauthors}%
+Chung, J.%
+\AX{chung  j
+@Chung, J.}%
+, Nagrani, A.%
+\AX{nagrani  a
+@Nagrani, A.}%
+\BCBL {}\ \BBA {} Zisserman, A.%
+\AX{zisserman  a
+@Zisserman, A.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {VoxCeleb: A Large-Scale Speaker Identification Dataset}
+  {Voxceleb: A large-scale speaker identification dataset}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Interspeech} {Interspeech}\ (\BPG~2616–2620).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chung%
+\AX{chung  j
+@Chung, J.}%
+, Nagrani%
+\AX{nagrani  a
+@Nagrani, A.}%
+\BCBL {}\ \BBA {} Zisserman%
+\AX{zisserman  a
+@Zisserman, A.}%
+}{%
+Chung%
+\AX{chung  j
+@Chung, J.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+voxceleb2}
+\APACinsertmetastar {%
+voxceleb2}%
+\begin{APACrefauthors}%
+Chung, J.%
+\AX{chung  j
+@Chung, J.}%
+, Nagrani, A.%
+\AX{nagrani  a
+@Nagrani, A.}%
+\BCBL {}\ \BBA {} Zisserman, A.%
+\AX{zisserman  a
+@Zisserman, A.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {VoxCeleb2: Deep Speaker Recognition} {Voxceleb2: Deep
+  speaker recognition}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Interspeech} {Interspeech}\ (\BPG~2616–2620).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Clinic%
+\AX{clinic  m
+@Clinic, M.}%
+}{%
+Clinic%
+\AX{clinic  m
+@Clinic, M.}%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+parkinson_symptoms}
+\APACinsertmetastar {%
+parkinson_symptoms}%
+\begin{APACrefauthors}%
+Clinic, M.%
+\AX{clinic  m
+@Clinic, M.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+\APACrefbtitle {Parkinson's Disease.} {Parkinson's disease.}
+\newblock
+\APAChowpublished
+  {\url{https://www.mayoclinic.org/diseases-conditions/parkinsons-disease/symptoms-causes/syc-20376055}}.
+\newblock
+\APACrefnote{Online; accessed 23 December 2020}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Das%
+\AX{das  a
+@Das, A.}%
+\ \BBA {} Rad%
+\AX{rad  p
+@Rad, P.}%
+}{%
+Das%
+\AX{das  a
+@Das, A.}%
+\ \BBA {} Rad%
+\AX{rad  p
+@Rad, P.}%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+XAI}
+\APACinsertmetastar {%
+XAI}%
+\begin{APACrefauthors}%
+Das, A.%
+\AX{das  a
+@Das, A.}%
+\BCBT {}\ \BBA {} Rad, P.%
+\AX{rad  p
+@Rad, P.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+\APACrefbtitle {Opportunities and Challenges in Explainable Artificial
+  Intelligence (XAI): A Survey.} {Opportunities and challenges in explainable
+  artificial intelligence (xai): A survey.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Despotovic%
+\AX{despotovic  v
+@Despotovic, V.}%
+, Skovranek%
+\AX{skovranek  t
+@Skovranek, T.}%
+\BCBL {}\ \BBA {} Schommer%
+\AX{schommer  c
+@Schommer, C.}%
+}{%
+Despotovic%
+\AX{despotovic  v
+@Despotovic, V.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+parkinson_acoustic_despotovic}
+\APACinsertmetastar {%
+parkinson_acoustic_despotovic}%
+\begin{APACrefauthors}%
+Despotovic, V.%
+\AX{despotovic  v
+@Despotovic, V.}%
+, Skovranek, T.%
+\AX{skovranek  t
+@Skovranek, T.}%
+\BCBL {}\ \BBA {} Schommer, C.%
+\AX{schommer  c
+@Schommer, C.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Speech Based Estimation of Parkinson’s Disease Using
+  Gaussian Processes and Automatic Relevance Determination} {Speech based
+  estimation of parkinson’s disease using gaussian processes and automatic
+  relevance determination}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Neurocomputing}{401}{}{173-181}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.neucom.2020.03.058}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dorsey%
+\AX{dorsey  e
+@Dorsey, E.}%
+, Sherer%
+\AX{sherer  t
+@Sherer, T.}%
+, Okun%
+\AX{okun  m
+@Okun, M.}%
+\BCBL {}\ \BBA {} Bloem%
+\AX{bloem  b
+@Bloem, B.}%
+}{%
+Dorsey%
+\AX{dorsey  e
+@Dorsey, E.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+parkinson_worldwide}
+\APACinsertmetastar {%
+parkinson_worldwide}%
+\begin{APACrefauthors}%
+Dorsey, E.%
+\AX{dorsey  e
+@Dorsey, E.}%
+, Sherer, T.%
+\AX{sherer  t
+@Sherer, T.}%
+, Okun, M.%
+\AX{okun  m
+@Okun, M.}%
+\BCBL {}\ \BBA {} Bloem, B.%
+\AX{bloem  b
+@Bloem, B.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{12}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Emerging Evidence of the Parkinson Pandemic} {The
+  emerging evidence of the parkinson pandemic}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Parkinson's Disease}{8}{}{S3-S8}.
+\newblock
+\begin{APACrefDOI} \doi{10.3233/JPD-181474} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Erdogdu~Sakar%
+\AX{erdogdusakar  b
+@Erdogdu~Sakar, B.}%
+\ \protect \BOthers {.}}{%
+Erdogdu~Sakar%
+\AX{erdogdusakar  b
+@Erdogdu~Sakar, B.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+UCI}
+\APACinsertmetastar {%
+UCI}%
+\begin{APACrefauthors}%
+Erdogdu~Sakar, B.%
+\AX{erdogdusakar  b
+@Erdogdu~Sakar, B.}%
+, Isenkul, M.%
+\AX{isenkul  m
+@Isenkul, M.}%
+, Sakar, C.%
+\AX{sakar  c
+@Sakar, C.}%
+, Sertbas, A.%
+\AX{sertbas  a
+@Sertbas, A.}%
+, Gurgen, F.%
+\AX{gurgen  f
+@Gurgen, F.}%
+, Delil, S.%
+\AX{delil  s
+@Delil, S.}%
+\BDBL {}Kursun, O.%
+\AX{apaydin  h
+@Apaydin, H.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+\APACrefbtitle {Collection and Analysis of a Parkinson Speech Dataset with
+  Multiple Types of Sound Recordings} {Collection and analysis of a parkinson
+  speech dataset with multiple types of sound recordings}\ (\BVOL~17).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Eyben%
+\AX{eyben  f
+@Eyben, F.}%
+, Wöllmer%
+\AX{wöllmer  m
+@Wöllmer, M.}%
+\BCBL {}\ \BBA {} Schuller%
+\AX{schuller  b
+@Schuller, B.}%
+}{%
+Eyben%
+\AX{eyben  f
+@Eyben, F.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+openSMILE}
+\APACinsertmetastar {%
+openSMILE}%
+\begin{APACrefauthors}%
+Eyben, F.%
+\AX{eyben  f
+@Eyben, F.}%
+, Wöllmer, M.%
+\AX{wöllmer  m
+@Wöllmer, M.}%
+\BCBL {}\ \BBA {} Schuller, B.%
+\AX{schuller  b
+@Schuller, B.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {openSMILE -- The Munich Versatile and Fast Open-Source
+  Audio Feature Extractor} {opensmile -- the munich versatile and fast
+  open-source audio feature extractor}.{\BBCQ}
+\newblock
+\BIn{} (\BPG~1459-1462).
+\newblock
+\begin{APACrefDOI} \doi{10.1145/1873951.1874246} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Fahn%
+\AX{fahn  s
+@Fahn, S.}%
+\ \BBA {} Elton%
+\AX{elton  r
+@Elton, R.}%
+}{%
+Fahn%
+\AX{fahn  s
+@Fahn, S.}%
+\ \BBA {} Elton%
+\AX{elton  r
+@Elton, R.}%
+}{%
+{\protect \APACyear {1987}}%
+}]{%
+fahn_updrs}
+\APACinsertmetastar {%
+fahn_updrs}%
+\begin{APACrefauthors}%
+Fahn, S.%
+\AX{fahn  s
+@Fahn, S.}%
+\BCBT {}\ \BBA {} Elton, R.%
+\AX{elton  r
+@Elton, R.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1987}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Unified Parkinson's Disease Rating Scale} {Unified
+  parkinson's disease rating scale}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Recent Development in Parkinson's Disease}{2}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Fish%
+\AX{fish  j
+@Fish, J.}%
+}{%
+Fish%
+\AX{fish  j
+@Fish, J.}%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+updrs}
+\APACinsertmetastar {%
+updrs}%
+\begin{APACrefauthors}%
+Fish, J.%
+\AX{fish  j
+@Fish, J.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Unified Parkinson’s Disease Rating Scale} {Unified
+  parkinson’s disease rating scale}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Encyclopedia of Clinical Neuropsychology} {Encyclopedia
+  of clinical neuropsychology}\ (\BPGS\ 2576--2577).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Fleming%
+\AX{fleming  r
+@Fleming, R.}%
+, Zeisel%
+\AX{zeisel  j
+@Zeisel, J.}%
+\BCBL {}\ \BBA {} Bennett%
+\AX{bennett  k
+@Bennett, K.}%
+}{%
+Fleming%
+\AX{fleming  r
+@Fleming, R.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+dementia2020}
+\APACinsertmetastar {%
+dementia2020}%
+\begin{APACrefauthors}%
+Fleming, R.%
+\AX{fleming  r
+@Fleming, R.}%
+, Zeisel, J.%
+\AX{zeisel  j
+@Zeisel, J.}%
+\BCBL {}\ \BBA {} Bennett, K.%
+\AX{bennett  k
+@Bennett, K.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {World Alzheimer Report 2020: Design Dignity Dementia:
+  dementia-related design and the built environment, Volume 1} {World alzheimer
+  report 2020: Design dignity dementia: dementia-related design and the built
+  environment, volume 1}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Froelich%
+\AX{froelich  w
+@Froelich, W.}%
+, Wróbel%
+\AX{wróbel  k
+@Wróbel, K.}%
+\BCBL {}\ \BBA {} Porwik%
+\AX{porwik  p
+@Porwik, P.}%
+}{%
+Froelich%
+\AX{froelich  w
+@Froelich, W.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+parkinson_90_percent}
+\APACinsertmetastar {%
+parkinson_90_percent}%
+\begin{APACrefauthors}%
+Froelich, W.%
+\AX{froelich  w
+@Froelich, W.}%
+, Wróbel, K.%
+\AX{wróbel  k
+@Wróbel, K.}%
+\BCBL {}\ \BBA {} Porwik, P.%
+\AX{porwik  p
+@Porwik, P.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Diagnosis of Parkinson's Disease Using Speech Samples
+  and Threshold-Based Classification} {Diagnosis of parkinson's disease using
+  speech samples and threshold-based classification}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Medical Imaging and Health
+  Informatics}{5}{}{1358-1363}.
+\newblock
+\begin{APACrefDOI} \doi{10.1166/jmihi.2015.1539} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Goberman%
+\AX{goberman  a
+@Goberman, A.}%
+\ \BBA {} Elmer%
+\AX{elmer  l
+@Elmer, L.}%
+}{%
+Goberman%
+\AX{goberman  a
+@Goberman, A.}%
+\ \BBA {} Elmer%
+\AX{elmer  l
+@Elmer, L.}%
+}{%
+{\protect \APACyear {2005}}%
+}]{%
+parkinson_acoustic_analysis_goberman}
+\APACinsertmetastar {%
+parkinson_acoustic_analysis_goberman}%
+\begin{APACrefauthors}%
+Goberman, A.%
+\AX{goberman  a
+@Goberman, A.}%
+\BCBT {}\ \BBA {} Elmer, L.%
+\AX{elmer  l
+@Elmer, L.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Acoustic analysis of clear versus conversational speech
+  in individuals with Parkinson disease} {Acoustic analysis of clear versus
+  conversational speech in individuals with parkinson disease}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Communication Disorders}{38}{}{215-230}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Godino-Llorente%
+\AX{godinollorente  j
+@Godino-Llorente, J.}%
+, Shattuck-Hufnage%
+\AX{shattuckhufnage  s
+@Shattuck-Hufnage, S.}%
+, Choi%
+\AX{choi  j
+@Choi, J.}%
+, Moro-Velázquez%
+\AX{morovelázquez  l
+@Moro-Velázquez, L.}%
+\BCBL {}\ \BBA {} Gómez-García%
+\AX{gómezgarcía  j
+@Gómez-García, J.}%
+}{%
+Godino-Llorente%
+\AX{godinollorente  j
+@Godino-Llorente, J.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+idiopathic_parkinson}
+\APACinsertmetastar {%
+idiopathic_parkinson}%
+\begin{APACrefauthors}%
+Godino-Llorente, J.%
+\AX{godinollorente  j
+@Godino-Llorente, J.}%
+, Shattuck-Hufnage, S.%
+\AX{shattuckhufnage  s
+@Shattuck-Hufnage, S.}%
+, Choi, J.%
+\AX{choi  j
+@Choi, J.}%
+, Moro-Velázquez, L.%
+\AX{morovelázquez  l
+@Moro-Velázquez, L.}%
+\BCBL {}\ \BBA {} Gómez-García, J.%
+\AX{gómezgarcía  j
+@Gómez-García, J.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Towards the identification of Idiopathic Parkinson’s
+  Disease from the speech. New articulatory kinetic biomarkers} {Towards the
+  identification of idiopathic parkinson’s disease from the speech. new
+  articulatory kinetic biomarkers}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Goetz%
+\AX{goetz  c
+@Goetz, C.}%
+\ \protect \BOthers {.}}{%
+Goetz%
+\AX{goetz  c
+@Goetz, C.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2003}}%
+}]{%
+updrs_bias}
+\APACinsertmetastar {%
+updrs_bias}%
+\begin{APACrefauthors}%
+Goetz, C.%
+\AX{goetz  c
+@Goetz, C.}%
+, Poewe, W.%
+\AX{poewe  w
+@Poewe, W.}%
+, Rascol, O.%
+\AX{rascol  o
+@Rascol, O.}%
+, Sampaio, C.%
+\AX{sampaio  c
+@Sampaio, C.}%
+, Stebbins, G.%
+\AX{stebbins  g
+@Stebbins, G.}%
+, Fahn, S.%
+\AX{fahn  s
+@Fahn, S.}%
+\BDBL {}Van~Hilten, B.%
+\AX{lang  a
+@Lang, A.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2003}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Unified Parkinson’s Disease Rating Scale (UPDRS):
+  Status and Recommendations} {The unified parkinson’s disease rating scale
+  (updrs): Status and recommendations}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Movement Disorder}{18(7)}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Goetz%
+\AX{goetz  c
+@Goetz, C.}%
+\ \protect \BOthers {.}}{%
+Goetz%
+\AX{goetz  c
+@Goetz, C.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2008}}%
+}]{%
+mds_updrs}
+\APACinsertmetastar {%
+mds_updrs}%
+\begin{APACrefauthors}%
+Goetz, C.%
+\AX{goetz  c
+@Goetz, C.}%
+, Poewe, W.%
+\AX{poewe  w
+@Poewe, W.}%
+, Rascol, O.%
+\AX{rascol  o
+@Rascol, O.}%
+, Sampaio, C.%
+\AX{sampaio  c
+@Sampaio, C.}%
+, Stebbins, G.%
+\AX{stebbins  g
+@Stebbins, G.}%
+, Fahn, S.%
+\AX{fahn  s
+@Fahn, S.}%
+\BDBL {}Tilley, B.%
+\AX{lang  a
+@Lang, A.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {MDS-UPDRS: The MDS-sponsored Revision of the Unified
+  Parkinson’s Disease Rating Scale} {Mds-updrs: The mds-sponsored revision of
+  the unified parkinson’s disease rating scale}.{\BBCQ}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Harel%
+\AX{harel  b
+@Harel, B.}%
+, Cannizzaro%
+\AX{cannizzaro  m
+@Cannizzaro, M.}%
+, Cohen%
+\AX{cohen  h
+@Cohen, H.}%
+, Reilly%
+\AX{reilly  n
+@Reilly, N.}%
+\BCBL {}\ \BBA {} Snyder%
+\AX{snyder  p
+@Snyder, P.}%
+}{%
+Harel%
+\AX{harel  b
+@Harel, B.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2004}}%
+}]{%
+parkinson_disfluency_harel}
+\APACinsertmetastar {%
+parkinson_disfluency_harel}%
+\begin{APACrefauthors}%
+Harel, B.%
+\AX{harel  b
+@Harel, B.}%
+, Cannizzaro, M.%
+\AX{cannizzaro  m
+@Cannizzaro, M.}%
+, Cohen, H.%
+\AX{cohen  h
+@Cohen, H.}%
+, Reilly, N.%
+\AX{reilly  n
+@Reilly, N.}%
+\BCBL {}\ \BBA {} Snyder, P.%
+\AX{snyder  p
+@Snyder, P.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Acoustic characteristics of Parkinsonian speech: a
+  potential biomarker of early disease progression and treatment} {Acoustic
+  characteristics of parkinsonian speech: a potential biomarker of early
+  disease progression and treatment}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Neurolinguistics}{17}{}{439–453}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Harrell%
+\AX{harrell  l
+@Harrell, L.}%
+, Marson%
+\AX{marson  d
+@Marson, D.}%
+, Chatterjee%
+\AX{chatterjee  a
+@Chatterjee, A.}%
+\BCBL {}\ \BBA {} Parrish%
+\AX{parrish  j
+@Parrish, J.}%
+}{%
+Harrell%
+\AX{harrell  l
+@Harrell, L.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2000}}%
+}]{%
+mmse_pros}
+\APACinsertmetastar {%
+mmse_pros}%
+\begin{APACrefauthors}%
+Harrell, L.%
+\AX{harrell  l
+@Harrell, L.}%
+, Marson, D.%
+\AX{marson  d
+@Marson, D.}%
+, Chatterjee, A.%
+\AX{chatterjee  a
+@Chatterjee, A.}%
+\BCBL {}\ \BBA {} Parrish, J.%
+\AX{parrish  j
+@Parrish, J.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Severe Mini-Mental State Examination: A New
+  Neuropsychologic Instrument for the Bedside Assessment of Severely Impaired
+  Patients With Alzheimer Disease} {The severe mini-mental state examination: A
+  new neuropsychologic instrument for the bedside assessment of severely
+  impaired patients with alzheimer disease}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Alzheimer Disease and Associated Disorders}{14}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1097/00002093-200007000-00008}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Health Direct}%
+\AX{health direct
+@{Health Direct}}%
+}{%
+{Health Direct}%
+\AX{health direct
+@{Health Direct}}%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+mmse_what_is_it}
+\APACinsertmetastar {%
+mmse_what_is_it}%
+\begin{APACrefauthors}%
+{Health Direct}.%
+\AX{health direct
+@{Health Direct}}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+\APACrefbtitle {Mini-Mental State Examination (MMSE).} {Mini-mental state
+  examination (mmse).}
+\newblock
+\APAChowpublished
+  {\url{https://www.healthdirect.gov.au/mini-mental-state-examination-mmse}}.
+\newblock
+\APACrefnote{Online; accessed 23 December 2020}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hely%
+\AX{hely  m
+@Hely, M.}%
+, Reid%
+\AX{reid  w
+@Reid, W.}%
+, Adena%
+\AX{adena  m
+@Adena, M.}%
+, Halliday%
+\AX{halliday  g
+@Halliday, G.}%
+\BCBL {}\ \BBA {} Morris%
+\AX{morris  j
+@Morris, J.}%
+}{%
+Hely%
+\AX{hely  m
+@Hely, M.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2008}}%
+}]{%
+parkinson_20_years}
+\APACinsertmetastar {%
+parkinson_20_years}%
+\begin{APACrefauthors}%
+Hely, M.%
+\AX{hely  m
+@Hely, M.}%
+, Reid, W.%
+\AX{reid  w
+@Reid, W.}%
+, Adena, M.%
+\AX{adena  m
+@Adena, M.}%
+, Halliday, G.%
+\AX{halliday  g
+@Halliday, G.}%
+\BCBL {}\ \BBA {} Morris, J.%
+\AX{morris  j
+@Morris, J.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Sydney multicenter study of Parkinson’s disease:
+  the inevitability of dementia at 20 years} {The sydney multicenter study of
+  parkinson’s disease: the inevitability of dementia at 20 years}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Movement Disorders Journal}{23}{}{837--844}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hermansky%
+\AX{hermansky  h
+@Hermansky, H.}%
+, Morgan%
+\AX{morgan  n
+@Morgan, N.}%
+, Bayya%
+\AX{bayya  a
+@Bayya, A.}%
+\BCBL {}\ \BBA {} Kohn%
+\AX{kohn  p
+@Kohn, P.}%
+}{%
+Hermansky%
+\AX{hermansky  h
+@Hermansky, H.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1992}}%
+}]{%
+rastaPLP}
+\APACinsertmetastar {%
+rastaPLP}%
+\begin{APACrefauthors}%
+Hermansky, H.%
+\AX{hermansky  h
+@Hermansky, H.}%
+, Morgan, N.%
+\AX{morgan  n
+@Morgan, N.}%
+, Bayya, A.%
+\AX{bayya  a
+@Bayya, A.}%
+\BCBL {}\ \BBA {} Kohn, P.%
+\AX{kohn  p
+@Kohn, P.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1992}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Rasta-PLP speech analysis technique} {Rasta-plp speech
+  analysis technique}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {ICASSP-92: 1992 IEEE International Conference on
+  Acoustics, Speech, and Signal Processing} {Icassp-92: 1992 ieee international
+  conference on acoustics, speech, and signal processing}\ (\BVOL~1,
+  \BPG~121-124).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ho%
+\AX{ho  a
+@Ho, A.}%
+, Iansek%
+\AX{iansek  r
+@Iansek, R.}%
+, Marigliani%
+\AX{marigliani  c
+@Marigliani, C.}%
+, Bradshaw%
+\AX{bradshaw  j
+@Bradshaw, J.}%
+\BCBL {}\ \BBA {} Gates%
+\AX{gates  s
+@Gates, S.}%
+}{%
+Ho%
+\AX{ho  a
+@Ho, A.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1998}}%
+}]{%
+speech_impairments_parkinson}
+\APACinsertmetastar {%
+speech_impairments_parkinson}%
+\begin{APACrefauthors}%
+Ho, A.%
+\AX{ho  a
+@Ho, A.}%
+, Iansek, R.%
+\AX{iansek  r
+@Iansek, R.}%
+, Marigliani, C.%
+\AX{marigliani  c
+@Marigliani, C.}%
+, Bradshaw, J.%
+\AX{bradshaw  j
+@Bradshaw, J.}%
+\BCBL {}\ \BBA {} Gates, S.%
+\AX{gates  s
+@Gates, S.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1998}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Speech impairment in a large sample of patients with
+  Parkinson’s disease} {Speech impairment in a large sample of patients with
+  parkinson’s disease}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Behavioural neurology}{11}{}{131–137}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hoehn%
+\AX{hoehn  mm
+@Hoehn, M\BPBI M.}%
+\ \BBA {} Yahr%
+\AX{yahr  md
+@Yahr, M\BPBI D.}%
+}{%
+Hoehn%
+\AX{hoehn  mm
+@Hoehn, M\BPBI M.}%
+\ \BBA {} Yahr%
+\AX{yahr  md
+@Yahr, M\BPBI D.}%
+}{%
+{\protect \APACyear {1967}}%
+}]{%
+hoehn_yahr}
+\APACinsertmetastar {%
+hoehn_yahr}%
+\begin{APACrefauthors}%
+Hoehn, M\BPBI M.%
+\AX{hoehn  mm
+@Hoehn, M\BPBI M.}%
+\BCBT {}\ \BBA {} Yahr, M\BPBI D.%
+\AX{yahr  md
+@Yahr, M\BPBI D.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1967}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Parkinsonism} {Parkinsonism}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Neurology}{17}{5}{427--427}.
+\newblock
+\begin{APACrefURL} \url{https://n.neurology.org/content/17/5/427}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1212/WNL.17.5.427} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Holzinger%
+\AX{holzinger  a
+@Holzinger, A.}%
+, Biemann%
+\AX{biemann  c
+@Biemann, C.}%
+, Pattichis%
+\AX{pattichis  c
+@Pattichis, C.}%
+\BCBL {}\ \BBA {} Kell%
+\AX{kell  d
+@Kell, D.}%
+}{%
+Holzinger%
+\AX{holzinger  a
+@Holzinger, A.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+explainable_ai_systems}
+\APACinsertmetastar {%
+explainable_ai_systems}%
+\begin{APACrefauthors}%
+Holzinger, A.%
+\AX{holzinger  a
+@Holzinger, A.}%
+, Biemann, C.%
+\AX{biemann  c
+@Biemann, C.}%
+, Pattichis, C.%
+\AX{pattichis  c
+@Pattichis, C.}%
+\BCBL {}\ \BBA {} Kell, D.%
+\AX{kell  d
+@Kell, D.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {What do we need to build explainable AI systems for the
+  medical domain?} {What do we need to build explainable ai systems for the
+  medical domain?}{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Jaeger%
+\AX{jaeger  h
+@Jaeger, H.}%
+, Trivedi%
+\AX{trivedi  d
+@Trivedi, D.}%
+\BCBL {}\ \BBA {} Stadtschnitzer%
+\AX{stadtschnitzer  m
+@Stadtschnitzer, M.}%
+}{%
+Jaeger%
+\AX{jaeger  h
+@Jaeger, H.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+MDVR}
+\APACinsertmetastar {%
+MDVR}%
+\begin{APACrefauthors}%
+Jaeger, H.%
+\AX{jaeger  h
+@Jaeger, H.}%
+, Trivedi, D.%
+\AX{trivedi  d
+@Trivedi, D.}%
+\BCBL {}\ \BBA {} Stadtschnitzer, M.%
+\AX{stadtschnitzer  m
+@Stadtschnitzer, M.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+\APACrefbtitle {Mobile Device Voice Recordings at King's College London
+  (MDVR-KCL) from both early and advanced Parkinson's disease patients and
+  healthy controls [Data set].} {Mobile device voice recordings at king's
+  college london (mdvr-kcl) from both early and advanced parkinson's disease
+  patients and healthy controls [data set].}
+\newblock
+\begin{APACrefDOI} \doi{http://doi.org/10.5281/zenodo.2867216} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kent%
+\AX{kent  t
+@Kent, T.}%
+, Vorperian%
+\AX{vorperian  h
+@Vorperian, H.}%
+, Kent%
+\AX{kent  j
+@Kent, J.}%
+\BCBL {}\ \BBA {} Duffy%
+\AX{duffy  j
+@Duffy, J.}%
+}{%
+Kent%
+\AX{kent  t
+@Kent, T.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2003}}%
+}]{%
+shimmer}
+\APACinsertmetastar {%
+shimmer}%
+\begin{APACrefauthors}%
+Kent, T.%
+\AX{kent  t
+@Kent, T.}%
+, Vorperian, H.%
+\AX{vorperian  h
+@Vorperian, H.}%
+, Kent, J.%
+\AX{kent  j
+@Kent, J.}%
+\BCBL {}\ \BBA {} Duffy, J.%
+\AX{duffy  j
+@Duffy, J.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2003}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Voice dysfunction in dysarthria: application of the
+  Multi-Dimensional Voice Program} {Voice dysfunction in dysarthria:
+  application of the multi-dimensional voice program}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Communication Disorders}{36}{}{281–306}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kim%
+\AX{kim  b
+@Kim, B.}%
+\ \protect \BOthers {.}}{%
+Kim%
+\AX{kim  b
+@Kim, B.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+TCAV}
+\APACinsertmetastar {%
+TCAV}%
+\begin{APACrefauthors}%
+Kim, B.%
+\AX{kim  b
+@Kim, B.}%
+, Wattenberg, M.%
+\AX{wattenberg  m
+@Wattenberg, M.}%
+, Gilmer, J.%
+\AX{gilmer  j
+@Gilmer, J.}%
+, Cai, C.%
+\AX{cai  c
+@Cai, C.}%
+, Wexler, J.%
+\AX{wexler  j
+@Wexler, J.}%
+, Viegas, F.%
+\AX{viegas  f
+@Viegas, F.}%
+\BCBL {}\ \BBA {} Sayres, R.%
+\AX{sayres  r
+@Sayres, R.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+\APACrefbtitle {Interpretability Beyond Feature Attribution: Quantitative
+  Testing with Concept Activation Vectors (TCAV).} {Interpretability beyond
+  feature attribution: Quantitative testing with concept activation vectors
+  (tcav).}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lapuschkin%
+\AX{lapuschkin  s
+@Lapuschkin, S.}%
+\ \protect \BOthers {.}}{%
+Lapuschkin%
+\AX{lapuschkin  s
+@Lapuschkin, S.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+LRP}
+\APACinsertmetastar {%
+LRP}%
+\begin{APACrefauthors}%
+Lapuschkin, S.%
+\AX{lapuschkin  s
+@Lapuschkin, S.}%
+, Binder, A.%
+\AX{binder  a
+@Binder, A.}%
+, Montavon, G.%
+\AX{montavon  g
+@Montavon, G.}%
+, Klauschen, F.%
+\AX{klauschen  f
+@Klauschen, F.}%
+, Müller, K\BHBI R.%
+\AX{müller  kr
+@Müller, K\BHBI R.}%
+\BCBL {}\ \BBA {} Samek, W.%
+\AX{samek  w
+@Samek, W.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {On Pixel-Wise Explanations for Non-Linear Classifier
+  Decisions by Layer-Wise Relevance Propagation} {On pixel-wise explanations
+  for non-linear classifier decisions by layer-wise relevance
+  propagation}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{PLoS ONE}{10}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1371/journal.pone.0130140} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+LeCun%
+\AX{lecun  y
+@LeCun, Y.}%
+\ \BBA {} Cortes%
+\AX{cortes  c
+@Cortes, C.}%
+}{%
+LeCun%
+\AX{lecun  y
+@LeCun, Y.}%
+\ \BBA {} Cortes%
+\AX{cortes  c
+@Cortes, C.}%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+MNIST}
+\APACinsertmetastar {%
+MNIST}%
+\begin{APACrefauthors}%
+LeCun, Y.%
+\AX{lecun  y
+@LeCun, Y.}%
+\BCBT {}\ \BBA {} Cortes, C.%
+\AX{cortes  c
+@Cortes, C.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{MNIST} handwritten digit database} {{MNIST} handwritten
+  digit database}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Little%
+\AX{little  m
+@Little, M.}%
+, McSharry%
+\AX{mcsharry  p
+@McSharry, P.}%
+, Costello%
+\AX{costello  d
+@Costello, D.}%
+\BCBL {}\ \BBA {} Moroz%
+\AX{moroz  i
+@Moroz, I.}%
+}{%
+Little%
+\AX{little  m
+@Little, M.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2007}}%
+}]{%
+PDDD}
+\APACinsertmetastar {%
+PDDD}%
+\begin{APACrefauthors}%
+Little, M.%
+\AX{little  m
+@Little, M.}%
+, McSharry, P.%
+\AX{mcsharry  p
+@McSharry, P.}%
+, Costello, D.%
+\AX{costello  d
+@Costello, D.}%
+\BCBL {}\ \BBA {} Moroz, I.%
+\AX{moroz  i
+@Moroz, I.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Exploiting Nonlinear Recurrence and Fractal Scaling
+  Properties for Voice Disorder Detection} {Exploiting nonlinear recurrence and
+  fractal scaling properties for voice disorder detection}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{BioMedical Engineering OnLine}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+London%
+\AX{london  a
+@London, A.}%
+}{%
+London%
+\AX{london  a
+@London, A.}%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+black_box_model_problem}
+\APACinsertmetastar {%
+black_box_model_problem}%
+\begin{APACrefauthors}%
+London, A.%
+\AX{london  a
+@London, A.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Artificial Intelligence and Black‐Box Medical
+  Decisions: Accuracy versus Explainability} {Artificial intelligence and
+  black‐box medical decisions: Accuracy versus explainability}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{The Hastings Center Report}{49}{}{15-21}.
+\newblock
+\begin{APACrefDOI} \doi{10.1002/hast.973} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lopez-de Ipiña%
+\AX{lopezdeipiña  k
+@Lopez-de Ipiña, K.}%
+, Alonso%
+\AX{alonso  j
+@Alonso, J.}%
+\BCBL {}\ \protect \BOthers {.}}{%
+Lopez-de Ipiña%
+\AX{lopezdeipiña  k
+@Lopez-de Ipiña, K.}%
+, Alonso%
+\AX{alonso  j
+@Alonso, J.}%
+\BCBL {}\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+alzheimer_2014_2}
+\APACinsertmetastar {%
+alzheimer_2014_2}%
+\begin{APACrefauthors}%
+Lopez-de Ipiña, K.%
+\AX{lopezdeipiña  k
+@Lopez-de Ipiña, K.}%
+, Alonso, J.%
+\AX{alonso  j
+@Alonso, J.}%
+, Travieso, C.%
+\AX{travieso  c
+@Travieso, C.}%
+, Solé-Casals, J.%
+\AX{solécasals  j
+@Solé-Casals, J.}%
+, Ezeiza, A.%
+\AX{ezeiza  a
+@Ezeiza, A.}%
+, Faundez-Zanuy, M.%
+\AX{faundezzanuy  m
+@Faundez-Zanuy, M.}%
+\BDBL {}Calvo, P.%
+\AX{beitia  b
+@Beitia, B.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Feature selection for automatic analysis of emotional
+  response based on nonlinear speech modeling suitable for diagnosis of
+  Alzheimer's disease} {Feature selection for automatic analysis of emotional
+  response based on nonlinear speech modeling suitable for diagnosis of
+  alzheimer's disease}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Neurocomputing}{150}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.neucom.2014.05.083} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lopez-de Ipiña%
+\AX{lopezdeipiña  k
+@Lopez-de Ipiña, K.}%
+, Solé-Casals%
+\AX{solécasals  j
+@Solé-Casals, J.}%
+\BCBL {}\ \protect \BOthers {.}}{%
+Lopez-de Ipiña%
+\AX{lopezdeipiña  k
+@Lopez-de Ipiña, K.}%
+, Solé-Casals%
+\AX{solécasals  j
+@Solé-Casals, J.}%
+\BCBL {}\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+alzheimer_2014_1}
+\APACinsertmetastar {%
+alzheimer_2014_1}%
+\begin{APACrefauthors}%
+Lopez-de Ipiña, K.%
+\AX{lopezdeipiña  k
+@Lopez-de Ipiña, K.}%
+, Solé-Casals, J.%
+\AX{solécasals  j
+@Solé-Casals, J.}%
+, Eguiraun~Martinez, H.%
+\AX{eguiraunmartinez  h
+@Eguiraun~Martinez, H.}%
+, Alonso, J.%
+\AX{alonso  j
+@Alonso, J.}%
+, Travieso, C.%
+\AX{travieso  c
+@Travieso, C.}%
+, Ecay, M.%
+\AX{ecay  m
+@Ecay, M.}%
+\BDBL {}Beitia, B.%
+\AX{ezeiza  a
+@Ezeiza, A.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Feature selection for spontaneous speech analysis to aid
+  in Alzheimer's disease diagnosis: A fractal dimension approach} {Feature
+  selection for spontaneous speech analysis to aid in alzheimer's disease
+  diagnosis: A fractal dimension approach}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Computer Speech \& Language}{30}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.csl.2014.08.002} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Magesh%
+\AX{magesh  p
+@Magesh, P.}%
+, Myloth%
+\AX{myloth  r
+@Myloth, R.}%
+\BCBL {}\ \BBA {} Rijo%
+\AX{rijo  t
+@Rijo, T.}%
+}{%
+Magesh%
+\AX{magesh  p
+@Magesh, P.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+LIME_explainability}
+\APACinsertmetastar {%
+LIME_explainability}%
+\begin{APACrefauthors}%
+Magesh, P.%
+\AX{magesh  p
+@Magesh, P.}%
+, Myloth, R.%
+\AX{myloth  r
+@Myloth, R.}%
+\BCBL {}\ \BBA {} Rijo, T.%
+\AX{rijo  t
+@Rijo, T.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {An Explainable Machine Learning Model for Early
+  Detection of Parkinson’s Disease using LIME on DaTSCAN Imagery} {An
+  explainable machine learning model for early detection of parkinson’s
+  disease using lime on datscan imagery}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Computers in Biology and Medicine}{126}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.compbiomed.2020.104041}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Mayo Clinic}%
+\AX{mayo clinic
+@{Mayo Clinic}}%
+}{%
+{Mayo Clinic}%
+\AX{mayo clinic
+@{Mayo Clinic}}%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+dementia_mayo}
+\APACinsertmetastar {%
+dementia_mayo}%
+\begin{APACrefauthors}%
+{Mayo Clinic}.%
+\AX{mayo clinic
+@{Mayo Clinic}}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+\APACrefbtitle {Dementia.} {Dementia.}
+\newblock
+\APAChowpublished
+  {\url{https://www.mayoclinic.org/diseases-conditions/dementia/symptoms-causes/syc-20352013}}.
+\newblock
+\APACrefnote{Online; accessed 23 Setember 2020}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Moreno%
+\AX{moreno  a
+@Moreno, A.}%
+\ \protect \BOthers {.}}{%
+Moreno%
+\AX{moreno  a
+@Moreno, A.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1993}}%
+}]{%
+Albayzin}
+\APACinsertmetastar {%
+Albayzin}%
+\begin{APACrefauthors}%
+Moreno, A.%
+\AX{moreno  a
+@Moreno, A.}%
+, Poch-Oliv{\'e}, D.%
+\AX{pocholive  d
+@Poch-Oliv{\'e}, D.}%
+, Bonafonte, A.%
+\AX{bonafonte  a
+@Bonafonte, A.}%
+, Lleida, E.%
+\AX{lleida  e
+@Lleida, E.}%
+, Llisterri, J.%
+\AX{llisterri  j
+@Llisterri, J.}%
+, Mari{\~n}o, J.%
+\AX{marino  j
+@Mari{\~n}o, J.}%
+\BCBL {}\ \BBA {} Nadeu, C.%
+\AX{nadeu  c
+@Nadeu, C.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1993}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Albayzin speech database: design of the phonetic corpus}
+  {Albayzin speech database: design of the phonetic corpus}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Eurospeech.} {Eurospeech.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Moro-Velazquez%
+\AX{morovelazquez  l
+@Moro-Velazquez, L.}%
+, Gomez-Garcia%
+\AX{gomezgarcia  j
+@Gomez-Garcia, J.}%
+, Godino-Llorente%
+\AX{godinollorente  j
+@Godino-Llorente, J.}%
+\BCBL {}\ \BBA {} Dehak%
+\AX{dehak  n
+@Dehak, N.}%
+}{%
+Moro-Velazquez%
+\AX{morovelazquez  l
+@Moro-Velazquez, L.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+Neurovoz}
+\APACinsertmetastar {%
+Neurovoz}%
+\begin{APACrefauthors}%
+Moro-Velazquez, L.%
+\AX{morovelazquez  l
+@Moro-Velazquez, L.}%
+, Gomez-Garcia, J.%
+\AX{gomezgarcia  j
+@Gomez-Garcia, J.}%
+, Godino-Llorente, J.%
+\AX{godinollorente  j
+@Godino-Llorente, J.}%
+\BCBL {}\ \BBA {} Dehak, N.%
+\AX{dehak  n
+@Dehak, N.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A forced Gaussians based methodology for the
+  differential evaluation of Parkinson's Disease by means of speech processing}
+  {A forced gaussians based methodology for the differential evaluation of
+  parkinson's disease by means of speech processing}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Biomedical Signal Processing and
+  Control}{48}{}{205--220}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Moro-Velázquez%
+\AX{morovelázquez  l
+@Moro-Velázquez, L.}%
+\ \protect \BOthers {.}}{%
+Moro-Velázquez%
+\AX{morovelázquez  l
+@Moro-Velázquez, L.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+parkinson_phonemic_relevance}
+\APACinsertmetastar {%
+parkinson_phonemic_relevance}%
+\begin{APACrefauthors}%
+Moro-Velázquez, L.%
+\AX{morovelázquez  l
+@Moro-Velázquez, L.}%
+, Gomez-Garcia, J.%
+\AX{gomezgarcia  j
+@Gomez-Garcia, J.}%
+, Godino-Llorente, J.%
+\AX{godinollorente  j
+@Godino-Llorente, J.}%
+, Grandas-Perez, F.%
+\AX{grandasperez  f
+@Grandas-Perez, F.}%
+, Shattuck-Hufnagel, S.%
+\AX{shattuckhufnagel  s
+@Shattuck-Hufnagel, S.}%
+, Yagüe-Jimenez, V.%
+\AX{yagüejimenez  v
+@Yagüe-Jimenez, V.}%
+\BCBL {}\ \BBA {} Dehak, N.%
+\AX{dehak  n
+@Dehak, N.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Phonetic relevance and phonemic grouping of speech in
+  the automatic detection of Parkinson’s Disease} {Phonetic relevance and
+  phonemic grouping of speech in the automatic detection of parkinson’s
+  disease}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Scientific Reports}{9}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Moro-Velázquez%
+\AX{morovelázquez  l
+@Moro-Velázquez, L.}%
+\ \protect \BOthers {.}}{%
+Moro-Velázquez%
+\AX{morovelázquez  l
+@Moro-Velázquez, L.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+parkinson_three_languages_moro_velazquez}
+\APACinsertmetastar {%
+parkinson_three_languages_moro_velazquez}%
+\begin{APACrefauthors}%
+Moro-Velázquez, L.%
+\AX{morovelázquez  l
+@Moro-Velázquez, L.}%
+, Gómez-García, J.%
+\AX{gómezgarcía  j
+@Gómez-García, J.}%
+, Godino-Llorente, J.%
+\AX{godinollorente  j
+@Godino-Llorente, J.}%
+, Villalba, J.%
+\AX{villalba  j
+@Villalba, J.}%
+, Orozco-Arroyave, J.%
+\AX{orozcoarroyave  j
+@Orozco-Arroyave, J.}%
+\BCBL {}\ \BBA {} Dehak, N.%
+\AX{dehak  n
+@Dehak, N.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Analysis of speaker recognition methodologies and the
+  influence of kinetic changes to automatically detect Parkinson’s Disease}
+  {Analysis of speaker recognition methodologies and the influence of kinetic
+  changes to automatically detect parkinson’s disease}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Applied Soft Computing}{62}{}{649–666}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Moro-Velázquez%
+\AX{morovelázquez  l
+@Moro-Velázquez, L.}%
+, Villalba%
+\AX{villalba  j
+@Villalba, J.}%
+\BCBL {}\ \BBA {} Dehak%
+\AX{dehak  n
+@Dehak, N.}%
+}{%
+Moro-Velázquez%
+\AX{morovelázquez  l
+@Moro-Velázquez, L.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+x_vector_parkinson}
+\APACinsertmetastar {%
+x_vector_parkinson}%
+\begin{APACrefauthors}%
+Moro-Velázquez, L.%
+\AX{morovelázquez  l
+@Moro-Velázquez, L.}%
+, Villalba, J.%
+\AX{villalba  j
+@Villalba, J.}%
+\BCBL {}\ \BBA {} Dehak, N.%
+\AX{dehak  n
+@Dehak, N.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Using X-Vectors to Automatically Detect Parkinson’s
+  Disease from Speech} {Using x-vectors to automatically detect parkinson’s
+  disease from speech}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {ICASSP 2020 - 2020 IEEE International Conference on
+  Acoustics, Speech and Signal Processing} {Icassp 2020 - 2020 ieee
+  international conference on acoustics, speech and signal processing}\
+  (\BPG~1155-1159).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Naranjo%
+\AX{naranjo  l
+@Naranjo, L.}%
+, Pérez%
+\AX{pérez  c
+@Pérez, C.}%
+, Campos-Roca%
+\AX{camposroca  y
+@Campos-Roca, Y.}%
+\BCBL {}\ \BBA {} Martín%
+\AX{martín  j
+@Martín, J.}%
+}{%
+Naranjo%
+\AX{naranjo  l
+@Naranjo, L.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+naranjo_dataset}
+\APACinsertmetastar {%
+naranjo_dataset}%
+\begin{APACrefauthors}%
+Naranjo, L.%
+\AX{naranjo  l
+@Naranjo, L.}%
+, Pérez, C.%
+\AX{pérez  c
+@Pérez, C.}%
+, Campos-Roca, Y.%
+\AX{camposroca  y
+@Campos-Roca, Y.}%
+\BCBL {}\ \BBA {} Martín, J.%
+\AX{martín  j
+@Martín, J.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Addressing voice recording replications for
+  Parkinson’s disease detection} {Addressing voice recording replications for
+  parkinson’s disease detection}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Expert Systems With Applications}{46}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{http://dx.doi.org/10.1016/j.eswa.2015.10.034}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{National Institute of Aging}%
+\AX{national institute of aging
+@{National Institute of Aging}}%
+}{%
+{National Institute of Aging}%
+\AX{national institute of aging
+@{National Institute of Aging}}%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+parkinson}
+\APACinsertmetastar {%
+parkinson}%
+\begin{APACrefauthors}%
+{National Institute of Aging}.%
+\AX{national institute of aging
+@{National Institute of Aging}}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+\APACrefbtitle {Parkinson's Disease.} {Parkinson's disease.}
+\newblock
+\APAChowpublished {\url{https://www.nia.nih.gov/health/parkinsons-disease}}.
+\newblock
+\APACrefnote{Online; accessed 23 December 2020}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Orozco-Arroyave%
+\AX{orozcoarroyave  j
+@Orozco-Arroyave, J.}%
+, Arias-Londo{\~n}o%
+\AX{ariaslondono  j
+@Arias-Londo{\~n}o, J.}%
+, Vargas-Bonilla%
+\AX{vargasbonilla  j
+@Vargas-Bonilla, J.}%
+, Gonzalez-R{\'a}tiva%
+\AX{gonzalezrativa  m
+@Gonzalez-R{\'a}tiva, M.}%
+\BCBL {}\ \BBA {} N{\"o}th%
+\AX{noth  e
+@N{\"o}th, E.}%
+}{%
+Orozco-Arroyave%
+\AX{orozcoarroyave  j
+@Orozco-Arroyave, J.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+GITA}
+\APACinsertmetastar {%
+GITA}%
+\begin{APACrefauthors}%
+Orozco-Arroyave, J.%
+\AX{orozcoarroyave  j
+@Orozco-Arroyave, J.}%
+, Arias-Londo{\~n}o, J.%
+\AX{ariaslondono  j
+@Arias-Londo{\~n}o, J.}%
+, Vargas-Bonilla, J.%
+\AX{vargasbonilla  j
+@Vargas-Bonilla, J.}%
+, Gonzalez-R{\'a}tiva, M.%
+\AX{gonzalezrativa  m
+@Gonzalez-R{\'a}tiva, M.}%
+\BCBL {}\ \BBA {} N{\"o}th, E.%
+\AX{noth  e
+@N{\"o}th, E.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {New Spanish speech corpus database for the analysis of
+  people suffering from Parkinson's disease} {New spanish speech corpus
+  database for the analysis of people suffering from parkinson's
+  disease}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {LREC.} {Lrec.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Orozco-Arroyave%
+\AX{orozcoarroyave  j
+@Orozco-Arroyave, J.}%
+\ \protect \BOthers {.}}{%
+Orozco-Arroyave%
+\AX{orozcoarroyave  j
+@Orozco-Arroyave, J.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+parkinson_three_languages}
+\APACinsertmetastar {%
+parkinson_three_languages}%
+\begin{APACrefauthors}%
+Orozco-Arroyave, J.%
+\AX{orozcoarroyave  j
+@Orozco-Arroyave, J.}%
+, Honig, F.%
+\AX{honig  f
+@Honig, F.}%
+, Arias-Londoño, J.%
+\AX{ariaslondoño  j
+@Arias-Londoño, J.}%
+, Vargas-Bonilla, J\BPBI F.%
+\AX{vargasbonilla  jf
+@Vargas-Bonilla, J\BPBI F.}%
+, Daqrouq, K.%
+\AX{daqrouq  k
+@Daqrouq, K.}%
+, Skodda, S.%
+\AX{skodda  s
+@Skodda, S.}%
+\BDBL {}Noth, E.%
+\AX{rusz  j
+@Rusz, J.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Automatic detection of Parkinson’s disease in running
+  speech spoken in three different languages} {Automatic detection of
+  parkinson’s disease in running speech spoken in three different
+  languages}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of the Acoustical Society of
+  America}{139}{}{481–500}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pagan%
+\AX{pagan  f
+@Pagan, F.}%
+}{%
+Pagan%
+\AX{pagan  f
+@Pagan, F.}%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+parkinson_early}
+\APACinsertmetastar {%
+parkinson_early}%
+\begin{APACrefauthors}%
+Pagan, F.%
+\AX{pagan  f
+@Pagan, F.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Improving Outcomes Through Early Diagnosis of
+  Parkinson's Disease} {Improving outcomes through early diagnosis of
+  parkinson's disease}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{American Journal of Managed Care}{18}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pedregosa%
+\AX{pedregosa  f
+@Pedregosa, F.}%
+\ \protect \BOthers {.}}{%
+Pedregosa%
+\AX{pedregosa  f
+@Pedregosa, F.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2011}}%
+}]{%
+scikit-learn}
+\APACinsertmetastar {%
+scikit-learn}%
+\begin{APACrefauthors}%
+Pedregosa, F.%
+\AX{pedregosa  f
+@Pedregosa, F.}%
+, Varoquaux, G.%
+\AX{varoquaux  g
+@Varoquaux, G.}%
+, Gramfort, A.%
+\AX{gramfort  a
+@Gramfort, A.}%
+, Michel, V.%
+\AX{michel  v
+@Michel, V.}%
+, Thirion, B.%
+\AX{thirion  b
+@Thirion, B.}%
+, Grisel, O.%
+\AX{grisel  o
+@Grisel, O.}%
+\BDBL {}Duchesnay, E.%
+\AX{blondel  m
+@Blondel, M.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Scikit-learn: Machine Learning in {P}ython}
+  {Scikit-learn: Machine learning in {P}ython}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Machine Learning
+  Research}{12}{}{2825--2830}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Perez%
+\AX{perez  k
+@Perez, K.}%
+, Ramig%
+\AX{ramig  l
+@Ramig, L.}%
+, Smith%
+\AX{smith  m
+@Smith, M.}%
+\BCBL {}\ \BBA {} Dromey%
+\AX{dromey  c
+@Dromey, C.}%
+}{%
+Perez%
+\AX{perez  k
+@Perez, K.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1996}}%
+}]{%
+features_explained}
+\APACinsertmetastar {%
+features_explained}%
+\begin{APACrefauthors}%
+Perez, K.%
+\AX{perez  k
+@Perez, K.}%
+, Ramig, L.%
+\AX{ramig  l
+@Ramig, L.}%
+, Smith, M.%
+\AX{smith  m
+@Smith, M.}%
+\BCBL {}\ \BBA {} Dromey, C.%
+\AX{dromey  c
+@Dromey, C.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1996}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Parkinson larynx: tremor and videostroboscopic
+  findings.} {The parkinson larynx: tremor and videostroboscopic
+  findings.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of voice : official journal of the Voice
+  Foundation}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Petsiuk%
+\AX{petsiuk  v
+@Petsiuk, V.}%
+, Das%
+\AX{das  a
+@Das, A.}%
+\BCBL {}\ \BBA {} Saenko%
+\AX{saenko  k
+@Saenko, K.}%
+}{%
+Petsiuk%
+\AX{petsiuk  v
+@Petsiuk, V.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+RISE}
+\APACinsertmetastar {%
+RISE}%
+\begin{APACrefauthors}%
+Petsiuk, V.%
+\AX{petsiuk  v
+@Petsiuk, V.}%
+, Das, A.%
+\AX{das  a
+@Das, A.}%
+\BCBL {}\ \BBA {} Saenko, K.%
+\AX{saenko  k
+@Saenko, K.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {RISE: Randomized Input Sampling for Explanation of
+  Black-box Models} {Rise: Randomized input sampling for explanation of
+  black-box models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{CoRR}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pfob%
+\AX{pfob  a
+@Pfob, A.}%
+\ \protect \BOthers {.}}{%
+Pfob%
+\AX{pfob  a
+@Pfob, A.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+lime_breast_cancer}
+\APACinsertmetastar {%
+lime_breast_cancer}%
+\begin{APACrefauthors}%
+Pfob, A.%
+\AX{pfob  a
+@Pfob, A.}%
+, Sidey-Gibbons, C.%
+\AX{sideygibbons  c
+@Sidey-Gibbons, C.}%
+, Lee, H\BHBI B.%
+\AX{lee  hb
+@Lee, H\BHBI B.}%
+, Tasoulis, M\BPBI K.%
+\AX{tasoulis  mk
+@Tasoulis, M\BPBI K.}%
+, Koelbel, V.%
+\AX{koelbel  v
+@Koelbel, V.}%
+, Golatta, M.%
+\AX{golatta  m
+@Golatta, M.}%
+\BDBL {}Kuerer, H.%
+\AX{rauch  g
+@Rauch, G.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Identification of breast cancer patients with pathologic
+  complete response in the breast after neoadjuvant systemic treatment by an
+  intelligent vacuum-assisted biopsy} {Identification of breast cancer patients
+  with pathologic complete response in the breast after neoadjuvant systemic
+  treatment by an intelligent vacuum-assisted biopsy}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{European Journal of Cancer}{143}{}{134-146}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.ejca.2020.11.006} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pinto%
+\AX{pinto  s
+@Pinto, S.}%
+\ \protect \BOthers {.}}{%
+Pinto%
+\AX{pinto  s
+@Pinto, S.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+fralusopark}
+\APACinsertmetastar {%
+fralusopark}%
+\begin{APACrefauthors}%
+Pinto, S.%
+\AX{pinto  s
+@Pinto, S.}%
+, Cardoso, R.%
+\AX{cardoso  r
+@Cardoso, R.}%
+, Sadat, J.%
+\AX{sadat  j
+@Sadat, J.}%
+, Guimarães, I.%
+\AX{guimarães  i
+@Guimarães, I.}%
+, Mercier, C.%
+\AX{mercier  c
+@Mercier, C.}%
+, Santos, H.%
+\AX{santos  h
+@Santos, H.}%
+\BDBL {}Ferreira, J.%
+\AX{atkinsonclement  c
+@Atkinson-Clement, C.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Dysarthria in individuals with Parkinson's disease: A
+  protocol for a binational, cross-sectional, case-controlled study in French
+  and European Portuguese (FraLusoPark)} {Dysarthria in individuals with
+  parkinson's disease: A protocol for a binational, cross-sectional,
+  case-controlled study in french and european portuguese
+  (fralusopark)}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{BMJ Open}{6}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1136/bmjopen-2016-012885} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pompilli%
+\AX{pompilli  a
+@Pompilli, A.}%
+\ \protect \BOthers {.}}{%
+Pompilli%
+\AX{pompilli  a
+@Pompilli, A.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+parkinson_acoustic_pompilli}
+\APACinsertmetastar {%
+parkinson_acoustic_pompilli}%
+\begin{APACrefauthors}%
+Pompilli, A.%
+\AX{pompilli  a
+@Pompilli, A.}%
+, Abad, A.%
+\AX{abad  a
+@Abad, A.}%
+, Romano, P.%
+\AX{romano  p
+@Romano, P.}%
+, Pavão~Martins, I.%
+\AX{pavãomartins  i
+@Pavão~Martins, I.}%
+, Cardoso, R.%
+\AX{cardoso  r
+@Cardoso, R.}%
+, Santos, H.%
+\AX{santos  h
+@Santos, H.}%
+\BDBL {}Ferreira, J.%
+\AX{carvalho  j
+@Carvalho, J.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Automatic Detection of Parkinson’s Disease: An
+  Experimental Analysis of Common Speech Production Tasks Used for Diagnosis}
+  {Automatic detection of parkinson’s disease: An experimental analysis of
+  common speech production tasks used for diagnosis}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Text, Speech, and Dialogue. TSD 2017. Lecture Notes in
+  Computer Science}{10415}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1007/978-3-319-64206-2_46}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Proença%
+\AX{proença  j
+@Proença, J.}%
+\ \protect \BOthers {.}}{%
+Proença%
+\AX{proença  j
+@Proença, J.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+Proenca}
+\APACinsertmetastar {%
+Proenca}%
+\begin{APACrefauthors}%
+Proença, J.%
+\AX{proença  j
+@Proença, J.}%
+, Perdigão, F.%
+\AX{perdigão  f
+@Perdigão, F.}%
+, Veira, A.%
+\AX{veira  a
+@Veira, A.}%
+, Candeias, S.%
+\AX{candeias  s
+@Candeias, S.}%
+, Lemos, J.%
+\AX{lemos  j
+@Lemos, J.}%
+\BCBL {}\ \BBA {} Januário, C.%
+\AX{januário  c
+@Januário, C.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Characterizing Parkinson’s disease speech by acoustic
+  and phonetic features} {Characterizing parkinson’s disease speech by
+  acoustic and phonetic features}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Computational Processing of the Portuguese
+  Language}{}{}{24-35}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Punn%
+\AX{punn  n
+@Punn, N.}%
+\ \BBA {} Agarwal%
+\AX{agarwal  s
+@Agarwal, S.}%
+}{%
+Punn%
+\AX{punn  n
+@Punn, N.}%
+\ \BBA {} Agarwal%
+\AX{agarwal  s
+@Agarwal, S.}%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+lime_covid}
+\APACinsertmetastar {%
+lime_covid}%
+\begin{APACrefauthors}%
+Punn, N.%
+\AX{punn  n
+@Punn, N.}%
+\BCBT {}\ \BBA {} Agarwal, S.%
+\AX{agarwal  s
+@Agarwal, S.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Automated diagnosis of COVID-19 with limited
+  posteroanterior chest X-ray images using fine-tuned deep neural networks}
+  {Automated diagnosis of covid-19 with limited posteroanterior chest x-ray
+  images using fine-tuned deep neural networks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Applied Intelligence}{}{}{1-14}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s10489-020-01900-3} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rai%
+\AX{rai  m
+@Rai, M.}%
+\ \protect \BOthers {.}}{%
+Rai%
+\AX{rai  m
+@Rai, M.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+parkinson_incidence}
+\APACinsertmetastar {%
+parkinson_incidence}%
+\begin{APACrefauthors}%
+Rai, M.%
+\AX{rai  m
+@Rai, M.}%
+, Yadav, A.%
+\AX{yadav  a
+@Yadav, A.}%
+, Ingle, A\BPBI P.%
+\AX{ingle  ap
+@Ingle, A\BPBI P.}%
+, Reshetilov, A.%
+\AX{reshetilov  a
+@Reshetilov, A.}%
+, Blanco-Prieto, M\BPBI J.%
+\AX{blancoprieto  mj
+@Blanco-Prieto, M\BPBI J.}%
+\BCBL {}\ \BBA {} Feitosa, C.%
+\AX{feitosa  c
+@Feitosa, C.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Neurodegenerative Diseases: The Real Problem and
+  Nanobiotechnological Solutions} {Neurodegenerative diseases: The real problem
+  and nanobiotechnological solutions}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Nanobiotechnology in Neurodegenerative Diseases}
+  {Nanobiotechnology in neurodegenerative diseases}\ (\BPGS\ 1--17).
+\newblock
+\APACaddressPublisher{}{Springer International Publishing}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ribeiro%
+\AX{ribeiro  m
+@Ribeiro, M.}%
+, Singh%
+\AX{singh  s
+@Singh, S.}%
+\BCBL {}\ \BBA {} Guestrin%
+\AX{guestrin  c
+@Guestrin, C.}%
+}{%
+Ribeiro%
+\AX{ribeiro  m
+@Ribeiro, M.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+LIME}
+\APACinsertmetastar {%
+LIME}%
+\begin{APACrefauthors}%
+Ribeiro, M.%
+\AX{ribeiro  m
+@Ribeiro, M.}%
+, Singh, S.%
+\AX{singh  s
+@Singh, S.}%
+\BCBL {}\ \BBA {} Guestrin, C.%
+\AX{guestrin  c
+@Guestrin, C.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {“Why Should I Trust You?” Explaining the Predictions
+  of Any Classifier} {“why should i trust you?” explaining the predictions
+  of any classifier}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {KDD '16: Proceedings of the 22nd ACM SIGKDD
+  International Conference on Knowledge Discovery and Data Mining} {Kdd '16:
+  Proceedings of the 22nd acm sigkdd international conference on knowledge
+  discovery and data mining}\ (\BPG~1135–1144).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rusz%
+\AX{rusz  j
+@Rusz, J.}%
+\ \protect \BOthers {.}}{%
+Rusz%
+\AX{rusz  j
+@Rusz, J.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+CzechPD}
+\APACinsertmetastar {%
+CzechPD}%
+\begin{APACrefauthors}%
+Rusz, J.%
+\AX{rusz  j
+@Rusz, J.}%
+, Cmejla, R.%
+\AX{cmejla  r
+@Cmejla, R.}%
+, Tykalov{\'a}, T.%
+\AX{tykalova  t
+@Tykalov{\'a}, T.}%
+, Ruzickova, H.%
+\AX{ruzickova  h
+@Ruzickova, H.}%
+, Klemp{\'i}r, J.%
+\AX{klempir  j
+@Klemp{\'i}r, J.}%
+, Majerova, V.%
+\AX{majerova  v
+@Majerova, V.}%
+\BDBL {}Růika, E.%
+\AX{picmausova  j
+@Picmausova, J.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Imprecise vowel articulation as a potential early marker
+  of Parkinson's disease: effect of speaking task.} {Imprecise vowel
+  articulation as a potential early marker of parkinson's disease: effect of
+  speaking task.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{The Journal of the Acoustical Society of
+  America}{}{}{2171-2181}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Shrikumar%
+\AX{shrikumar  a
+@Shrikumar, A.}%
+, Greenside%
+\AX{greenside  p
+@Greenside, P.}%
+\BCBL {}\ \BBA {} Kundaje%
+\AX{kundaje  a
+@Kundaje, A.}%
+}{%
+Shrikumar%
+\AX{shrikumar  a
+@Shrikumar, A.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+DeepLIFT}
+\APACinsertmetastar {%
+DeepLIFT}%
+\begin{APACrefauthors}%
+Shrikumar, A.%
+\AX{shrikumar  a
+@Shrikumar, A.}%
+, Greenside, P.%
+\AX{greenside  p
+@Greenside, P.}%
+\BCBL {}\ \BBA {} Kundaje, A.%
+\AX{kundaje  a
+@Kundaje, A.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning Important Features Through Propagating
+  Activation Differences} {Learning important features through propagating
+  activation differences}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{CoRR}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sundararajan%
+\AX{sundararajan  m
+@Sundararajan, M.}%
+, Taly%
+\AX{taly  a
+@Taly, A.}%
+\BCBL {}\ \BBA {} Yan%
+\AX{yan  q
+@Yan, Q.}%
+}{%
+Sundararajan%
+\AX{sundararajan  m
+@Sundararajan, M.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+axiomatic_attribution}
+\APACinsertmetastar {%
+axiomatic_attribution}%
+\begin{APACrefauthors}%
+Sundararajan, M.%
+\AX{sundararajan  m
+@Sundararajan, M.}%
+, Taly, A.%
+\AX{taly  a
+@Taly, A.}%
+\BCBL {}\ \BBA {} Yan, Q.%
+\AX{yan  q
+@Yan, Q.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Axiomatic Attribution for Deep Networks} {Axiomatic
+  attribution for deep networks}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {ICML.} {Icml.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tombaugh%
+\AX{tombaugh  t
+@Tombaugh, T.}%
+\ \BBA {} McIntyre%
+\AX{mcintyre  n
+@McIntyre, N.}%
+}{%
+Tombaugh%
+\AX{tombaugh  t
+@Tombaugh, T.}%
+\ \BBA {} McIntyre%
+\AX{mcintyre  n
+@McIntyre, N.}%
+}{%
+{\protect \APACyear {1992}}%
+}]{%
+mmse_cons}
+\APACinsertmetastar {%
+mmse_cons}%
+\begin{APACrefauthors}%
+Tombaugh, T.%
+\AX{tombaugh  t
+@Tombaugh, T.}%
+\BCBT {}\ \BBA {} McIntyre, N.%
+\AX{mcintyre  n
+@McIntyre, N.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1992}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The mini-mental state examination: a comprehensive
+  review} {The mini-mental state examination: a comprehensive review}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of the American Geriatrics Society}{40}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1111/j.1532-5415.1992.tb01992.x}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tracy%
+\AX{tracy  j
+@Tracy, J.}%
+, Özkancab%
+\AX{Özkancab  y
+@Özkancab, Y.}%
+, Atkins%
+\AX{atkins  d
+@Atkins, D.}%
+\BCBL {}\ \BBA {} Ghomi%
+\AX{ghomi  r
+@Ghomi, R.}%
+}{%
+Tracy%
+\AX{tracy  j
+@Tracy, J.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+parkinson_acoustic_tracy}
+\APACinsertmetastar {%
+parkinson_acoustic_tracy}%
+\begin{APACrefauthors}%
+Tracy, J.%
+\AX{tracy  j
+@Tracy, J.}%
+, Özkancab, Y.%
+\AX{Özkancab  y
+@Özkancab, Y.}%
+, Atkins, D.%
+\AX{atkins  d
+@Atkins, D.}%
+\BCBL {}\ \BBA {} Ghomi, R.%
+\AX{ghomi  r
+@Ghomi, R.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Investigating voice as a biomarker: Deep phenotyping
+  methods for earlydetection of Parkinson's disease} {Investigating voice as a
+  biomarker: Deep phenotyping methods for earlydetection of parkinson's
+  disease}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Biomedical Informatics}{104}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.jbi.2019.103362}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tsanas%
+\AX{tsanas  a
+@Tsanas, A.}%
+, Little%
+\AX{little  m
+@Little, M.}%
+, McSharry%
+\AX{mcsharry  p
+@McSharry, P.}%
+\BCBL {}\ \BBA {} Ramig%
+\AX{ramig  l
+@Ramig, L.}%
+}{%
+Tsanas%
+\AX{tsanas  a
+@Tsanas, A.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+PTD}
+\APACinsertmetastar {%
+PTD}%
+\begin{APACrefauthors}%
+Tsanas, A.%
+\AX{tsanas  a
+@Tsanas, A.}%
+, Little, M.%
+\AX{little  m
+@Little, M.}%
+, McSharry, P.%
+\AX{mcsharry  p
+@McSharry, P.}%
+\BCBL {}\ \BBA {} Ramig, L.%
+\AX{ramig  l
+@Ramig, L.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Accurate telemonitoring of Parkinson’s disease
+  progression by non-invasive speech tests} {Accurate telemonitoring of
+  parkinson’s disease progression by non-invasive speech tests}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Transactions on Biomedical Engineering}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tysnes%
+\AX{tysnes  ob
+@Tysnes, O\BHBI B.}%
+\ \BBA {} Storstein%
+\AX{storstein  a
+@Storstein, A.}%
+}{%
+Tysnes%
+\AX{tysnes  ob
+@Tysnes, O\BHBI B.}%
+\ \BBA {} Storstein%
+\AX{storstein  a
+@Storstein, A.}%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+epidemiology_pd}
+\APACinsertmetastar {%
+epidemiology_pd}%
+\begin{APACrefauthors}%
+Tysnes, O\BHBI B.%
+\AX{tysnes  ob
+@Tysnes, O\BHBI B.}%
+\BCBT {}\ \BBA {} Storstein, A.%
+\AX{storstein  a
+@Storstein, A.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Epidemiology of Parkinson's disease} {Epidemiology of
+  parkinson's disease}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of neural transmission}{124}{}{901--905}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Vellido%
+\AX{vellido  a
+@Vellido, A.}%
+}{%
+Vellido%
+\AX{vellido  a
+@Vellido, A.}%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+interpretability_importance}
+\APACinsertmetastar {%
+interpretability_importance}%
+\begin{APACrefauthors}%
+Vellido, A.%
+\AX{vellido  a
+@Vellido, A.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The importance of interpretability and visualization in
+  machine learning for applications in medicine and health care} {The
+  importance of interpretability and visualization in machine learning for
+  applications in medicine and health care}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Neural Computing and Applications}{}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1007/s00521-019-04051-w}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wan%
+\AX{wan  s
+@Wan, S.}%
+, Liang%
+\AX{liang  y
+@Liang, Y.}%
+, Zhang%
+\AX{zhang  y
+@Zhang, Y.}%
+\BCBL {}\ \BBA {} Guizani%
+\AX{guizani  m
+@Guizani, M.}%
+}{%
+Wan%
+\AX{wan  s
+@Wan, S.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+deep_mlp_parkinson}
+\APACinsertmetastar {%
+deep_mlp_parkinson}%
+\begin{APACrefauthors}%
+Wan, S.%
+\AX{wan  s
+@Wan, S.}%
+, Liang, Y.%
+\AX{liang  y
+@Liang, Y.}%
+, Zhang, Y.%
+\AX{zhang  y
+@Zhang, Y.}%
+\BCBL {}\ \BBA {} Guizani, M.%
+\AX{guizani  m
+@Guizani, M.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Deep Multi-Layer Perceptron Classifier for Behavior
+  Analysis to Estimate Parkinson’s Disease Severity Using Smartphones} {Deep
+  multi-layer perceptron classifier for behavior analysis to estimate
+  parkinson’s disease severity using smartphones}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Access}{}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1109/ACCESS.2018.2851382} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Williams-Gray%
+\AX{williamsgray  c
+@Williams-Gray, C.}%
+\ \protect \BOthers {.}}{%
+Williams-Gray%
+\AX{williamsgray  c
+@Williams-Gray, C.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+parkinson_10_years}
+\APACinsertmetastar {%
+parkinson_10_years}%
+\begin{APACrefauthors}%
+Williams-Gray, C.%
+\AX{williamsgray  c
+@Williams-Gray, C.}%
+, Mason, S.%
+\AX{mason  s
+@Mason, S.}%
+, Evans, J.%
+\AX{evans  j
+@Evans, J.}%
+, Foltynie, T.%
+\AX{foltynie  t
+@Foltynie, T.}%
+, Brayne, C.%
+\AX{brayne  c
+@Brayne, C.}%
+, Robbins, T.%
+\AX{robbins  t
+@Robbins, T.}%
+\BCBL {}\ \BBA {} Barker, R.%
+\AX{barker  r
+@Barker, R.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The CamPaIGN study of Parkinson’s disease: 10-year
+  outlook in an incident population-based cohort} {The campaign study of
+  parkinson’s disease: 10-year outlook in an incident population-based
+  cohort}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Neurology, Neurosurgery and
+  Psychiatry}{84}{}{1258--1264}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{World Health Organization}%
+\AX{world health organization
+@{World Health Organization}}%
+}{%
+{World Health Organization}%
+\AX{world health organization
+@{World Health Organization}}%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+dementia_who}
+\APACinsertmetastar {%
+dementia_who}%
+\begin{APACrefauthors}%
+{World Health Organization}.%
+\AX{world health organization
+@{World Health Organization}}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+\APACrefbtitle {{Dementia}.} {{Dementia}.}
+\newblock
+\APAChowpublished
+  {\url{https://www.who.int/news-room/fact-sheets/detail/dementia}}.
+\newblock
+\APACrefnote{Online; accessed 23 Setember 2020}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Yaman%
+\AX{yaman  o
+@Yaman, O.}%
+, Ertam%
+\AX{ertam  f
+@Ertam, F.}%
+\BCBL {}\ \BBA {} Tuncer%
+\AX{tuncer  t
+@Tuncer, T.}%
+}{%
+Yaman%
+\AX{yaman  o
+@Yaman, O.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+parkinson_acoustic_yaman}
+\APACinsertmetastar {%
+parkinson_acoustic_yaman}%
+\begin{APACrefauthors}%
+Yaman, O.%
+\AX{yaman  o
+@Yaman, O.}%
+, Ertam, F.%
+\AX{ertam  f
+@Ertam, F.}%
+\BCBL {}\ \BBA {} Tuncer, T.%
+\AX{tuncer  t
+@Tuncer, T.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Automated Parkinson’s disease recognition based on
+  statistical pooling method using acoustic features} {Automated parkinson’s
+  disease recognition based on statistical pooling method using acoustic
+  features}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Medical Hypotheses}{135}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.mehy.2019.109483}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

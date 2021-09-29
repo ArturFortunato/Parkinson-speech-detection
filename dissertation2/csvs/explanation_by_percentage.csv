@@ -1,0 +1,11 @@
+feature,percentage,weight
+PLP[0],14.783,0.057
+$\Delta$ PLP[1],13.913,0.043
+$\Delta$$\Delta$ PLP[3],13.261,0.044
+$\Delta$ MFCC[1],13.261,0.043
+MFCC[11],12.391,0.042
+MFCC[8],11.522,0.043
+MFCC[0],11.304,0.058
+$\Delta$ MFCC[0],11.087,0.041
+$\Delta$ PLP[0],11.087,0.043
+$\Delta$$\Delta$ MFCC[2],10.652,0.041

@@ -1,0 +1,62 @@
+feature,percentage,weight
+MFCC[0],11.304,0.0581
+PLP[0],14.783,0.0568
+PLP[1],6.087,0.0513
+MFCC[12],6.739,0.0487
+MFCC[4],8.043,0.0485
+$Delta$$Delta$ PLP[0],1.957,0.0482
+Jitter,3.261,0.0468
+MFCC[2],7.174,0.0459
+$Delta$ MFCC[12],5.870,0.0458
+MFCC[6],6.957,0.0457
+MFCC[7],7.609,0.0457
+PLP[5],7.826,0.0450
+MFCC[5],6.957,0.0447
+PLP[2],3.696,0.0447
+$Delta$ PLP[5],6.087,0.0445
+$Delta$$Delta$ PLP[2],8.696,0.0442
+$Delta$ MFCC[4],9.565,0.0441
+$Delta$$Delta$ PLP[3],13.261,0.0440
+$Delta$$Delta$ MFCC[3],7.826,0.0440
+$Delta$$Delta$ MFCC[12],9.130,0.0437
+F0,8.261,0.0437
+$Delta$$Delta$ MFCC[1],7.391,0.0430
+$Delta$ PLP[0],11.087,0.0428
+$Delta$ PLP[1],13.913,0.0428
+$Delta$ PLP[2],10.000,0.0426
+$Delta$ MFCC[1],13.261,0.0426
+MFCC[8],11.522,0.0425
+MFCC[11],12.391,0.0423
+$Delta$ PLP[4],9.348,0.0421
+$Delta$$Delta$ PLP[1],10.435,0.0420
+$Delta$ MFCC[3],7.609,0.0420
+$Delta$$Delta$ PLP[5],9.565,0.0417
+$Delta$$Delta$ MFCC[0],5.000,0.0414
+$Delta$$Delta$ MFCC[2],10.652,0.0411
+$Delta$$Delta$ MFCC[4],8.261,0.0410
+$Delta$ MFCC[0],11.087,0.0409
+$Delta$ MFCC[6],9.783,0.0409
+$Delta$ MFCC[2],10.435,0.0408
+$Delta$$Delta$ PLP[4],8.913,0.0406
+$Delta$ MFCC[8],5.217,0.0404
+$Delta$$Delta$ MFCC[7],7.609,0.0404
+HNR,6.522,0.0402
+$Delta$ MFCC[10],8.478,0.0402
+$Delta$$Delta$ MFCC[6],7.174,0.0399
+MFCC[9],10.217,0.0399
+$Delta$ PLP[3],7.609,0.0398
+PLP[4],6.957,0.0397
+$Delta$$Delta$ MFCC[5],8.696,0.0396
+MFCC[10],9.348,0.0396
+PLP[3],6.739,0.0393
+MFCC[3],3.478,0.0382
+$Delta$$Delta$ MFCC[8],7.391,0.0379
+Shimmer,7.391,0.0379
+$Delta$ MFCC[7],8.043,0.0377
+$Delta$ MFCC[5],6.739,0.0374
+$Delta$$Delta$ MFCC[10],7.609,0.0373
+MFCC[1],3.913,0.0371
+$Delta$ MFCC[11],8.261,0.0366
+$Delta$ MFCC[9],6.957,0.0356
+$Delta$$Delta$ MFCC[9],6.957,0.0356
+$Delta$$Delta$ MFCC[11],6.957,0.0349

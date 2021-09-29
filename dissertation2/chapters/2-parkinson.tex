@@ -1,0 +1,140 @@
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+  %
+%%%%%                        CHAPTER
+ %%%
+  %
+
+\chapter{Parkinson's Disease}
+%\addcontentsline{lof}{chapter}{\thechapter\quad Facere Possimus}
+%\addcontentsline{lot}{chapter}{\thechapter\quad Facere Possimus}
+\label{ch:facere}
+
+%\begin{quotation}
+%  {\small\it Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
+
+%{\small\it -- Cerico}
+%\end{quotation}
+
+
+
+\gls{pd} is a common cause of dementia. It consists of a neurodegenerative disorder that affects the central nervous system. Symptoms begin gradually and worsen over time \cite{parkinson}.
+
+Dementia is a syndrome that reduces the cognitive function. It affects a wide range of mental capacities, such as memory, comprehension, calculation, and language. Several factors can contribute to the development of dementia: factors that cannot be changed, such as age (the percentage of people over 60 years old suffering from dementia is estimated to be 5-8\% \cite{dementia_who}) and genetics (having a family history of dementia increases one's probability of developing some form of dementia), and factors that can be changed, such as a poor diet and lack of exercise, smoking, diabetes, vitamin and nutritional deficiencies, excessive alcohol consumption and cardiovascular risk factors \cite{dementia_mayo}. 
+
+Dementia impacts the patient physically and psychologically, but also its carers and family (as it creates a high level of dependency for the patient), and society at economic and social levels \cite{dementia_who}.
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                        FIRST SECTION
+ %%%
+  %
+
+\section{Symptoms}
+
+As previously stated, symptoms begin gradually and worsen over time \cite{parkinson}. The most common symptoms include resting tremors (where hands or arms start shaking when resting), bradykinesia (or slowness of movement), muscle stiffness, which results in difficulty in moving and producing facial expressions, postural instability, which reduces the ability to maintain a steady posture, and dystonia, a condition in which patients have involuntary and repetitive muscle movements. In particular, \gls{pd} also affects speech ability. Slurring and mumbling are observed in \gls{pd} patients' speech, which is often observed to be monotone and breathy. The speech rate is also affected, as most patients speak slowly, although others speak too fast. Finally, cognitive problems have been associated with the disease, manifested as a difficulty in finding the correct words (which also contributes to slowing the speech) \cite{parkinson_symptoms}.
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                      SECOND SECTION
+ %%%
+  %
+
+\section{Speech Impairments}
+
+\gls{pd} patients exhibits multiple speech impairments, both at acoustic and at language levels. Acoustic parameters of speech, such as the \gls{f0} \cite{parkinson_disfluency_harel}, pause duration \cite{parkinson_disfluency_harel} or vowel space time \cite{parkinson_acoustic_analysis_goberman} have been shown to distinguish \gls{pd} from \gls{hc}. 90\% of \gls{pd} patients are reported to have speech and voice disorders \cite{parkinson_90_percent}, which show that this biomarker can be an important source of information to detect \gls{pd}. 
+Instances of incomplete closure of vocal folds along with bowing folds during phonation have been reported \cite{features_explained}, leading to noise presence, typically characterized by measures such as \gls{gnr}, \gls{nhr}, \gls{hnr} and \gls{vti}. An increase in the average values of \gls{f0}, jitter, and shimmer have also been measured in PD patients.
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                         ANOTHER SECTION
+ %%%
+  %
+\section{Diagnosis}
+
+To measure the progression of \gls{pd}, \gls{hny} was proposed \cite{hoehn_yahr}. This scale describes the disease through five stages, ranging from stage one, where the patient's symptoms are mild and only manifest on one side of the body, to stage five, where patients are confined to a wheelchair or a bed.
+
+Two decades later, \gls{updrs} was created \cite{fahn_updrs}. It consists on a 50 question test, separated into four sections: (1) Mentation, behavior, and mood, (2) Activities of daily living (ADL), (3) Motor, and (4) Complications \cite{updrs}. Sections 2 and 3 include speech evaluation (section 2 contains questions for self-assessment of speech impairments, while section 3 evaluates free speech from the patient, for an evaluation made by the clinician). The \gls{updrs} test has proven to be very effective in the diagnosis of \gls{pd}, although favoring moderate and severe impairments. Hence, it may not be ideal to detect mild disease-related signs and symptoms \cite{updrs_bias}.
+Furthermore, the \gls{updrs} presents some ambiguities \cite{updrs_bias}. In 2003, the \gls{mds} published a state-of-the-art review on the \gls{updrs} stating the test's inability to measure the severity of \gls{pd} \cite{mds_updrs}. Furthermore, the heterogeneity of the test (evident on section 4 that uses a mixture of 5-point options with ``yes'' or ``no'' questions) hampers a global analysis. Additionally, some redundancy has been found in ADL and motor sections, which increases the time required to perform the test. Lastly, cultural biases have also been identified, in items such as Dressing and Cutting Food/Handling Utensils.
+
+The \gls{mds} created the MDS-UPDRS \cite{mds_updrs}, an update on the \gls{updrs} correcting several problems recognized in the original version. Specifically, the response type was homogenized (all questions are answered in a 4-point scale). Some of the redundant items were removed and unrepresented areas in the \gls{updrs} were added. Finally, cultural bias was eliminated. An appendix regarding non-motor problems was also inserted in the MDS-UPDRS.
+
+%When considering the diagnosis of dementia types of disease, the most common test used is the \gls{mmse}. It consists of 30 questions that test the mental abilities of the patient, such as memory, attention and language. The \gls{mmse} is also used to measure the progression and severity of the disease \cite{mmse_what_is_it}. With a maximum of 30 points, the result of the test indicates the following:
+%\\ 
+%\begin{itemize}
+%	\textbullet ~Less than 13 points suggests severe dementia \\
+%	\textbullet ~13 to 20 points suggests moderate dementia \\
+%	\textbullet ~20 to 24 points suggests mild dementia 
+%\end{itemize}
+
+%Advantages of the \gls{mmse} test include not requiring specialized equipment nor training for administration, and offering validity and reliability for the diagnosis and longitudinal assessment of \gls{ad} \cite{mmse_pros}. The test also presents disadvantages: it lacks sensitivity for mild cognitive impairment, and the results are affected by demographic factors (such as age and education) \cite{mmse_cons}.
+
+\section{Computational diagnosis}
+
+Over the last years, many experiments have been conducted to diagnose \gls{pd} using \gls{ml} models. Such projects have achieved positive results, which are reviewed in this section.
+
+\subsection{Speech production tasks}
+
+The most common speech production tasks used for \gls{pd} classification are:
+\\
+\begin{itemize}
+	\item ~productions of a sustained vowel, as there are major variations in glottal noise and tremors in patients with \gls{pd} \cite{idiopathic_parkinson}
+	\item ~\gls{ddk}, which consists of a fast repetition of sounds that imply quick succession of movements with the mouth and tongue (for this task, it is normal to use the pseudo-word \textit{/pa-ta-ka/})
+	\item ~\gls{tdu}
+	\item ~Text reading
+\end{itemize}
+
+Several speech production tasks to detect \gls{pd} were tested \cite{parkinson_acoustic_pompilli} -- Sustained vowel phonation (\textit{/a/}), maximum phonation time (\textit{/a/}), rapid repetitions of the pseudo-word \textit{/pa-ta-ka/}, reading of words, sentences and texts, and storytelling guided by visual stimuli. Two approaches were carried out. First, a sentence-level vector was created, with which the classifier achieved accuracies between 55\% (with a sustained vowel phonation \textit{/a/} production task) and almost 71\% (where the speech production task was reading out loud prosodic sentences). Secondly, all sentences were segmented into 4-second segments, with a time shift of 2 seconds. Using the features extracted at a segment level, the classifier achieved accuracies between 58\% (with a sustained vowel phonation /a/ production task) and 85\% (where the speech production task was reading of prosodic sentences). For this work, the authors used the FraLusoPark dataset \cite{fralusopark}, which contains audio from 60 PD and 60 HC. The participants were European Portuguese speakers.
+
+A set of 22 acoustic features was extracted from the Parkinson’s Disease Detection Dataset \cite{PDDD} and the Parkinson’s Telemonitoring Dataset \cite{PTD}. The Parkinson’s Disease Detection Dataset includes speech by 23 patients with \gls{pd} and 8 \gls{hc} producing sustained vowels. The Parkinson’s Telemonitoring Dataset contains speech from 42 \gls{pd} patients producing sustained vowels. Using multiple \gls{ml} classifiers, the system achieved an accuracy of almost 97\% using a \gls{gpc}. With this model, the sensitivity reached 88\% and the specificity went slightly above 97\% \cite{parkinson_acoustic_despotovic}.
+
+To study the relevance of each phonemic group in detecting \gls{pd}, three datasets were used -- GITA \cite{GITA}, Neurovoz \cite{Neurovoz}, and CzechPD \cite{CzechPD}. Neurovoz contains the results for multiple tasks -- \gls{ddk}, \gls{tdu} and a monologue, based on a picture description -- from 47 \gls{pd} patients and 32 control Spanish Castilian speakers. GITA contains multiple speech production tasks from 50 \gls{pd} patients and 50 \gls{hc} Spanish Colombian speakers -- \gls{ddk}, \gls{tdu} and a monologue. The CzechPD subset considered for this study contains only the \gls{ddk} task, produced by 20 newly diagnosed and untreated speakers with \gls{pd} and 14 \gls{hc}, all Czech speakers. Using a \gls{gmmubm} classifier pre-trained with an auxiliary Spanish Castilian dataset, Albayzin \cite{Albayzin}, the model yielded an classification accuracy of 94\% for the CzechPD dataset, 89\% for Neurovoz, and 84\% for GITA \cite{parkinson_phonemic_relevance}. 
+
+Sustained vowels and text reading tasks were tested to differentiate \gls{pd} from \gls{hc} \cite{parkinson_braga}. The authors use three datasets -- Proença \cite{Proenca} (containing audio from 22 \gls{pd} patients in European Portuguese), UCI \cite{UCI} (with audio from 20 \gls{pd} and 20 \gls{hc}) and a dataset created for the purpose of this study by the authors. The Proença dataset contains word and text reading tasks and the UCI contains results from the sustained vowel task from the patients and healthy controls. The authors tested multiple \gls{ml} classifiers, such as \gls{nn}, \gls{svm} and \gls{rf}. This work yielded an accuracy of almost 95\% with the \gls{rf} classifier and slightly above 90\% with \gls{nn} (with 4 layers, comprising 7, 7, 6 and 7 neurons, respectively) and \gls{svm}.
+
+\subsection{Feature selection}
+
+Multiple acoustic features have been used to attempt to distinguish between \gls{pd} and \gls{hc}.
+
+Cases of incomplete vocal folds closure along with folds bowing during phonation were reported \cite{features_explained}, leading to the presence of noise, that is typically characterized using measures such as \gls{nhr}, \gls{gnr}, \gls{hnr}, and \gls{vti}. Some feature values have also been found to increase in \gls{pd} patients, such as average \gls{f0} and jitter \cite{f0_jitter} and shimmer \cite{shimmer}.
+
+A set of 5 acoustic features -- \gls{f0}, correlation dimension,  \gls{hnr}, detrended fluctuation analysis and recurrence period density entropy -- were selected from a set of 22 acoustic features by using Gaussian processes for regression and classification combined with \gls{ard} \cite{parkinson_acoustic_despotovic}. The authors tested multiple \gls{ml} classifiers (\gls{svm}, \gls{rf}, \gls{gpc}, among others). The \gls{gpc} achieved an accuracy of almost 97\%, although the model's sensitivity was left on 88\% (wrongly classifying 12\% of the patients). The specificity reached 97\%.
+
+The adequacy of different phonemic groups in identifying \gls{pd} patients was analyzed \cite{parkinson_phonemic_relevance}. The work describes the concept of phonemic grouping, which consists of grouping phonemes by their type (such as nasal, fricatives, plosives). Using a \gls{gmmubm} classifier, this work yielded results with accuracies between 77\% (using the plosive-nasal-vowel phonemic group) and 94\% (with the fricative-nasal phonemic group). The authors extracted \gls{rasta_plp} \cite{rastaPLP} and its derivatives, $\Delta + \Delta \Delta$, and labeled them by phonemic group. The focus on the most important sounds has proved that plosive, vowel and fricative segments are the most important for \gls{pd} detection.
+
+A \gls{nn} was trained with the VoxCeleb 1 \cite{voxceleb1} and 2 \cite{voxceleb2} datasets. An affine transformation was applied to the last pooling layer, to retrieve the \textit{x-vectors}, an abstract representation of the input features, which were \gls{mfcc} and its derivatives, $\Delta + \Delta \Delta$. The \textit{x-vectors} are then used as an input to a \gls{plda} classifier. The model achieved an accuracy of 90\% on \gls{tdu} production tasks and 79\% on \gls{ddk} production task (repetition of the pseudo-word \textit{/pa-ta-ka/}) \cite{x_vector_parkinson}.
+
+\subsection{Classification models}
+
+Most of the available datasets for this task are very small, considering the usual size for a classification problem. This property made the \gls{pd} detection difficult. Indeed, complex models are unable to capture the variability of the data from a small dataset, and are therefore unable to correctly simulate and generalize the training set \cite{underfitting_small_datasets}. Therefore, the majority of the approaches to this problem use traditional machine learning models, such as \gls{svm}, \gls{rf} and \gls{knn}, which are able to make accurate predictions training with small datasets. Nevertheless, some experiments have used \gls{mlp} and other \gls{nn} architectures, achieving accurate results, in some cases yielding superior performances when compared to other models, such as \gls{svm}, and \gls{rf} \cite{deep_mlp_parkinson}.
+
+A 114-dimensional feature vector was used as input to a \gls{rf}. Using acoustic features such as \gls{f0}, loudness, shimmer, jitter and \gls{mfcc}, and using 5-fold cross-validation, the classifier achieved an accuracy of 85.1\% \cite{parkinson_acoustic_pompilli}. 
+
+A set of classifiers was used on two \gls{pd} datasets \cite{parkinson_acoustic_despotovic}. The authors extracted the top 5 acoustic features (using \gls{ard}) from a set of 22 features. After feature selection, the model achieved an accuracy of almost 97\%, using a \gls{gpc} with Matérns 3/2 and 5/2 as covariance functions. The \gls{svm} classifier yielded an accuracy close to 97\% as well, whereas the \gls{bc} obtained an accuracy around 1\% lower, completing the task with close to 96 \% accuracy. The \gls{rf} achieved 96.62\% specificity, whereas the model's accuracy almost reached 93\%.
+
+From the Naranjo dataset \cite{naranjo_dataset} 240 recordings were retrieved \cite{parkinson_acoustic_yaman}. From these recordings, 44 acoustic features were extracted. The authors used \gls{knn} and \gls{svm} classifiers, achieving similar results, yielding accuracies slightly above 91\%.
+
+From the Naranjo dataset, a total of 177 acoustic features were retrieved \cite{parkinson_acoustic_yaman}. Using the Relief algorithm, the authors selected the 66 more relevant features. Ensemble \gls{knn} was compared against Cosine \gls{knn} and Gaussian \gls{svm} was compared to Quadratic \gls{svm}. The Cosine \gls{knn} yielded an accuracy slightly above 91\%, whereas the Gaussian \gls{svm} outperformed the Quadratic \gls{svm}, with an accuracy similar to the Cosine \gls{knn} (also above 91\%).
+
+A total of 2330 acoustic features were extracted from the mPower dataset \cite{mPower} (2268 corresponding to Audio/Visual Emotion and Depression Recognition Challenge (AVEC) 2013 and 62 corresponding to GeMAPS) \cite{parkinson_acoustic_tracy}. With 2023 \gls{hc} and 246 \gls{pd}, the authors tested three \gls{ml} methods to distinguish between \gls{pd} and \gls{hc}: L2-regularized \gls{lr}, \gls{rf}, and gradient-boosted \gls{dt}. Because the dataset is heavily biased towards \gls{hc} (n = 2023) compared to \gls{pd} (n = 246), the authors added precision, recall and F1-score to the accuracy as evaluation metrics to compare the performance of each model. The gradient boosted \gls{dt} achieved the best results, yielding 0.797 for recall, 0.901 precision and an F1-score of 0.836. Similar results were reached with the \gls{rf} classifier, but with an inferior value for recall (0.693 recall, 0.902 precision and 0.783 for F1-score). The \gls{lr} achieved the worst results, reaching 0.759 recall, 0.811 precision and 0.784 of F1-score.
+
+A \gls{gmmubm} classifier was trained using one dataset and tested it with three others. The model yielded accuracies between 84\% and 94\% \cite{parkinson_phonemic_relevance}.
+
+\gls{mlp} have also been extensively used for \gls{pd} classification, having proven their efficacy in performing this task. A 1 hidden layer \gls{mlp}, used on various sets of acoustic features, was able to classify \gls{ad} patients with an accuracy of over 92\% and \gls{hc} with an accuracy of almost 91\%, surpassing the performance of a \gls{knn} model, which yielded accuracies of 90.9\% for \gls{ad} and 87.3\% for \gls{hc} \cite{alzheimer_2014_1}. The Levenberg-Marquardt and Scaled Conjugate Gradient methods were tested as training algorithms for an \gls{mlp} \cite{parkinson_mlp}. Using 16 classical acoustic features (such as \gls{f0}, jitter, shimmer) extracted from 195 speakers, the authors tested multiple values for the number of hidden units (5, 10, 15, 20, 25) and concluded that the Levenberg-Marquardt outperformed the Scaled Conjugate Gradient, reaching accuracies of over 97\% with 25 hidden units, whereas Scaled Conjugate Gradient achieved 79\% on 10 hidden units. Using the UCI dataset \cite{UCI}, a set of 23 features was extracted for PD classification \cite{deep_mlp_parkinson}. The authors compared the performance of a \gls{dmlp}, with 5 or 10 hidden layers, with other \gls{ml} classifiers. The authors reduced the size of the \gls{dmlp} to 5 hidden layers, using \textit{ReLU} or \textit{softplus} as non-linear activation functions instead of the latter activation function, as these are continuous and can therefore address the vanishing gradient problem that affects \gls{dnn}. Results on this experiment concluded that the best performance came from the \gls{dmlp} using 10 hidden layers, which yielded 80\% accuracy, whereas the \gls{lr} model only reached 77.5\% and the \gls{knn} could only get to 72.5\%. Dropping the size of the \gls{dmlp} to 5 hidden layers reduced the model's accuracy to 76\%, which was still higher than some of the tested models, such as the \gls{knn} and \gls{rf} models.
+
+\subsection{Universality}
+
+As the goal for this work is to develop a model capable of detecting \gls{pd} for any patient, universality is an important property for the desired model, which can be achieved with language-independency. 
+
+Three distinct datasets, one in Spanish, one in German and one in Czech, were used with a \gls{gmmubm} model to train a semi language-independent model \cite{parkinson_three_languages}. For each experiment, the model was trained with one dataset and tested with another (adding to the training set subsets of the test set with percentages varying from 10\% and 80\%). Despite reaching accuracies of 96\%, high accuracies are only achieved when large portions of the test language are used to train the model. In a fully language-independent model (where the model is trained using one language and tested with another), the model accuracy only reaches 77\% (trained with the German dataset and tested with the Czech dataset).
+
+A \gls{gmmubm} was trained using \textit{corpora} in Spanish Castilian, Spanish Colombian and Czech. Cross-language testing resulted in accuracies of 82\% \cite{parkinson_phonemic_relevance}.
+  %
+ %%%
+%%%%%                            THE END
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "tese"
+%%% End: 

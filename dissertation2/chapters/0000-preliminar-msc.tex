@@ -1,0 +1,309 @@
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+  %
+%%%%%                  TÍTULO E DATA OFICIAL DA TESE
+ %%%
+  %
+
+\def\date{September 2021}
+\def\title{Explaining Parkinson’s Disease Computational Diagnostic based on Speech Analysis}
+
+% hypernavigation in PDF docs
+\hypersetup{
+   debug=false,
+   linkcolor=blue,  %%% cor do tableofcontents, \ref, \footnote, etc
+   citecolor=red,  %%% cor do \cite
+   urlcolor=blue,   %%% cor do \url e \href
+   bookmarksopen=true,
+   pdftitle={\title},
+   pdfauthor={Author's Name},
+   pdfsubject={Labore et Dolore},
+   pdfkeywords={Labore, Dolore}
+}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                          CAPA DA TESE
+ %%%
+  %
+
+\thispagestyle{empty}
+
+\begin{singlespace}
+\vbox to\textheight{%
+%--------------------------------------------------
+\vskip-1.3in%---------- LOGO E NOME IST/UTL -------
+%--------------------------------------------------
+\hskip-17mm\vbox to50mm{
+\vfil%
+\begin{tabular}{l}
+\includegraphics[width=9cm]{figs/preliminar/IST_A_CMYK_POS.pdf}
+\end{tabular}
+\vfil
+\vfil
+}%
+%--------------------------------------------------
+\vskip18mm%---------- FIGURAS DA CAPA -------------
+%--------------------------------------------------
+\vbox to25mm{\LARGE\sl
+\vfil
+%\centerline{\psfig{file=figs/preliminar/tarantula.eps,height=25mm}}
+\vfil
+}%
+%--------------------------------------------------
+\vskip6mm%---------- TÍTULO -----------------------
+%--------------------------------------------------
+\vbox to25mm{\LARGE\sf
+\vfil
+\begin{center}
+\textbf\title
+\end{center}
+\vfil
+}%
+%--------------------------------------------------
+\vskip10mm%---------- NOME E GRAU ACTUAL -----------
+%--------------------------------------------------
+\vbox to25mm{\large
+\vfil
+\begin{center}
+{\Large\sf\textbf {Artur Oliveira Fortunato}}\\   % author's name
+\end{center}
+\vfil
+}%
+%--------------------------------------------------
+\vskip8mm%---------- GRAU A OBTER -----------------
+%--------------------------------------------------
+\vbox to8mm{\large\sf
+\vfil
+\centerline{Thesis to obtain the Master of Science Degree in}
+\vskip3mm
+\centerline{\LARGE\textbf{Computer Science and Engineering}}
+\vfil
+}%
+%--------------------------------------------------
+\vskip15mm%---------- ORIENTADOR -------------------
+%--------------------------------------------------
+\vbox to8mm{\large\sf
+\vfil
+\begin{center}
+\begin{tabular}{c}
+Supervisors: Doctor David Manuel Martins de Matos\\
+            Doctor Alberto Abad Gareta\\
+\end{tabular}
+\end{center}
+\vfil
+}%
+%%--------------------------------------------------
+%\vfil
+% %--------------------------------------------------
+\vskip15mm%---------- J�RI -------------------------
+% %--------------------------------------------------
+%\vbox{\Large%
+%\vfil%
+%\begin{center}
+%{\Large\sf\textbf{Examination Committee}}\\
+%\end{center}
+%\vfil%
+%}%
+
+\vbox to30mm{\large\sf
+\vfil
+\begin{center}
+{\Large\sf\textbf{Examination Committee}}\\
+\quad\\
+\begin{tabular}{c}
+Chairperson: Doctor name-of-president\\
+Supervisor: Doctor David Manuel Martins de Matos\\
+Member of the Committee: Doctor name-of-member-of-committee\\
+\end{tabular}
+\end{center}
+\vfil
+}%
+%--------------------------------------------------
+\vskip12mm%---------- DATA -------------------------
+%--------------------------------------------------
+\begin{center}
+{\Large\sf\textbf\date}
+\end{center}
+
+%--------------------------------------------------
+}%vbox
+\end{singlespace}
+\newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                             AGRADECIMENTOS
+ %%%
+  %
+
+\chapter*{Agradecimentos}
+%\chapter*{Acknowledgements}
+\thispagestyle{empty}
+
+% AGRADECER!
+
+Magníficos Agradecimentos
+
+\vfill
+\begin{flushright}
+  \begin{minipage}{8cm}
+    \begin{center}
+      Lisboa, \today
+
+      Artur Oliveira Fortunato
+    \end{center}
+  \end{minipage}
+\end{flushright}
+
+\cleardoublepage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                            DEDICATÓRIAS
+ %%%
+  %
+
+\chapter*{}
+\thispagestyle{empty}
+
+% DEDICAR!
+\vfill
+\mbox{}
+\vfill\Large
+\begin{flushright}
+  \begin{minipage}{8cm}
+    \begin{center}
+
+Dedicatória interessante
+
+    \end{center}
+  \end{minipage}
+\end{flushright}
+\normalsize\vfill
+
+\cleardoublepage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                                RESUMO
+ %%%
+  %
+
+\chapter*{Resumo}
+\thispagestyle{empty}
+
+[TRADUZIR PARA PORTUGUÊS] Parkinson’s Disease (PD) is a neurodegenerative disorder that affects the central nervous system. The disease manifests
+itself in the patient’s speech, which usually becomes slurred, monotonic, and breathy. This symptoms provide a powerful
+biomarker for the detection of PD.
+The present work will analyse the subject’s speech, representing it with a set of acoustic features. With this repre-
+sentation, a Machine Learning (ML) model will be trained to diagnose PD. By performing cross-language tests on this
+classification model, we will evaluate the hypothesis that a ML classifier can correctly diagnose PD. In addition, this
+diagnosis will be independent of the language spoken by the subject. Furthermore, we will explore the use of an explain-
+ability model, which will “translate” the classification model’s diagnosis to a medical professional. The model will provide
+essential information for the clinician to trust and use this tool.
+Despite the good results achieved by many ML classification models, their acceptance for the diagnosis of this disease
+has not yet been achieved. Clinicians are unable to use the model’s diagnosis, as it lacks a medical-oriented interpretation.
+Therefore, this work is motivated by the practical need of a universal, language-independent model that can provide
+enough human-understandable information to support clinical usage of ML models on PD diagnosis. This project will
+provide a tool that can boost the transfer of such models from test environments to real-life usage.
+\newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                            ABSTRACT
+ %%%
+  %
+
+\chapter*{Abstract}
+\thispagestyle{empty}
+
+Parkinson’s Disease (PD) is a neurodegenerative disorder that affects the central nervous system. One of the disease's manifestation is in the patient’s speech, which usually becomes slurred, monotonic, and breathy. These symptoms provide a powerful bio-marker for the detection of PD.
+The present work analyzes the subject’s speech, representing it through a set of acoustic features. With this representation, a Machine Learning (ML) model will be trained to diagnose PD. By performing cross-language tests on this classification model, we will evaluate the hypothesis that a ML classifier can correctly diagnose PD. In addition, this
+diagnosis will be independent of the language spoken by the subject. Furthermore, we will explore the use of an explainability model, which will “translate” the classification model’s diagnosis to a medical professional. The model will provide essential information for the clinician to trust and use this tool. Despite the good results achieved by many ML classification models, their acceptance for the diagnosis of this disease
+has not yet been achieved. Clinicians are unable to use the model’s diagnosis, as it lacks a medical-oriented interpretation. Therefore, this work is motivated by the practical need of a universal, language-independent model that can provide enough human-understandable information to support clinical usage of ML models on PD diagnosis. This project will provide a tool that can boost the transfer of such models from test environments to real-life usage.
+
+\newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                 FICHA BIBLIOGRAFICA -- PALAVRAS CHAVE
+ %%%
+  %
+
+\chapter*{Palavras Chave \\ Keywords}
+\thispagestyle{empty}
+
+\section*{Palavras Chave}
+{\large % EM PORTUGUÊS
+
+\noindent Aprendizagem de máquina
+
+\noindent Discurso
+
+\noindent Explicabilidade
+
+\noindent Interpretabilidade
+
+}
+
+\section*{Keywords}
+
+{\large % EM INGLÊS
+
+\noindent Machine Learning
+
+\noindent Speech
+
+\noindent Explainability
+
+\noindent Interpretability
+
+}
+
+\vfill
+%LATEX2HTML}
+
+\cleardoublepage
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                           CHANGE OF NUMBERING
+ %%%
+  %
+
+\pagestyle{plain}
+\pagenumbering{roman}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                               INDICES
+ %%%
+  %
+
+% ``Table of contents'' (Apêndice).
+
+\def\contentsname{Table of Contents}
+\tableofcontents
+\newpage
+
+% Lista de figuras.
+\listoffigures
+\newpage
+
+% Lista de tabelas.
+\listoftables
+
+% Does it always work? I expect so...
+\cleardoublepage
+
+  %
+ %%%
+%%%%%                            T H E    E N D
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Local Variables: 
+% mode: latex
+% TeX-master: "tese"
+% End: 

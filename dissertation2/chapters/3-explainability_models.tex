@@ -1,0 +1,144 @@
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+  %
+%%%%%                         CHAPTER
+ %%%
+  %
+
+\chapter{Explainability Models}
+%\addcontentsline{lof}{chapter}{\thechapter\quad Irure Dolor}
+%\addcontentsline{lot}{chapter}{\thechapter\quad Irure Dolor}
+\label{ch:omnisiste}
+
+%\begin{quotation}
+%  {\small\it Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
+
+%{\small\it -- Cerico}
+%\end{quotation}
+
+\gls{xai} is a field of \gls{ai} that provides techniques and algorithms able to generate interpretable, intuitive, human-understandable explanations of \gls{ai} decisions \cite{XAI}.
+
+Explaining the decisions made by a black-box model requires knowledge of its internal operations \cite{XAI}, which makes it impossible to use by end-users who are only focused and interested on getting an accurate result.
+The very nature of a \textit{black-box} \gls{ml}/\gls{dl} model is a barrier for their real-life usage \cite{DeepLIFT}. For a \gls{ml} model be used in real life situations, the users must have confidence in it. Two definitions of \textit{trust} must be considered: \textit{trust in the prediction}, where the user trusts a prediction sufficiently such that he is comfortable with performing an action based on it, and \textit{trust in the model}, which gives enough confidence to deploy the model. Thus, in order for such model to be deployed, both definitions must be fulfilled \cite{LIME}. This is even more important in critical situations, such as medical diagnosis. To address this limitation in \gls{ml} and \gls{dl}, many models have been created to generate explanations for a model's predictions. 
+
+Creating human-understandable explanations can also aid in finding erroneous behavior in a model. A peculiar discovery was made in an experiment where Fisher Vector classifiers were used for the image recognition task \cite{FisherVectors}. An interpretability technique called \gls{lrp} was applied to explain the predictions of the model. In particular cases, where the input image consisted of a horse, it was found that the model primarily based its decision not on any of the physical traits of the horse, but on a copyright tag present on the bottom left of the image that turned out to be a characteristic of all the horse images used in training. This error certainly highlights the need for interpretability of \gls{ml}/\gls{dl} models, especially in the medical field, where such errors can severely impact human lives.
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                        FIRST SECTION
+ %%%
+  %
+
+\section{Explanation}
+
+An explanation is a verifiable justification for a model's output or decision \cite{XAI}. There are many kinds of explanations, such as a heat map stressing relevant parts of an image (for example, a DaTscan image in \gls{pd} detection \cite{LIME_explainability}). Some models, such as \gls{lime} \cite{LIME}, base their explanations on activations or parameters of the black-box models, using simpler surrogate models \cite{XAI}.
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                      SECOND SECTION
+ %%%
+  %
+
+\section{Scope}
+
+Explainability models can be subdivided in three large groups, based on the scope of their explanations: local, global or mixed.
+
+\subsection{Local explanations' models}
+
+Locally explainable methods are designed to generate an explanation for the model's decision on a single instance of input data \cite{XAI}. Models that provide local explanations fail to provide a global observation of the model. Their explanations do not provide enough information on the original model computations and do not provide enough detail to understand the model’s behavior as a whole \cite{NAM}. 
+
+The concept of Axiomatic Attributions was proposed \cite{axiomatic_attribution}. Consider a function  $F : \mathbb{R} ^n \rightarrow [0, 1]$ representing a \gls{dnn}. Let $x \in \mathbb{R} ^n$ be the input, and $x' \in \mathbb{R} ^n$ be the baseline input (the black image for image networks, for example). Using a straight line path in $\mathbb{R} ^n$ from $x'$ to $x$, the model computes the gradients along the path, in every point. Integrated gradients are obtained by cumulating these gradients. Specifically, integrated gradients are defined from baseline $x'$ to input $x$ as the path integral of the gradients along a straight line path. For each dimension $i$, $\frac{\partial F(x)}{\partial x_i}$ defines the gradient along dimension $i$. \gls{ig} are then calculated as
+
+\begin{equation}
+IG_i (x) = ( x_i - x_i' ) \times \int_{\alpha=0}^1 \frac{\partial F(x' + \alpha \times (x - x'))}{\partial x_i} d\alpha
+\end{equation}
+
+The \gls{ig} provide a measure of the relative importance of each feature on the model's classification of instance $x$ - the higher the \gls{ig} of feature $i$, the higher its importance for the classification.
+
+\gls{rise} was proposed in 2018. This model is based on random masking to locally understand the most important features (for example, in the case of the image classification problem, \gls{rise} will determine the most important pixels for the black-box model's classification) \cite{RISE}. 
+
+Consider $f: I \rightarrow \mathbb{R}$ to be the model. For the image classification problem, we consider $\Lambda: \{1, .., J\}$ x $\{1, .., W\}$ as the image coordinates and $I$ would map every pixel to its RGB representation ($I = \{ I | I: \Lambda \rightarrow \mathbb{R} \})$. $f$ is a classifier that returns the probability of an instance of a certain class be present in the image. Considering a random binary mask $ M : \Lambda \rightarrow \{0,1\} $ following a distribution $\mathcal{D}$. By masking the image with $I \odot M$ (where $\odot$ represents the element-wise multiplication), we preserve only a subset of the pixels of $I$. By calculating the confidence score $f(I \odot M)$, we can define the importance of every pixel $\lambda$, $S_{I,f}(\lambda), \lambda \in \Lambda $, as the average value of the confidence scores of all masked images where $M(\lambda) = 1$. Mathematically,
+
+\begin{equation}
+S_{I,f}(\lambda) = \dfrac{1}{\mathds{E}[M]} \sum_{m \in M} f(I \odot m) \cdot m(\lambda) \cdot P[M = m]
+\end{equation}
+
+\subsection{Global explanations' models}
+
+Understanding the model's behavior on a set of input data points could provide insights on the input features, patterns, and their output correlations, thereby providing transparency of model behavior globally. Various globally explainable methods break down complex deep models into linear counterparts, which are easier to interpret \cite{XAI}.
+
+To generate explanations at class , \gls{cav} were proposed, which provide interpretations for a \gls{nn}’s internal state in terms of human-friendly concepts \cite{TCAV}.
+The model considers a \gls{nn} with inputs $x \in \mathbb{R}^n$ and a feed-forward layer $l$ with $m$ neurons. Thus, layer $l$'s activation can be seen as $f_l:\mathbb{R}^n \rightarrow \mathbb{R}^m$.
+The user chooses a concept of interest $C$ and creates a series of inputs llevelabeled as \textit{contains concept} $C$ and a series of inputs labeled as \textit{does not contains concept} $C$. The model then calculates the hyperplane separating the two groups of inputs. The \gls{cav} is then defined as the vector normal to this hyperplane. 
+
+Common interpretability methods (such as saliency maps), calculate the derivatives for the \textit{logit} in terms of the input features. With this approach, these methods are able to measure sensitivity in the set of input features. When combining \gls{cav}s and directional derivatives, the model can gauge sensitivity of \gls{ml} predictions in directional input changes of the concept $C$, at activation layer $l$.
+
+In 2020, the concept of \gls{nam} was proposed \cite{NAM}. The explanations are created by shape functions, relative to each input feature. To parameterize the these functions, a \gls{nn} is created for each function. With this architecture, the model is able to create an exact representation of how \gls{nam}s compute a prediction, thus creating an explanation of the model's global behavior.
+
+Consider $\mathcal{D} = \{(x^{(i)}, y^{(i)})\}_{i=1}^N$ as the training set, with $N$ instances, where $x$ is the input vector and $y$ is the target vector. The proposed model was trained using the following loss function:
+
+\begin{equation}
+\mathcal{L}(\Theta) = \mathds{E}_{x,y \sim \mathcal{D}} [l(x,y;\Theta) + \lambda_1\eta (x;\theta)] + \lambda_2 \gamma(\Theta)
+\end{equation}
+\\
+where $\eta(x,\Theta) = \frac{1}{K} \sum_x \sum_k (f_k^\Theta (x_k))^2$ is the output penalty, $\gamma(\Theta)$ is the weighted decay and $f_k^\Theta$ represents the $k^{th}$ feature network.
+
+The authors use the cross-entropy loss for binary classification as the task-dependent loss function $l(x,y;\Theta)$, which, considering $p_\Theta(x) = \sigma(\beta^\Theta +  \sum_{k=1}^K k_k^\beta(x_k))$, yields  
+
+\begin{equation}
+l(x,y;\Theta) = (\beta^\Theta +  \sum_{k=1}^K f_k^\Theta(x_k) - y)^2
+\end{equation}
+\\
+where $\beta^\Theta$ defines the parameters to be calculated. 
+
+
+\subsection{Mixed models}
+
+To combine the advantages of the local and global explanations' models, mixed models provide explanations that are able to locally interpret decisions, while also allowing to understand the behavior of the model as a whole.
+
+Similarly to  \gls{rise}, \gls{lrp} allow to understand which pixels of the image contribute the most to the model's decision \cite{LRP}. This model, created for \gls{dnn} architectures, redistributes the relevance of each neuron at the last layer of the network to pixel-wise scores ($R_{i}^{l}$) using the rule
+
+\begin{equation}
+R_i^{(l)} = \sum_j \dfrac{z_{ij}{\sum_{i'} z_{i'j}}} R_{j}^{(l+1)} , z_{ij} = x_i^{(l)}w_{ij}^{(l,l+1)}
+\end{equation}
+\\
+where $i$ is the $i$\textit{-th} neuron in layer $l$, $\sum_j$ iterates through all the upper-layer neurons to which neuron $i$ contributes. This result can be assessed using a visualization tool, such as a heat map, to explain the model's classification.
+
+\gls{lime} is an algorithm that uses \textit{local interpretable representations} of the classification data to generate an output that can be interpreted by humans \cite{LIME}. 
+We define $x \in \mathbb{R}^d$ as the original representation of the instance to be explained and $x' \in \{0,1\}^{d'}$, a binary vector and its interpretable representation. Let $g \in G$, where $G$ is the set of models that can present a interpretable output to the user. We also denote $\Omega(g)$ as a measure $g$'s explanation complexity and $ f: \mathbb{R}^d \rightarrow \mathbb{R}$ as the model to be interpreted. $f(x)$ will be the probability or binary indicator that $x$ belongs to a particular class. Let $\pi_x(z)$ be a proximity measure of distance between $x$ and an instance $z$ to define around $x$. Lastly, we define $\mathcal{L}(f,g,\pi_x)$ as a measure of how unfaithful $g$ is approximating $f$ in the space defined by $\pi_x$. As we want to maximize interpretability while keeping local fidelity, the explanation can be defined as:
+
+\begin{equation}
+\label{eqn:lime_equation}
+\xi(x) = \operatorname*{argmin}_{g\in G} \mathcal{L}(f,g,\pi_x) + \Omega(g)
+\end{equation}
+
+The algorithm creates samples around $x'$, weighted by $\pi_x$. Considering a perturbed sample $ z' \in \{0,1\}^{d'}$ containing a fraction of the non-zero elements of $x'$, the original representation $z \in \mathbb{R}^d$ is obtained, so the value $f(z)$ can be calculated. Considering $\mathcal{Z}$ as the set of all perturbed $z'$ with the label $f(z)$, equation \ref{eqn:lime_equation} is used to calculate the explanation.  
+
+\gls{deeplift} was presented as a method to understand the output of a \gls{nn} by backpropagating the neurons' contributions to every feature of the input \cite{DeepLIFT}. To assign contribution scores $C$, \gls{deeplift} compares the activation of each neuron $t$ to its reference activation value $t^0$, using the summation-to-delta property:
+
+\begin{equation}
+\sum_{i=1}^n C_{\Delta x_i \Delta t} = \Delta t
+\end{equation}
+
+where $ \Delta t = t - t_0 $ and $ C_{\Delta x_i \Delta t} $ is a measure of the difference from the reference value $t^0$ attributed to the neuron $ x_i $. The reference values $ t^0 $ are calculated by defining a set of reference input values $x_1^0, x_2^0,...,x_n^0$ for a given neuron, resulting in $ t^0 = f(x_1^0, x_2^0,...,x_n^0) $, where $f$ is the activation function of the neuron. The choice of reference input values is highly context-dependent. For example, for the MNIST \cite{MNIST}, the reference values were set to 0 (which represents the background color of the images, black). For DNA classification tasks, the references were defined based on the expected frequency of each of the elements on the DNA's alphabet (A, C, G, T). This creates a limitation on some applications, as defining reference values may be difficult.
+
+\section{\acrlong{pd} diagnosis}
+
+As stated in section 1, \gls{ml} models used for sensitive tasks, such as detection of \gls{pd}, lack the ability to generate an explanation to be interpreted by the medical professionals that need to establish a diagnosis. These models, called black-box models \cite{explainable_ai_systems}, take an input and return as an output a classification, which cannot be interpreted by a medical professional. This problem difficults the acceptance of these models for such tasks, as the risk of decision-making based on the results of a black-box system raises numerous ethical concerns \cite{ethical_black_box_decision}.
+
+Image-based explanations were generated for a black-box model (the VGG16 convolutional neural network) on a dataset of SPECT DaTSCAN images of the brain \cite{LIME_explainability}. The authors retrieved a 2-dimensional section of the 3-dimensional image, trained, and tested the \textit{black-box} model, which yielded an accuracy of 95.2\%, a specificity of almost 91\%, a sensitivity of 97.5\% and a precision of 95.2\%. After the classification, the authors generated a color map over the input images to highlight the regions of interest (the pixels with larger weights for the classification process). This showed that the most interesting regions of the brain for this task were the \textit{putamen} and the \textit{caudate}, confirming the medical background information described, providing trust in the model, as it could be easily interpreted by a medical professional.
+
+Explainability models have been applied to many other medical tasks, such as breast cancer detection \cite{lime_breast_cancer}, identification of individuals with high-risk of depressive disorder \cite{lime_depression}, and early detection of COVID-19 \cite{lime_covid}. 
+
+This area remains almost unexplored for the task of early detection of \gls{pd} and, to the best of our knowledge, no work has combined explainability algorithms with acoustic-based models for this task.
+
+
+  %
+ %%%
+%%%%%                           THE END
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "tese"
+%%% End: 

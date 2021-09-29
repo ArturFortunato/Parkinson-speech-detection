@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: document-msc.aux
+The style file: apacitex.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: refs/document.bib
+apacitex.bst [2013/07/21 v6.03 APA bibl. style with author index info]
+Warning--No journal in NAM
+Warning--No journal in dementia2020
+Warning--No journal in idiopathic_parkinson
+Warning--No journal in explainable_ai_systems
+Warning--No journal in MNIST
+You've used 77 entries,
+            6951 wiz_defined-function locations,
+            1709 strings with 28871 characters,
+and the built_in function-call counts, 230949 in all, are:
+= -- 26644
+> -- 1698
+< -- 10288
++ -- 12860
+- -- 186
+* -- 14599
+:= -- 40337
+add.period$ -- 325
+call.type$ -- 77
+change.case$ -- 1914
+chr.to.int$ -- 0
+cite$ -- 159
+duplicate$ -- 10244
+empty$ -- 8615
+format.name$ -- 5997
+if$ -- 40013
+int.to.chr$ -- 0
+int.to.str$ -- 231
+missing$ -- 0
+newline$ -- 3300
+num.names$ -- 616
+pop$ -- 4215
+preamble$ -- 1
+purify$ -- 902
+quote$ -- 0
+skip$ -- 12081
+stack$ -- 0
+substring$ -- 15939
+swap$ -- 5073
+text.length$ -- 249
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 6992
+warning$ -- 5
+while$ -- 2217
+width$ -- 0
+write$ -- 5171
+(There were 5 warnings)
