@@ -1,2 +1,0 @@
-baseline_200/gita/AVPEPUDEAC0041_adam_0.001_5000_tanh.html
-baseline/gita/AVPEPUDEAC0046_lbfgs_0.0001_2000_tanh.html
