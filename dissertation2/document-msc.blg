@@ -18,45 +18,45 @@ Warning--No journal in dementia2020
 Warning--No journal in idiopathic_parkinson
 Warning--No journal in explainable_ai_systems
 Warning--No journal in MNIST
-You've used 77 entries,
+You've used 79 entries,
             6951 wiz_defined-function locations,
-            1709 strings with 28871 characters,
-and the built_in function-call counts, 230949 in all, are:
-= -- 26644
-> -- 1698
-< -- 10288
-+ -- 12860
-- -- 186
-* -- 14599
-:= -- 40337
-add.period$ -- 325
-call.type$ -- 77
-change.case$ -- 1914
+            1722 strings with 29163 characters,
+and the built_in function-call counts, 235470 in all, are:
+= -- 27259
+> -- 1743
+< -- 10395
++ -- 12991
+- -- 190
+* -- 14808
+:= -- 40935
+add.period$ -- 337
+call.type$ -- 79
+change.case$ -- 1959
 chr.to.int$ -- 0
-cite$ -- 159
-duplicate$ -- 10244
-empty$ -- 8615
-format.name$ -- 5997
-if$ -- 40013
+cite$ -- 163
+duplicate$ -- 10414
+empty$ -- 8809
+format.name$ -- 6080
+if$ -- 40961
 int.to.chr$ -- 0
-int.to.str$ -- 231
+int.to.str$ -- 237
 missing$ -- 0
-newline$ -- 3300
-num.names$ -- 616
-pop$ -- 4215
+newline$ -- 3369
+num.names$ -- 632
+pop$ -- 4351
 preamble$ -- 1
-purify$ -- 902
+purify$ -- 919
 quote$ -- 0
-skip$ -- 12081
+skip$ -- 12419
 stack$ -- 0
-substring$ -- 15939
-swap$ -- 5073
-text.length$ -- 249
+substring$ -- 16175
+swap$ -- 5169
+text.length$ -- 274
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 6992
+type$ -- 7280
 warning$ -- 5
-while$ -- 2217
+while$ -- 2249
 width$ -- 0
-write$ -- 5171
+write$ -- 5266
 (There were 5 warnings)

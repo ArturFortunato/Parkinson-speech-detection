@@ -2047,6 +2047,47 @@ dementia_mayo}%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+McGee%
+\AX{mcgee  w
+@McGee, W.}%
+\ \BBA {} Zhang%
+\AX{zhang  g
+@Zhang, G.}%
+}{%
+McGee%
+\AX{mcgee  w
+@McGee, W.}%
+\ \BBA {} Zhang%
+\AX{zhang  g
+@Zhang, G.}%
+}{%
+{\protect \APACyear {1990}}%
+}]{%
+logfilterbank}
+\APACinsertmetastar {%
+logfilterbank}%
+\begin{APACrefauthors}%
+McGee, W.%
+\AX{mcgee  w
+@McGee, W.}%
+\BCBT {}\ \BBA {} Zhang, G.%
+\AX{zhang  g
+@Zhang, G.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1990}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Logarithmic filter banks} {Logarithmic filter
+  banks}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {IEEE International Symposium on Circuits and Systems}
+  {Ieee international symposium on circuits and systems}\ (\BPG~661-664 vol.1).
+\newblock
+\begin{APACrefDOI} \doi{10.1109/ISCAS.1990.112164} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Moreno%
 \AX{moreno  a
 @Moreno, A.}%
@@ -2930,6 +2971,37 @@ Rai, M.%
   {Nanobiotechnology in neurodegenerative diseases}\ (\BPGS\ 1--17).
 \newblock
 \APACaddressPublisher{}{Springer International Publishing}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rendle%
+\AX{rendle  s
+@Rendle, S.}%
+}{%
+Rendle%
+\AX{rendle  s
+@Rendle, S.}%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+factorizationmachines}
+\APACinsertmetastar {%
+factorizationmachines}%
+\begin{APACrefauthors}%
+Rendle, S.%
+\AX{rendle  s
+@Rendle, S.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Factorization Machines} {Factorization machines}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2010 IEEE International Conference on Data Mining} {2010
+  ieee international conference on data mining}\ (\BPG~995-1000).
+\newblock
+\begin{APACrefDOI} \doi{10.1109/ICDM.2010.127} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
