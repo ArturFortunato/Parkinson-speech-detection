@@ -24,12 +24,11 @@
 \glossaryentry{AI?\glossentry{ai}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{1}
-\glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{ML?\glossentry{ml}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{1}
-\glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{2}
-\glossaryentry{XAI?\glossentry{xai}|setentrycounter[]{page}\glsnumberformat}{2}
+\glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{XAI?\glossentry{xai}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{3}
 \glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{3}
 \glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{3}
@@ -229,11 +228,7 @@
 \glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{16}
 \glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{16}
 \glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{16}
-\glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{16}
-\glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{16}
 \glossaryentry{DDK?\glossentry{ddk}|setentrycounter[]{page}\glsnumberformat}{16}
-\glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{16}
-\glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{16}
 \glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{16}
 \glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{16}
 \glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{16}
@@ -245,7 +240,7 @@
 \glossaryentry{F0?\glossentry{f0}|setentrycounter[]{page}\glsnumberformat}{17}
 \glossaryentry{HNR?\glossentry{hnr}|setentrycounter[]{page}\glsnumberformat}{17}
 \glossaryentry{MLP?\glossentry{mlp}|setentrycounter[]{page}\glsnumberformat}{17}
-\glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{18}
+\glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{17}
 \glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{HC?\glossentry{hc}|setentrycounter[]{page}\glsnumberformat}{18}
 \glossaryentry{PD?\glossentry{pd}|setentrycounter[]{page}\glsnumberformat}{18}
