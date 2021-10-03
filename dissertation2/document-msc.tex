@@ -137,17 +137,16 @@
 \printglossary[type=\acronymtype,title={\protect\centering\glossaryname}]\cleardoublepage
 \end{singlespace}
 
-
 \begin{table}[!htb]
 	\renewcommand{\arraystretch}{1.3} % more space between rows
 	\centering
-	\begin{tabular}{lcc}
+	\begin{tabular}{lccc}
 		\hline
-		~       & Male & Female \\ \hline
-		F0 (Hz)      & 105-160 & 175-245 \\ 
-		Jitter (\%)  & \multicolumn{2}{c}{ $<$ 1.04  } \\ 
-		Shimmer (\%) & \multicolumn{2}{c}{ $<$ 3.81 } \\
-		HNR (dB)     & \multicolumn{2}{c}{ $<$ 20 (/a/, /i/), $<$ 40 (/u/) } \\
+		~       & Male & Female & Reference \\ \hline
+		F0 (Hz)      & 105-160 & 175-245 & \cite{f0_values}\\ 
+		Jitter (\%)  & \multicolumn{2}{c}{ $<$ 1.04  } & \cite{jitter_shimmer_values} \\ 
+		Shimmer (\%) & \multicolumn{2}{c}{ $<$ 3.81 } & \cite{jitter_shimmer_values} \\
+		HNR (dB)     & \multicolumn{2}{c}{ $<$ 20 (/a/, /i/), $<$ 40 (/u/) } & \cite{hnr_values} \\
 		\hline
 	\end{tabular}
 	\caption[Feature values for healthy subjects.]{Feature values for healthy subjects.}
@@ -179,12 +178,7 @@
 %%%%%                         SPECIAL
  %%%
   %
-\begin{singlespace}
 
-\def\indexname{Index}             % Index
-\printindex\cleardoublepage
-
-\end{singlespace}
 
 \end{document}
 

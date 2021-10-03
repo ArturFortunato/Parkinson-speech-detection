@@ -137,6 +137,61 @@ Andonie, R.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Asiaee%
+\AX{asiaee  m
+@Asiaee, M.}%
+, Vahedian-azimi%
+\AX{vahedianazimi  a
+@Vahedian-azimi, A.}%
+, Atashi%
+\AX{atashi  s
+@Atashi, S.}%
+\BCBL {}\ \BBA {} Keramatfar%
+\AX{keramatfar  a
+@Keramatfar, A.}%
+}{%
+Asiaee%
+\AX{asiaee  m
+@Asiaee, M.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+jitter_shimmer_values}
+\APACinsertmetastar {%
+jitter_shimmer_values}%
+\begin{APACrefauthors}%
+Asiaee, M.%
+\AX{asiaee  m
+@Asiaee, M.}%
+, Vahedian-azimi, A.%
+\AX{vahedianazimi  a
+@Vahedian-azimi, A.}%
+, Atashi, S.%
+\AX{atashi  s
+@Atashi, S.}%
+\BCBL {}\ \BBA {} Keramatfar, A.%
+\AX{keramatfar  a
+@Keramatfar, A.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Voice Quality Evaluation in Patients With COVID-19: An
+  Acoustic Analysis} {Voice quality evaluation in patients with covid-19: An
+  acoustic analysis}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Voice}{}{}{}.
+\newblock
+\begin{APACrefURL}
+  \url{https://www.sciencedirect.com/science/article/pii/S0892199720303684}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.jvoice.2020.09.024}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Bach%
 \AX{bach  s
 @Bach, S.}%
@@ -853,6 +908,72 @@ Fahn, S.%
   parkinson's disease rating scale}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Recent Development in Parkinson's Disease}{2}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Fernandes%
+\AX{fernandes  j
+@Fernandes, J.}%
+, Teixeira%
+\AX{teixeira  f
+@Teixeira, F.}%
+, Guedes%
+\AX{guedes  v
+@Guedes, V.}%
+, Junior%
+\AX{junior  a
+@Junior, A.}%
+\BCBL {}\ \BBA {} Teixeira%
+\AX{teixeira  jp
+@Teixeira, J\BPBI P.}%
+}{%
+Fernandes%
+\AX{fernandes  j
+@Fernandes, J.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+hnr_values}
+\APACinsertmetastar {%
+hnr_values}%
+\begin{APACrefauthors}%
+Fernandes, J.%
+\AX{fernandes  j
+@Fernandes, J.}%
+, Teixeira, F.%
+\AX{teixeira  f
+@Teixeira, F.}%
+, Guedes, V.%
+\AX{guedes  v
+@Guedes, V.}%
+, Junior, A.%
+\AX{junior  a
+@Junior, A.}%
+\BCBL {}\ \BBA {} Teixeira, J\BPBI P.%
+\AX{teixeira  jp
+@Teixeira, J\BPBI P.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Harmonic to Noise Ratio Measurement - Selection of
+  Window and Length} {Harmonic to noise ratio measurement - selection of window
+  and length}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Procedia Computer Science}{138}{}{280-285}.
+\newblock
+\begin{APACrefURL}
+  \url{https://www.sciencedirect.com/science/article/pii/S1877050918316739}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{CENTERIS 2018 - International Conference on ENTERprise Information
+  Systems / ProjMAN 2018 - International Conference on Project MANagement /
+  HCist 2018 - International Conference on Health and Social Care Information
+  Systems and Technologies, CENTERIS/ProjMAN/HCist 2018}
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.procs.2018.10.040}
+  \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2538,6 +2659,56 @@ Pagan, F.%
   parkinson's disease}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{American Journal of Managed Care}{18}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Palumbo%
+\AX{palumbo  a
+@Palumbo, A.}%
+\ \protect \BOthers {.}}{%
+Palumbo%
+\AX{palumbo  a
+@Palumbo, A.}%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+f0_values}
+\APACinsertmetastar {%
+f0_values}%
+\begin{APACrefauthors}%
+Palumbo, A.%
+\AX{palumbo  a
+@Palumbo, A.}%
+, Calabrese, B.%
+\AX{calabrese  b
+@Calabrese, B.}%
+, Vizza, P.%
+\AX{vizza  p
+@Vizza, P.}%
+, Lombardo, N.%
+\AX{lombardo  n
+@Lombardo, N.}%
+, Garozzo, A.%
+\AX{garozzo  a
+@Garozzo, A.}%
+, Cannataro, M.%
+\AX{cannataro  m
+@Cannataro, M.}%
+\BDBL {}Veltri, P.%
+\AX{amato  f
+@Amato, F.}%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{01}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A Novel Portable Device for Laryngeal Pathologies
+  Analysis and Classification} {A novel portable device for laryngeal
+  pathologies analysis and classification}.{\BBCQ}
+\newblock
+\BIn{} (\BVOL~55, \BPG~335-352).
+\newblock
+\begin{APACrefDOI} \doi{10.1007/978-3-642-05167-8_19} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
