@@ -68,7 +68,7 @@ Understanding the model's behavior on a set of input data points could provide i
 
 To generate explanations at class , \gls{cav} were proposed, which provide interpretations for a \gls{nn}’s internal state in terms of human-friendly concepts \cite{TCAV}.
 The model considers a \gls{nn} with inputs $x \in \mathbb{R}^n$ and a feed-forward layer $l$ with $m$ neurons. Thus, layer $l$'s activation can be seen as $f_l:\mathbb{R}^n \rightarrow \mathbb{R}^m$.
-The user chooses a concept of interest $C$ and creates a series of inputs llevelabeled as \textit{contains concept} $C$ and a series of inputs labeled as \textit{does not contains concept} $C$. The model then calculates the hyperplane separating the two groups of inputs. The \gls{cav} is then defined as the vector normal to this hyperplane. 
+The user chooses a concept of interest $C$ and creates a series of inputs labeled as \textit{contains concept} $C$ and a series of inputs labeled as \textit{does not contains concept} $C$. The model then calculates the hyperplane separating the two groups of inputs. The \gls{cav} is then defined as the vector normal to this hyperplane. 
 
 Common interpretability methods (such as saliency maps), calculate the derivatives for the \textit{logit} in terms of the input features. With this approach, these methods are able to measure sensitivity in the set of input features. When combining \gls{cav}s and directional derivatives, the model can gauge sensitivity of \gls{ml} predictions in directional input changes of the concept $C$, at activation layer $l$.
 
