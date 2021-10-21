@@ -15,12 +15,12 @@
 %{\small\it -- Cerico}
 %\end{quotation}
 
-This section describes the methodology. First, the \textit{corpora} used in this work are described, followed by the approaches to be followed (feature selection, classification model, explanation generation model, and multi-language tests). Finally, the evaluation procedures are presented. Figure \ref{pipeline} shows the pipeline for the system's architecture. 
+This section describes the methodology. First, the \textit{corpora} used in this work are described, followed by the adopted approaches (feature selection, classification model, explanation generation model, and multi-language tests). Finally, the evaluation procedures are presented. Figure \ref{pipeline} shows the pipeline for the system's architecture. 
 
 \section{Corpus Description}
 
-As described in section 3.3, most datasets available for this task have insufficient data to train neural models \cite{underfitting_small_datasets}. Nevertheless, few common speech production tasks are available in the datasets. Because some of these datasets only differ in
-the model of the microphone used for recording and the language of the test subjects, several datasets may be combined to produce sufficiently long collections of data that can be used for neural models \cite{parkinson_braga}, \cite{parkinson_acoustic_despotovic}, \cite{parkinson_phonemic_relevance}, \cite{x_vector_parkinson}. Different datasets were used for training and testing, or to combine instances from different datasets in the training and/or testing sets \cite{parkinson_three_languages}, all proving to be accurate in the \gls{pd} classification task.
+Most datasets available for this task have insufficient data to train neural models \cite{underfitting_small_datasets}. Nevertheless, few common speech production tasks are available in the datasets. 
+As some datasets contain speech from \gls{pd} patients and share commons speech production tasks, they can be combined to produce sufficiently long collections of data that can be used for neural models \cite{parkinson_braga}, \cite{parkinson_acoustic_despotovic}, \cite{parkinson_phonemic_relevance}, \cite{x_vector_parkinson}. Different datasets were used for training and testing, or to combine instances from different datasets in the training and/or testing sets \cite{parkinson_three_languages}, all proving to be accurate in the \gls{pd} classification task.
 
 This study used 3 datasets for training and testing the model -- FraLusoPark \cite{fralusopark}, GITA \cite{GITA}, and Mobile Device Voice Recordings at King's College London (MDVR\_KCL) \cite{MDVR}.
 
@@ -38,42 +38,78 @@ The FraLusoPark dataset is composed by speech from 120 patients, half of which a
 	
 \end{itemize}
 
-In the scope of the present study, we will only consider the Portuguese speakers of this dataset, as the audios from the french patients could not be accessed.
+In the scope of the present study, we only consider the Portuguese speakers of this dataset, as the audios from the french patients were not available.
 
 The GITA dataset contains recordings of 50 \gls{pd} patients and 50 \gls{hc}, evenly distributed between genders. For the \gls{pd} group, the average age is 62.2 with a standard deviation of 11.2 years and 60.1 with a standard deviation of 7.8 for male and female participants, respectively. Considering the \gls{hc} group, the average age is 61.2 and 11.3 years and 60.7 with a standard deviation of 7.7 for male and female participants, respectively. Multiple stages of disease progression are considered in this study (time since diagnostic ranges between 0.4 - 20 years for male patients and 1 - 41 years for female patients). All the participants are Colombian Spanish native speakers. Recordings of the \gls{pd} patients were made no up to 3 hours after the morning medication. Different speech production tasks were performed to examine phonation, articulation and prosody. To analyze phonation, participants were asked to sustain the five Spanish vowels and to repeat the same five vowels, but alternating the tone between low and high. Regarding articulation, a \gls{ddk} evaluation was performed with the pseudo-words \textit{/pa-ta-ka/}, \textit{/pa-ka-ta/} and \textit{/pe-ta-ka/}. Finally, for the evaluation of prosody, both \gls{pd} patients and \gls{hc} were asked to repeat a series of sentences with different levels of complexity, to read a dialogue between a doctor and a patient, which contained the complete set of Spanish sounds, to read sentences with a strong emphasis on a set of words and freely speak about their daily routine.
 
-Lastly, the MDVR\_KCL dataset was recorded in the context of phone calls, in an acoustically-controlled environment. The dataset contains speed from 16 participants with \gls{pd} (11 male and 4 female) and 21 \gls{hc} (3 male and 18 female), totaling 37 native English speakers. The \gls{pd} group contains patients from all the stages of the disease (early, mid and late stages) according to the  Hoehn and Yahr scale \cite{hoehn_yahr}. The participants were asked to read a text (``The north wind and the sun'' or ``Tech. Engin. Computer applications in geography snippet''). Additionally, the interviewer started a spontaneous conversation with each participant about various topics.
+Lastly, the MDVR\_KCL dataset was recorded in the context of phone calls, in an acoustically-controlled environment. The dataset contains speech from 16 participants with \gls{pd} (11 male and 4 female) and 21 \gls{hc} (3 male and 18 female), totaling 37 native English speakers. The \gls{pd} group contains patients from all the stages of the disease (early, mid and late stages) according to the  Hoehn and Yahr scale \cite{hoehn_yahr}. The participants were asked to read a text (``The north wind and the sun'' or ``Tech. Engin. Computer applications in geography snippet''). Additionally, the interviewer started a spontaneous conversation with each participant about various topics.
 
 To homogenize the datasets, only the text-reading tasks were considered herein. This yields a total of 131 \gls{hc} and 125 \gls{pd} speakers of European Portuguese, Colombian Spanish, and European English. 
 
 \section{Data Processing}
 
-The original audio files contained full interviews of each test subject, therefore requiring segmentation in order to remove useless audio fragments. Silences between speech segments were removed. Next, sounds produced by the subject that were not considered as speech were also deleted. Finally, audio segments containing speech from interviewers were also eliminated.
+The original audio files contained the interviews (including silences and speech segments from the interviewers) of each test subject, therefore requiring segmentation in order to remove useless audio fragments. Silences between speech segments were removed. Next, sounds produced by the subject that were not considered as speech were also deleted. Finally, audio segments containing speech from interviewers were also eliminated.
 \\
-After data processing, the data sets were reduced as follows for PD patients and HC participants:
+After data processing, the datasets were reduced to one file per subject with the following total duration:
 
 \begin{itemize}
 	\item ~FraLusoPark recordings: 113 minutes and 43 seconds
 	\item ~Gita recordings: 30 minutes and 8 seconds
 	\item ~MDVR\_KCL recordings: 65 minutes and 3 seconds
-	
+
 \end{itemize}
 
 \section{Feature Extraction}
 
 In order to extract the features, the openSMILE \cite{openSMILE} tool was used. To extract the complete set of features, four configurations were used: \textit{MFCC12\_0\_D\_A.conf} for MFCC's, \textit{PLP\_0\_D\_A.conf} to extract \gls{plp}'s, \textit{prosodyAcf2.conf} for prosody features (\gls{f0} and \gls{hnr}), and \textit{GeMAPSv01b.conf} to extract jitter and shimmer.
 \\
-OpenSMILE was configured to use a sliding window of 25\textit{ms} with a frame step of 10\textit{ms}. After the extraction, each participant was represented by a list of frames, and each frame described by a list of features. To classify each patient, the resulting diagnostic is obtained by averaging the model's output for each of the patient's frames.
+OpenSMILE was configured to use a sliding window of 25\textit{ms} with a frame step of 10\textit{ms}. After the extraction, each participant was represented by a sequence of feature vectors, and each frame described by a list of features. To classify each patient, the resulting diagnostic is obtained by averaging the model's output for each of the patient's frames.
+
+\begin{table}[!htb]
+	\renewcommand{\arraystretch}{1.3} % more space between rows
+	\centering
+	\begin{tabular}{lccc}
+		\hline
+		~       & Male & Female & Reference \\ \hline
+		F0 (Hz)      & 105-160 & 175-245 & \cite{f0_values}\\ 
+		Jitter (\%)  & \multicolumn{2}{c}{ $<$ 1.04  } & \cite{jitter_shimmer_values} \\ 
+		Shimmer (\%) & \multicolumn{2}{c}{ $<$ 3.81 } & \cite{jitter_shimmer_values} \\
+		HNR (dB)     & \multicolumn{2}{c}{ $<$ 20 (/a/, /i/), $<$ 40 (/u/) } & \cite{hnr_values} \\
+		\hline
+	\end{tabular}
+	\caption[Feature values for healthy subjects.]{Feature values for healthy subjects.}
+	\label{normalValues}
+\end{table}
+
+\pagebreak
+
+\begin{table}[!htb]
+	\renewcommand{\arraystretch}{1.4} % more space between rows
+	\centering
+	\begin{tabular}{cL}
+		\hline
+		~ & \textbf{Description} \\ \hline
+		F0      & The number of open/close cycles of the glottis. \\ 
+		Jitter  & Measures the frequency variation between cycles. Affected by lack of control on the vocal cords vibration. \\ 
+		Shimmer & Measures the amplitude variation between cycles. \\ 
+		HNR     & The ratio between periodic (associated with normal speed production) and non-periodic (associated with noise) speech components. \\ 
+		MFCC    & Features that approximate to our perception of the audio quality \\ 
+		PLP     & Features that approximate to our perception of the audio quality \\
+		\hline
+	\end{tabular}
+	\caption[Acoustic features description.]{Acoustic features description.}
+	\label{featureDescription}
+\end{table}
 
 \section{Classification Experiments}
 
 Three distinct experiments were conducted during the present work. First, a baseline was created by training and testing a classification model with sets from the same dataset. This procedure scored the classification models for single languages. Secondly, the same model was trained to evaluate its performance as a semi language-independent classifier. For this, the model was trained using one complete dataset and with a fraction of another dataset (90\%), thus combining two languages in the same training set. The model was then tested with the remaining 10\% of the second dataset. All the combinations between the three datasets were tested, leading to 6 dataset combinations. By testing this semi language-independent version, it was possible to evaluate an intermediate step between a language-dependent and a language-independent classification model, shedding light into the model's sensitivity to the language. Lastly, a completely language-independent model was trained by combining two datasets. For this last experiment, each model was trained with two datasets and tested with the third, thus allowing to evaluate the model's ability to diagnose a patient who speaks in a language different from the ones used to train the model.
 \\
-These experiments used the \textit{scikit-learn} implementation \cite{scikit-learn} of a \gls{mlp} was used. Two different architectures were tested to evaluate their ability to learn from the training data. The first architecture contains one entry layer with \textbf{N} neurons (where \textbf{N} is the number of input features), a fully-connected hidden layer with \textbf{N + 1} neurons and an output layer with 1 neuron, whose value represents the probability of the test subject to be classified as \gls{pd} \cite{alzheimer_2014_1}. The second architecture also contains an input layer with \textbf{N} neurons, two fully-connected hidden layers, comprising 200 neurons each and, similarly to the first architecture, an output layer with 1 neuron, also representing the probability of the subject under evaluation to be diagnosed with \gls{pd}. For these experiments, the threshold between \gls{hc} and \gls{pd} diagnostics (the output value of the neuron from the output layer) was set to 0.5.
+These experiments used the \textit{scikit-learn} implementation \cite{scikit-learn} of a \gls{mlp}. Two different architectures were tested to evaluate their ability to learn from the training data. The first architecture contains one entry layer with \textbf{N} neurons (where \textbf{N} is the number of input features), a fully-connected hidden layer with \textbf{N + 1} neurons and an output layer with 1 neuron, whose value represents the probability of the test subject to be classified as \gls{pd} \cite{alzheimer_2014_1}. The second architecture also contains an input layer with \textbf{N} neurons, two fully-connected hidden layers, comprising 200 neurons each and, similarly to the first architecture, an output layer with 1 neuron, also representing the probability of the subject under evaluation to be diagnosed with \gls{pd}. For these experiments, the threshold between \gls{hc} and \gls{pd} diagnostics (the output value of the neuron from the output layer) was set to 0.5.
 \\
 In order to find the best model configuration, the experiments were repeated testing multiple values for the L2 regularization term parameter, or \textit{alpha} ($ 10^{-4} $, $ 10^{-3} $, $ 10 ^{-2} $), maximum number of iterations (1000, 2000, 5000) and solver for weight optimization (lbfgs, sgd, adam). 
 
-\section{Explanation Production}
+\section{Explanation Generation}
 
 After the classification experiments, explanations were generated for each individual of the test set (with all models described in section 4.4). As the objective of this work is to generate an explanation for each diagnostic individually, a mixed model was used.
 \\
@@ -97,7 +133,7 @@ To evaluate the classification model's performance, multiple metrics have been s
 
 These metrics quantify the performance of the models, which allows to determine the best parameters and architecture. Furthermore, \textit{recall} allows to evaluate the percentage of subjects from the \gls{pd} group that were correctly diagnosed, which, combined with specificity (that evaluates the number of subjects from the \gls{pd} group incorrectly diagnosed), provides confidence in the model information to medical professionals.
 \\
-To assess LIME's performance, average values of each feature were extracted from the bibliography (see \ref{normalValues}) and are shown along with the values in each explanation, in order to compare each subject's feature values with it's range for a healthy individual. This comparison will allow to evaluate the model's ability to detect abnormal values (or their absence) and select those features as justifications for a given classification.
+To assess LIME's results, average values of each feature were obtained from the bibliography (see table \ref{normalValues}) and are shown along with the values in each explanation, in order to compare each subject's feature values with its range for a healthy individual. This comparison will allow to evaluate the model's ability to detect abnormal values (or their absence) and select those features as justifications for a given classification. Furthermore, a comparative analysis between the global contribution of each acoustic feature was performed, therefore allowing to compare feature's relevance for the model's diagnostic.
 
 \begin{figure*}[t]
 	\begin{center}

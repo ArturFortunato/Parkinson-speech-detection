@@ -7,7 +7,7 @@
 \BOOKMARK [2][]{subsection.2.4.1}{Speech production tasks}{section.2.4}% 7
 \BOOKMARK [2][]{subsection.2.4.2}{Feature selection}{section.2.4}% 8
 \BOOKMARK [2][]{subsection.2.4.3}{Classification models}{section.2.4}% 9
-\BOOKMARK [2][]{subsection.2.4.4}{Universality}{section.2.4}% 10
+\BOOKMARK [2][]{subsection.2.4.4}{Language independency}{section.2.4}% 10
 \BOOKMARK [0][]{chapter.3}{Explainability Models}{}% 11
 \BOOKMARK [1][]{section.3.1}{Explanation}{chapter.3}% 12
 \BOOKMARK [1][]{section.3.2}{Scope}{chapter.3}% 13
@@ -20,7 +20,7 @@
 \BOOKMARK [1][]{section.4.2}{Data Processing}{chapter.4}% 20
 \BOOKMARK [1][]{section.4.3}{Feature Extraction}{chapter.4}% 21
 \BOOKMARK [1][]{section.4.4}{Classification Experiments}{chapter.4}% 22
-\BOOKMARK [1][]{section.4.5}{Explanation Production}{chapter.4}% 23
+\BOOKMARK [1][]{section.4.5}{Explanation Generation}{chapter.4}% 23
 \BOOKMARK [1][]{section.4.6}{Model Evaluation}{chapter.4}% 24
 \BOOKMARK [0][]{chapter.5}{Results and discussion}{}% 25
 \BOOKMARK [1][]{section.5.1}{Classification Experiments}{chapter.5}% 26

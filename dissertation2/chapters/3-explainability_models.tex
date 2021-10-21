@@ -72,7 +72,7 @@ The user chooses a concept of interest $C$ and creates a series of inputs labele
 
 Common interpretability methods (such as saliency maps), calculate the derivatives for the \textit{logit} in terms of the input features. With this approach, these methods are able to measure sensitivity in the set of input features. When combining \gls{cav}s and directional derivatives, the model can gauge sensitivity of \gls{ml} predictions in directional input changes of the concept $C$, at activation layer $l$.
 
-In 2020, the concept of \gls{nam} was proposed \cite{NAM}. The explanations are created by shape functions, relative to each input feature. To parameterize the these functions, a \gls{nn} is created for each function. With this architecture, the model is able to create an exact representation of how \gls{nam}s compute a prediction, thus creating an explanation of the model's global behavior.
+In 2020, the concept of \gls{nam} was proposed \cite{NAM}. The explanations are created by shape functions, relative to each input feature. To parameterize these functions, a \gls{nn} is created for each function. With this architecture, the model is able to create an exact representation of how \gls{nam}s compute a prediction, thus creating an explanation of the model's global behavior.
 
 Consider $\mathcal{D} = \{(x^{(i)}, y^{(i)})\}_{i=1}^N$ as the training set, with $N$ instances, where $x$ is the input vector and $y$ is the target vector. The proposed model was trained using the following loss function:
 
@@ -95,7 +95,7 @@ where $\beta^\Theta$ defines the parameters to be calculated.
 
 To combine the advantages of the local and global explanations' models, mixed models provide explanations that are able to locally interpret decisions, while also allowing to understand the behavior of the model as a whole.
 
-Similarly to  \gls{rise}, \gls{lrp} allow to understand which pixels of the image contribute the most to the model's decision \cite{LRP}. This model, created for \gls{dnn} architectures, redistributes the relevance of each neuron at the last layer of the network to pixel-wise scores ($R_{i}^{l}$) using the rule
+Similarly to  \gls{rise}, \gls{lrp} allows to understand which pixels of the image contribute the most to the model's decision \cite{LRP}. This model, created for \gls{dnn} architectures, redistributes the relevance of each neuron at the last layer of the network to pixel-wise scores ($R_{i}^{l}$) using the rule
 
 \begin{equation}
 R_i^{(l)} = \sum_j \dfrac{z_{ij}{\sum_{i'} z_{i'j}}} R_{j}^{(l+1)} , z_{ij} = x_i^{(l)}w_{ij}^{(l,l+1)}

@@ -2,6 +2,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Feature values for healthy subjects.}}{17}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Acoustic features description.}}{18}{table.4.2}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Baseline experiment results using architecture 1.}}{22}{table.5.1}
 \contentsline {table}{\numberline {5.2}{\ignorespaces Baseline experiment result using architecture 2.}}{22}{table.5.2}
@@ -12,5 +14,3 @@
 \contentsline {table}{\numberline {5.7}{\ignorespaces Top 10 more common features on explanations.}}{27}{table.5.7}
 \contentsline {table}{\numberline {5.8}{\ignorespaces Top 10 features ordered by average contribution (weight) to explanations.}}{28}{table.5.8}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1}{\ignorespaces Feature values for healthy subjects.}}{43}{table.0.1}
-\contentsline {table}{\numberline {2}{\ignorespaces Acoustic features description.}}{44}{table.0.2}
