@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: document-msc.aux
-The style file: apacitex.bst
+The style file: myapacitex.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
@@ -20,43 +20,43 @@ Warning--No journal in explainable_ai_systems
 Warning--No journal in MNIST
 You've used 82 entries,
             6951 wiz_defined-function locations,
-            1745 strings with 30375 characters,
-and the built_in function-call counts, 245766 in all, are:
-= -- 28441
+            1745 strings with 30379 characters,
+and the built_in function-call counts, 254714 in all, are:
+= -- 29347
 > -- 1829
-< -- 10813
-+ -- 13558
+< -- 11048
++ -- 14169
 - -- 196
-* -- 15445
-:= -- 42615
-add.period$ -- 350
+* -- 15915
+:= -- 43884
+add.period$ -- 363
 call.type$ -- 82
-change.case$ -- 2041
+change.case$ -- 2088
 chr.to.int$ -- 0
 cite$ -- 169
-duplicate$ -- 10921
-empty$ -- 9205
-format.name$ -- 6374
-if$ -- 42759
+duplicate$ -- 11767
+empty$ -- 9581
+format.name$ -- 6797
+if$ -- 44101
 int.to.chr$ -- 0
 int.to.str$ -- 246
 missing$ -- 0
-newline$ -- 3525
+newline$ -- 3666
 num.names$ -- 656
-pop$ -- 4532
+pop$ -- 4720
 preamble$ -- 1
-purify$ -- 962
+purify$ -- 1009
 quote$ -- 0
-skip$ -- 12969
+skip$ -- 13251
 stack$ -- 0
-substring$ -- 16903
-swap$ -- 5418
+substring$ -- 17796
+swap$ -- 5794
 text.length$ -- 292
 text.prefix$ -- 0
 top$ -- 1
 type$ -- 7584
 warning$ -- 5
-while$ -- 2360
+while$ -- 2548
 width$ -- 0
-write$ -- 5514
+write$ -- 5809
 (There were 5 warnings)

@@ -373,9 +373,24 @@ Bot, B.%
 , Bare, C.%
 \AX{bare  c
 @Bare, C.}%
-\BDBL {}Trister, A.%
+, Doerr, M.%
 \AX{doerr  m
 @Doerr, M.}%
+, Pratap, A.%
+\AX{pratap  a
+@Pratap, A.}%
+, Wilbanks, J.%
+\AX{wilbanks  j
+@Wilbanks, J.}%
+, Dorsey, E.%
+\AX{dorsey  e
+@Dorsey, E.}%
+, Friend, S.%
+\AX{friend  s
+@Friend, S.}%
+\BCBL {}\ \BBA {} Trister, A.%
+\AX{trister  a
+@Trister, A.}%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -815,9 +830,12 @@ Erdogdu~Sakar, B.%
 , Delil, S.%
 \AX{delil  s
 @Delil, S.}%
-\BDBL {}Kursun, O.%
+, Apaydin, H.%
 \AX{apaydin  h
 @Apaydin, H.}%
+\BCBL {}\ \BBA {} Kursun, O.%
+\AX{kursun  o
+@Kursun, O.}%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -1221,9 +1239,18 @@ Goetz, C.%
 , Fahn, S.%
 \AX{fahn  s
 @Fahn, S.}%
-\BDBL {}Van~Hilten, B.%
+, Lang, A.%
 \AX{lang  a
 @Lang, A.}%
+, Martinez-Martin, P.%
+\AX{martinezmartin  p
+@Martinez-Martin, P.}%
+, Tilley, B.%
+\AX{tilley  b
+@Tilley, B.}%
+\BCBL {}\ \BBA {} Van~Hilten, B.%
+\AX{vanhilten  b
+@Van~Hilten, B.}%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -1269,9 +1296,15 @@ Goetz, C.%
 , Fahn, S.%
 \AX{fahn  s
 @Fahn, S.}%
-\BDBL {}Tilley, B.%
+, Lang, A.%
 \AX{lang  a
 @Lang, A.}%
+, Martinez-Martin, P.%
+\AX{martinezmartin  p
+@Martinez-Martin, P.}%
+\BCBL {}\ \BBA {} Tilley, B.%
+\AX{tilley  b
+@Tilley, B.}%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -2014,9 +2047,12 @@ Lopez-de Ipiña, K.%
 , Faundez-Zanuy, M.%
 \AX{faundezzanuy  m
 @Faundez-Zanuy, M.}%
-\BDBL {}Calvo, P.%
+, Beitia, B.%
 \AX{beitia  b
 @Beitia, B.}%
+\BCBL {}\ \BBA {} Calvo, P.%
+\AX{calvo  p
+@Calvo, P.}%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -2072,9 +2108,18 @@ Lopez-de Ipiña, K.%
 , Ecay, M.%
 \AX{ecay  m
 @Ecay, M.}%
-\BDBL {}Beitia, B.%
+, Ezeiza, A.%
 \AX{ezeiza  a
 @Ezeiza, A.}%
+, Barroso, N.%
+\AX{barroso  n
+@Barroso, N.}%
+, Martinez-Lage, P.%
+\AX{martinezlage  p
+@Martinez-Lage, P.}%
+\BCBL {}\ \BBA {} Beitia, B.%
+\AX{beitia  b
+@Beitia, B.}%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -2614,9 +2659,12 @@ Orozco-Arroyave, J.%
 , Skodda, S.%
 \AX{skodda  s
 @Skodda, S.}%
-\BDBL {}Noth, E.%
+, Rusz, J.%
 \AX{rusz  j
 @Rusz, J.}%
+\BCBL {}\ \BBA {} Noth, E.%
+\AX{noth  e
+@Noth, E.}%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -2694,9 +2742,12 @@ Palumbo, A.%
 , Cannataro, M.%
 \AX{cannataro  m
 @Cannataro, M.}%
-\BDBL {}Veltri, P.%
+, Amato, F.%
 \AX{amato  f
 @Amato, F.}%
+\BCBL {}\ \BBA {} Veltri, P.%
+\AX{veltri  p
+@Veltri, P.}%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -2744,9 +2795,36 @@ Pedregosa, F.%
 , Grisel, O.%
 \AX{grisel  o
 @Grisel, O.}%
-\BDBL {}Duchesnay, E.%
+, Blondel, M.%
 \AX{blondel  m
 @Blondel, M.}%
+, Prettenhofer, P.%
+\AX{prettenhofer  p
+@Prettenhofer, P.}%
+, Weiss, R.%
+\AX{weiss  r
+@Weiss, R.}%
+, Dubourg, V.%
+\AX{dubourg  v
+@Dubourg, V.}%
+, Vanderplas, J.%
+\AX{vanderplas  j
+@Vanderplas, J.}%
+, Passos, A.%
+\AX{passos  a
+@Passos, A.}%
+, Cournapeau, D.%
+\AX{cournapeau  d
+@Cournapeau, D.}%
+, Brucher, M.%
+\AX{brucher  m
+@Brucher, M.}%
+, Perrot, M.%
+\AX{perrot  m
+@Perrot, M.}%
+\BCBL {}\ \BBA {} Duchesnay, E.%
+\AX{duchesnay  e
+@Duchesnay, E.}%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -2883,9 +2961,27 @@ Pfob, A.%
 , Golatta, M.%
 \AX{golatta  m
 @Golatta, M.}%
-\BDBL {}Kuerer, H.%
+, Rauch, G.%
 \AX{rauch  g
 @Rauch, G.}%
+, Smith, B.%
+\AX{smith  b
+@Smith, B.}%
+, Valero, V.%
+\AX{valero  v
+@Valero, V.}%
+, Han, W.%
+\AX{han  w
+@Han, W.}%
+, MacNeill, F.%
+\AX{macneill  f
+@MacNeill, F.}%
+, Rauch, G.%
+\AX{rauch  g
+@Rauch, G.}%
+\BCBL {}\ \BBA {} Kuerer, H.%
+\AX{kuerer  h
+@Kuerer, H.}%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -2935,9 +3031,42 @@ Pinto, S.%
 , Santos, H.%
 \AX{santos  h
 @Santos, H.}%
-\BDBL {}Ferreira, J.%
+, Atkinson-Clement, C.%
 \AX{atkinsonclement  c
 @Atkinson-Clement, C.}%
+, Carvalho, J.%
+\AX{carvalho  j
+@Carvalho, J.}%
+, Welby, P.%
+\AX{welby  p
+@Welby, P.}%
+, Oliveira, P.%
+\AX{oliveira  p
+@Oliveira, P.}%
+, D'Imperio, M.%
+\AX{dimperio  m
+@D'Imperio, M.}%
+, Frota, S.%
+\AX{frota  s
+@Frota, S.}%
+, Letanneux, A.%
+\AX{letanneux  a
+@Letanneux, A.}%
+, Vigário, M.%
+\AX{vigário  m
+@Vigário, M.}%
+, Cruz, M.%
+\AX{cruz  m
+@Cruz, M.}%
+, Martins, I.%
+\AX{martins  i
+@Martins, I.}%
+, Viallet, F.%
+\AX{viallet  f
+@Viallet, F.}%
+\BCBL {}\ \BBA {} Ferreira, J.%
+\AX{ferreira  j
+@Ferreira, J.}%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -2988,9 +3117,15 @@ Pompilli, A.%
 , Santos, H.%
 \AX{santos  h
 @Santos, H.}%
-\BDBL {}Ferreira, J.%
+, Carvalho, J.%
 \AX{carvalho  j
 @Carvalho, J.}%
+, Guimarães, I.%
+\AX{guimarães  i
+@Guimarães, I.}%
+\BCBL {}\ \BBA {} Ferreira, J.%
+\AX{ferreira  j
+@Ferreira, J.}%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -3253,9 +3388,15 @@ Rusz, J.%
 , Majerova, V.%
 \AX{majerova  v
 @Majerova, V.}%
-\BDBL {}Růika, E.%
+, Picmausova, J.%
 \AX{picmausova  j
 @Picmausova, J.}%
+, Roth, J.%
+\AX{roth  j
+@Roth, J.}%
+\BCBL {}\ \BBA {} Růika, E.%
+\AX{růika  e
+@Růika, E.}%
 \end{APACrefauthors}%
 \unskip\
 \newblock
