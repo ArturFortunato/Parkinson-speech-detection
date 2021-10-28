@@ -14,49 +14,48 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: refs/document.bib
 apacitex.bst [2013/07/21 v6.03 APA bibl. style with author index info]
 Warning--No journal in NAM
-Warning--No journal in dementia2020
 Warning--No journal in idiopathic_parkinson
 Warning--No journal in explainable_ai_systems
 Warning--No journal in MNIST
-You've used 82 entries,
+You've used 74 entries,
             6951 wiz_defined-function locations,
-            1745 strings with 30379 characters,
-and the built_in function-call counts, 254714 in all, are:
-= -- 29347
-> -- 1829
-< -- 11048
-+ -- 14169
-- -- 196
-* -- 15915
-:= -- 43884
-add.period$ -- 363
-call.type$ -- 82
-change.case$ -- 2088
+            1699 strings with 28212 characters,
+and the built_in function-call counts, 229161 in all, are:
+= -- 26483
+> -- 1655
+< -- 9806
++ -- 12652
+- -- 172
+* -- 14216
+:= -- 39181
+add.period$ -- 330
+call.type$ -- 74
+change.case$ -- 1885
 chr.to.int$ -- 0
-cite$ -- 169
-duplicate$ -- 11767
-empty$ -- 9581
-format.name$ -- 6797
-if$ -- 44101
+cite$ -- 152
+duplicate$ -- 10638
+empty$ -- 8663
+format.name$ -- 6123
+if$ -- 39829
 int.to.chr$ -- 0
-int.to.str$ -- 246
+int.to.str$ -- 222
 missing$ -- 0
-newline$ -- 3666
-num.names$ -- 656
-pop$ -- 4720
+newline$ -- 3303
+num.names$ -- 592
+pop$ -- 4311
 preamble$ -- 1
-purify$ -- 1009
+purify$ -- 910
 quote$ -- 0
-skip$ -- 13251
+skip$ -- 12011
 stack$ -- 0
-substring$ -- 17796
-swap$ -- 5794
-text.length$ -- 292
+substring$ -- 15961
+swap$ -- 5237
+text.length$ -- 272
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 7584
-warning$ -- 5
-while$ -- 2548
+type$ -- 6944
+warning$ -- 4
+while$ -- 2299
 width$ -- 0
-write$ -- 5809
-(There were 5 warnings)
+write$ -- 5234
+(There were 4 warnings)

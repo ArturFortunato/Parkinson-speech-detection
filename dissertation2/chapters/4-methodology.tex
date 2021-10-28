@@ -49,7 +49,7 @@ To homogenize the datasets, only the text-reading tasks were considered herein. 
 \section{Data Processing}
 
 The original audio files contained the interviews (including silences and speech segments from the interviewers) of each test subject, therefore requiring segmentation in order to remove useless audio fragments. Silences between speech segments were removed. Next, sounds produced by the subject that were not considered as speech were also deleted. Finally, audio segments containing speech from interviewers were also eliminated.
-\\
+
 After data processing, the datasets were reduced to one file per subject. Total duration and remaining metadata on each dataset is presented in table \ref{metadata123}.
 
 \begin{table}
@@ -67,7 +67,7 @@ After data processing, the datasets were reduced to one file per subject. Total 
 \section{Feature Extraction}
 
 In order to extract the features, the openSMILE \cite{openSMILE} tool was used. To extract the complete set of features, four configurations were used: \textit{MFCC12\_0\_D\_A.conf} for MFCC's, \textit{PLP\_0\_D\_A.conf} to extract \gls{plp}'s, \textit{prosodyAcf2.conf} for prosody features (\gls{f0} and \gls{hnr}), and \textit{GeMAPSv01b.conf} to extract jitter and shimmer.
-\\
+
 OpenSMILE was configured to use a sliding window of 25\textit{ms} with a frame step of 10\textit{ms}. After the extraction, each participant was represented by a sequence of feature vectors, and each frame described by a list of features. To classify each patient, the resulting diagnostic is obtained by averaging the model's output for each of the patient's frames.
 
 \begin{table}[!htb]
@@ -103,19 +103,19 @@ OpenSMILE was configured to use a sliding window of 25\textit{ms} with a frame s
 \section{Classification Experiments}
 
 Three distinct experiments were conducted during the present work. First, a baseline was created by training and testing a classification model with sets from the same dataset. This procedure scored the classification models for single languages. Secondly, the same model was trained to evaluate its performance as a semi language-independent classifier. For this, the model was trained using one complete dataset and with a fraction of another dataset (90\%), thus combining two languages in the same training set. The model was then tested with the remaining 10\% of the second dataset. All the combinations between the three datasets were tested, leading to 6 dataset combinations. By testing this semi language-independent version, it was possible to evaluate an intermediate step between a language-dependent and a language-independent classification model, shedding light into the model's sensitivity to the language. Lastly, a completely language-independent model was trained by combining two datasets. For this last experiment, each model was trained with two datasets and tested with the third, thus allowing to evaluate the model's ability to diagnose a patient who speaks in a language different from the ones used to train the model.
-\\
+
 These experiments used the \textit{scikit-learn} implementation \cite{scikit-learn} of a \gls{mlp}. Two different architectures were tested to evaluate their ability to learn from the training data. The first architecture contains one entry layer with \textbf{N} neurons (where \textbf{N} is the number of input features), a fully-connected hidden layer with \textbf{N + 1} neurons and an output layer with 1 neuron, whose value represents the probability of the test subject to be classified as \gls{pd} \cite{alzheimer_2014_1}. The second architecture also contains an input layer with \textbf{N} neurons, two fully-connected hidden layers, comprising 200 neurons each and, similarly to the first architecture, an output layer with 1 neuron, also representing the probability of the subject under evaluation to be diagnosed with \gls{pd}. For these experiments, the threshold between \gls{hc} and \gls{pd} diagnostics (the output value of the neuron from the output layer) was set to 0.5.
-\\
+
 In order to find the best model configuration, the experiments were repeated testing multiple values for the L2 regularization term parameter, or \textit{alpha} ($ 10^{-4} $, $ 10^{-3} $, $ 10 ^{-2} $), maximum number of iterations (1000, 2000, 5000) and solver for weight optimization (\textit{lbfgs}, \textit{sgd}, \textit{adam}). 
 
 \section{Explanation Generation}
 
 After the classification experiments, explanations were generated for each individual of the test set (with all models described in section 4.4). As the objective of this work is to generate an explanation for each diagnostic individually, a mixed model was used.
-\\
+
 The selected model was LIME \cite{LIME}. This model yielded results on explaining \gls{pd} diagnostics with SPECT DaTSCAN images of the brain that were confirmed by the bibliography. This work aimed to verify if a similar performance can be achieved using acoustic features.
-\\
+
 To explain the diagnostic of each subject, the \textit{explain\_instance} method from the \textit{LimeTabularExplainer} class was used with each feature list (each representing a time frame) to generate a report. Next, two operations were performed. First, the classification model's output was averaged between all time frames, creating a final classification probability for the subject. Secondly, each feature weight (which LIME calculated) was also averaged, thus creating a final weight for each feature (from which the top five features with the largest contribution to the classification were selected). To this report, a list of normal values for healthy patients for each of the features was added. Finally, to assist the interpretation of the report by the medical professional, a small description of each feature was also added. Tables \ref{normalValues} and \ref{featureDescription} show the complete list of normal values and descriptions for each feature.
-\\
+
 Additionally, a global evaluation of each feature's relevance was conducted. In order to conduct this analysis, the top five classification model configurations for each experiment for each \gls{mlp} were used. An explanation was generated for each patient from the testing set, and the result contribution of each feature was averaged. Additionally, the percentage of patients for each of the top five features with highest contribution was calculated. Thus, we shed light into the relative quality of each feature in distinguishing \gls{pd} patients from healthy subjects.
 
 \section{Model Evaluation}
@@ -131,7 +131,7 @@ To evaluate the classification model's performance, multiple metrics have been s
 \end{itemize}
 
 These metrics quantify the performance of the models, which allows to determine the best parameters and architecture. Furthermore, \textit{recall} allows to evaluate the percentage of subjects from the \gls{pd} group that were correctly diagnosed, which, combined with specificity (that evaluates the number of subjects from the \gls{pd} group incorrectly diagnosed), provides confidence in the model information to medical professionals.
-\\
+
 To assess LIME's results, average values of each feature were obtained from the bibliography (see table \ref{normalValues}) and are shown along with the values in each explanation, in order to compare each subject's feature values with its range for a healthy individual. This comparison will allow to evaluate the model's ability to detect abnormal values (or their absence) and select those features as justifications for a given classification. Furthermore, a comparative analysis between the global contribution of each acoustic feature was performed, therefore allowing to compare feature's relevance for the model's diagnostic.
 
 \begin{figure*}[t]
@@ -141,3 +141,7 @@ To assess LIME's results, average values of each feature were obtained from the 
 	\caption{Pipeline of the proposed model.}
 	\label{pipeline}
 \end{figure*}
+
+\section{Summary}
+
+The methodology followed during the execution of the present work was presented. Corpora, feature selection, classification and   explanation experiments were described. Finally, evaluation procedures and metrics were presented.

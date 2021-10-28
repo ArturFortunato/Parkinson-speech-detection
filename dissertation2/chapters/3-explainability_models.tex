@@ -79,7 +79,7 @@ Consider $\mathcal{D} = \{(x^{(i)}, y^{(i)})\}_{i=1}^N$ as the training set, wit
 \begin{equation}
 \mathcal{L}(\Theta) = \mathds{E}_{x,y \sim \mathcal{D}} [l(x,y;\Theta) + \lambda_1\eta (x;\theta)] + \lambda_2 \gamma(\Theta)
 \end{equation}
-\\
+
 where $\eta(x,\Theta) = \frac{1}{K} \sum_x \sum_k (f_k^\Theta (x_k))^2$ is the output penalty, $\gamma(\Theta)$ is the weighted decay and $f_k^\Theta$ represents the $k^{th}$ feature network.
 
 The authors use the cross-entropy loss for binary classification as the task-dependent loss function $l(x,y;\Theta)$, which, considering $p_\Theta(x) = \sigma(\beta^\Theta +  \sum_{k=1}^K k_k^\beta(x_k))$, yields  
@@ -87,7 +87,7 @@ The authors use the cross-entropy loss for binary classification as the task-dep
 \begin{equation}
 l(x,y;\Theta) = (\beta^\Theta +  \sum_{k=1}^K f_k^\Theta(x_k) - y)^2
 \end{equation}
-\\
+
 where $\beta^\Theta$ defines the parameters to be calculated. 
 
 
@@ -100,7 +100,7 @@ Similarly to  \gls{rise}, \gls{lrp} allows to understand which pixels of the ima
 \begin{equation}
 R_i^{(l)} = \sum_j \dfrac{z_{ij}{\sum_{i'} z_{i'j}}} R_{j}^{(l+1)} , z_{ij} = x_i^{(l)}w_{ij}^{(l,l+1)}
 \end{equation}
-\\
+
 where $i$ is the $i$\textit{-th} neuron in layer $l$, $\sum_j$ iterates through all the upper-layer neurons to which neuron $i$ contributes. This result can be assessed using a visualization tool, such as a heat map, to explain the model's classification.
 
 \gls{lime} is an algorithm that uses \textit{local interpretable representations} of the classification data to generate an output that can be interpreted by humans \cite{LIME}. 
@@ -131,7 +131,9 @@ Explainability models have been applied to many other medical tasks, such as bre
 
 This area remains almost unexplored for the task of early detection of \gls{pd} and, to the best of our knowledge, no work has combined explainability algorithms with acoustic-based models for this task.
 
+\section{Summary}
 
+This chapter described multiple types of explainability algorithms, based on the scope of their explanations - local, global and mixed. State-of-the-art models were described for each scope. Finally, a literature review on explainability in \gls{pd} computational diagnostic was also presented.
   %
  %%%
 %%%%%                           THE END

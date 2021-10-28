@@ -65,7 +65,7 @@ Over the last years, many experiments have been conducted to diagnose \gls{pd} u
 \subsection{Speech production tasks}
 
 The most common speech production tasks used for \gls{pd} classification are:
-\\
+
 \begin{itemize}
 	\item ~productions of a sustained vowel, as there are major variations in glottal noise and tremors in patients with \gls{pd} \cite{idiopathic_parkinson}
 	\item ~\gls{ddk}, which consists of a fast repetition of sounds that imply quick succession of movements with the mouth and tongue (for this task, it is normal to use the pseudo-word \textit{/pa-ta-ka/})
@@ -118,6 +118,10 @@ As one of the goals for this work is to develop a model capable of detecting \gl
 Three distinct datasets, one in Spanish, one in German and one in Czech, were used with a \gls{gmmubm} model to train a semi language-independent model \cite{parkinson_three_languages}. For each experiment, the model was trained with one dataset and tested with another (adding to the training set subsets of the test set with percentages varying from 10\% and 80\%). Despite reaching accuracies of 96\%, high accuracies are only achieved when large portions of the test language are used to train the model. In a fully language-independent model (where the model is trained using one language and tested with another), the model accuracy only reaches 77\% (trained with the German dataset and tested with the Czech dataset).
 
 A \gls{gmmubm} was trained using \textit{corpora} in Spanish Castilian, Spanish Colombian and Czech. Cross-language testing resulted in accuracies of 82\% \cite{parkinson_phonemic_relevance}.
+
+\section{Summary}
+
+This chapter dived into the manifestations of \gls{pd}, as well as feature representation of speech, used for computational diagnostic of \gls{pd}, closing with an introduction to language independency in the diagnostic of this disease.
   %
  %%%
 %%%%%                            THE END

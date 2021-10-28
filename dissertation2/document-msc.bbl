@@ -55,58 +55,6 @@ Agarwal, R.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Almeida%
-\AX{almeida  j
-@Almeida, J.}%
-\ \protect \BOthers {.}}{%
-Almeida%
-\AX{almeida  j
-@Almeida, J.}%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2019}}%
-}]{%
-parkinson_acoustic_almeida}
-\APACinsertmetastar {%
-parkinson_acoustic_almeida}%
-\begin{APACrefauthors}%
-Almeida, J.%
-\AX{almeida  j
-@Almeida, J.}%
-, Filho, P.%
-\AX{filho  p
-@Filho, P.}%
-, Carneiro, T.%
-\AX{carneiro  t
-@Carneiro, T.}%
-, Wei, W.%
-\AX{wei  w
-@Wei, W.}%
-, Damaševičius, R.%
-\AX{damaševičius  r
-@Damaševičius, R.}%
-, Maskeliunas, R.%
-\AX{maskeliunas  r
-@Maskeliunas, R.}%
-\BCBL {}\ \BBA {} Albuquerque, V.%
-\AX{albuquerque  v
-@Albuquerque, V.}%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2019}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Detecting Parkinson’s disease with sustained phonation
-  and speech signals using machine learning techniques} {Detecting
-  parkinson’s disease with sustained phonation and speech signals using
-  machine learning techniques}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Pattern Recognition Letters}{125}{}{55-62}.
-\newblock
-\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.patrec.2019.04.005}
-  \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Andonie%
 \AX{andonie  r
 @Andonie, R.}%
@@ -1025,49 +973,6 @@ Fish, J.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Fleming%
-\AX{fleming  r
-@Fleming, R.}%
-, Zeisel%
-\AX{zeisel  j
-@Zeisel, J.}%
-\BCBL {}\ \BBA {} Bennett%
-\AX{bennett  k
-@Bennett, K.}%
-}{%
-Fleming%
-\AX{fleming  r
-@Fleming, R.}%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2020}}%
-}]{%
-dementia2020}
-\APACinsertmetastar {%
-dementia2020}%
-\begin{APACrefauthors}%
-Fleming, R.%
-\AX{fleming  r
-@Fleming, R.}%
-, Zeisel, J.%
-\AX{zeisel  j
-@Zeisel, J.}%
-\BCBL {}\ \BBA {} Bennett, K.%
-\AX{bennett  k
-@Bennett, K.}%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2020}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {World Alzheimer Report 2020: Design Dignity Dementia:
-  dementia-related design and the built environment, Volume 1} {World alzheimer
-  report 2020: Design dignity dementia: dementia-related design and the built
-  environment, volume 1}.{\BBCQ}
-\newblock
-
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Froelich%
 \AX{froelich  w
 @Froelich, W.}%
@@ -1371,91 +1276,6 @@ Harel, B.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Harrell%
-\AX{harrell  l
-@Harrell, L.}%
-, Marson%
-\AX{marson  d
-@Marson, D.}%
-, Chatterjee%
-\AX{chatterjee  a
-@Chatterjee, A.}%
-\BCBL {}\ \BBA {} Parrish%
-\AX{parrish  j
-@Parrish, J.}%
-}{%
-Harrell%
-\AX{harrell  l
-@Harrell, L.}%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2000}}%
-}]{%
-mmse_pros}
-\APACinsertmetastar {%
-mmse_pros}%
-\begin{APACrefauthors}%
-Harrell, L.%
-\AX{harrell  l
-@Harrell, L.}%
-, Marson, D.%
-\AX{marson  d
-@Marson, D.}%
-, Chatterjee, A.%
-\AX{chatterjee  a
-@Chatterjee, A.}%
-\BCBL {}\ \BBA {} Parrish, J.%
-\AX{parrish  j
-@Parrish, J.}%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2000}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {The Severe Mini-Mental State Examination: A New
-  Neuropsychologic Instrument for the Bedside Assessment of Severely Impaired
-  Patients With Alzheimer Disease} {The severe mini-mental state examination: A
-  new neuropsychologic instrument for the bedside assessment of severely
-  impaired patients with alzheimer disease}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Alzheimer Disease and Associated Disorders}{14}{}{}.
-\newblock
-\begin{APACrefDOI} \doi{https://doi.org/10.1097/00002093-200007000-00008}
-  \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-{Health Direct}%
-\AX{health direct
-@{Health Direct}}%
-}{%
-{Health Direct}%
-\AX{health direct
-@{Health Direct}}%
-}{%
-{\protect \APACyear {2019}}%
-}]{%
-mmse_what_is_it}
-\APACinsertmetastar {%
-mmse_what_is_it}%
-\begin{APACrefauthors}%
-{Health Direct}.%
-\AX{health direct
-@{Health Direct}}%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2019}{}{}.
-\newblock
-\APACrefbtitle {Mini-Mental State Examination (MMSE).} {Mini-mental state
-  examination (mmse).}
-\newblock
-\APAChowpublished
-  {\url{https://www.healthdirect.gov.au/mini-mental-state-examination-mmse}}.
-\newblock
-\APACrefnote{Online; accessed 23 December 2020}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Hely%
 \AX{hely  m
 @Hely, M.}%
@@ -1557,60 +1377,6 @@ Hermansky, H.%
   Acoustics, Speech, and Signal Processing} {Icassp-92: 1992 ieee international
   conference on acoustics, speech, and signal processing}\ (\BVOL~1,
   \BPG~121-124).
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Ho%
-\AX{ho  a
-@Ho, A.}%
-, Iansek%
-\AX{iansek  r
-@Iansek, R.}%
-, Marigliani%
-\AX{marigliani  c
-@Marigliani, C.}%
-, Bradshaw%
-\AX{bradshaw  j
-@Bradshaw, J.}%
-\BCBL {}\ \BBA {} Gates%
-\AX{gates  s
-@Gates, S.}%
-}{%
-Ho%
-\AX{ho  a
-@Ho, A.}%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {1998}}%
-}]{%
-speech_impairments_parkinson}
-\APACinsertmetastar {%
-speech_impairments_parkinson}%
-\begin{APACrefauthors}%
-Ho, A.%
-\AX{ho  a
-@Ho, A.}%
-, Iansek, R.%
-\AX{iansek  r
-@Iansek, R.}%
-, Marigliani, C.%
-\AX{marigliani  c
-@Marigliani, C.}%
-, Bradshaw, J.%
-\AX{bradshaw  j
-@Bradshaw, J.}%
-\BCBL {}\ \BBA {} Gates, S.%
-\AX{gates  s
-@Gates, S.}%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1998}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Speech impairment in a large sample of patients with
-  Parkinson’s disease} {Speech impairment in a large sample of patients with
-  parkinson’s disease}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Behavioural neurology}{11}{}{131–137}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2012,78 +1778,11 @@ London, A.%
 Lopez-de Ipiña%
 \AX{lopezdeipiña  k
 @Lopez-de Ipiña, K.}%
-, Alonso%
-\AX{alonso  j
-@Alonso, J.}%
-\BCBL {}\ \protect \BOthers {.}}{%
+\ \protect \BOthers {.}}{%
 Lopez-de Ipiña%
 \AX{lopezdeipiña  k
 @Lopez-de Ipiña, K.}%
-, Alonso%
-\AX{alonso  j
-@Alonso, J.}%
-\BCBL {}\ \protect \BOthers {.}}{%
-{\protect \APACyear {2014}}%
-}]{%
-alzheimer_2014_2}
-\APACinsertmetastar {%
-alzheimer_2014_2}%
-\begin{APACrefauthors}%
-Lopez-de Ipiña, K.%
-\AX{lopezdeipiña  k
-@Lopez-de Ipiña, K.}%
-, Alonso, J.%
-\AX{alonso  j
-@Alonso, J.}%
-, Travieso, C.%
-\AX{travieso  c
-@Travieso, C.}%
-, Solé-Casals, J.%
-\AX{solécasals  j
-@Solé-Casals, J.}%
-, Ezeiza, A.%
-\AX{ezeiza  a
-@Ezeiza, A.}%
-, Faundez-Zanuy, M.%
-\AX{faundezzanuy  m
-@Faundez-Zanuy, M.}%
-, Beitia, B.%
-\AX{beitia  b
-@Beitia, B.}%
-\BCBL {}\ \BBA {} Calvo, P.%
-\AX{calvo  p
-@Calvo, P.}%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2014}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Feature selection for automatic analysis of emotional
-  response based on nonlinear speech modeling suitable for diagnosis of
-  Alzheimer's disease} {Feature selection for automatic analysis of emotional
-  response based on nonlinear speech modeling suitable for diagnosis of
-  alzheimer's disease}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Neurocomputing}{150}{}{}.
-\newblock
-\begin{APACrefDOI} \doi{10.1016/j.neucom.2014.05.083} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Lopez-de Ipiña%
-\AX{lopezdeipiña  k
-@Lopez-de Ipiña, K.}%
-, Solé-Casals%
-\AX{solécasals  j
-@Solé-Casals, J.}%
-\BCBL {}\ \protect \BOthers {.}}{%
-Lopez-de Ipiña%
-\AX{lopezdeipiña  k
-@Lopez-de Ipiña, K.}%
-, Solé-Casals%
-\AX{solécasals  j
-@Solé-Casals, J.}%
-\BCBL {}\ \protect \BOthers {.}}{%
+\ \protect \BOthers {.}}{%
 {\protect \APACyear {2014}}%
 }]{%
 alzheimer_2014_1}
@@ -2397,52 +2096,6 @@ Moro-Velázquez, L.%
   disease}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Scientific Reports}{9}{}{}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Moro-Velázquez%
-\AX{morovelázquez  l
-@Moro-Velázquez, L.}%
-\ \protect \BOthers {.}}{%
-Moro-Velázquez%
-\AX{morovelázquez  l
-@Moro-Velázquez, L.}%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2018}}%
-}]{%
-parkinson_three_languages_moro_velazquez}
-\APACinsertmetastar {%
-parkinson_three_languages_moro_velazquez}%
-\begin{APACrefauthors}%
-Moro-Velázquez, L.%
-\AX{morovelázquez  l
-@Moro-Velázquez, L.}%
-, Gómez-García, J.%
-\AX{gómezgarcía  j
-@Gómez-García, J.}%
-, Godino-Llorente, J.%
-\AX{godinollorente  j
-@Godino-Llorente, J.}%
-, Villalba, J.%
-\AX{villalba  j
-@Villalba, J.}%
-, Orozco-Arroyave, J.%
-\AX{orozcoarroyave  j
-@Orozco-Arroyave, J.}%
-\BCBL {}\ \BBA {} Dehak, N.%
-\AX{dehak  n
-@Dehak, N.}%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2018}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Analysis of speaker recognition methodologies and the
-  influence of kinetic changes to automatically detect Parkinson’s Disease}
-  {Analysis of speaker recognition methodologies and the influence of kinetic
-  changes to automatically detect parkinson’s disease}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Applied Soft Computing}{62}{}{649–666}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -3492,47 +3145,6 @@ Sundararajan, M.%
   attribution for deep networks}.{\BBCQ}
 \newblock
 \BIn{} \APACrefbtitle {ICML.} {Icml.}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Tombaugh%
-\AX{tombaugh  t
-@Tombaugh, T.}%
-\ \BBA {} McIntyre%
-\AX{mcintyre  n
-@McIntyre, N.}%
-}{%
-Tombaugh%
-\AX{tombaugh  t
-@Tombaugh, T.}%
-\ \BBA {} McIntyre%
-\AX{mcintyre  n
-@McIntyre, N.}%
-}{%
-{\protect \APACyear {1992}}%
-}]{%
-mmse_cons}
-\APACinsertmetastar {%
-mmse_cons}%
-\begin{APACrefauthors}%
-Tombaugh, T.%
-\AX{tombaugh  t
-@Tombaugh, T.}%
-\BCBT {}\ \BBA {} McIntyre, N.%
-\AX{mcintyre  n
-@McIntyre, N.}%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1992}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {The mini-mental state examination: a comprehensive
-  review} {The mini-mental state examination: a comprehensive review}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Journal of the American Geriatrics Society}{40}{}{}.
-\newblock
-\begin{APACrefDOI} \doi{https://doi.org/10.1111/j.1532-5415.1992.tb01992.x}
-  \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
